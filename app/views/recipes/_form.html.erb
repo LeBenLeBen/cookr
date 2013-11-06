@@ -1,0 +1,52 @@
+<% if @recipe.errors.any? %>
+  <%= render 'shared/form_errors', :errors => @recipe.errors %>
+<% end %>
+
+<div class="form-group">
+  <%= f.label :title, :class => 'control-label' %>
+  <%= f.text_field :title, :class => 'form-control' %>
+</div>
+
+<%= f.label :ingredients, :class => 'control-label' %>
+<div class="ingredients">
+  <%= f.fields_for :ingredients, @recipe.ingredients do |i_f|%>
+    <div data-id="<%= :id %>" class="recipe-ingredient row form-group">
+      <div class="col-xs-3">
+        <%= i_f.text_field :amout, :class => 'form-control' %>
+      </div>
+      <div class="col-xs-9">
+        <div class="input-group">
+          <%= i_f.text_field :title, :class => 'form-control' %>
+          <span class="input-group-btn">
+            <button class="remove-button btn btn-default" type="button">
+              <span class="glyphicon glyphicon-remove"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<p><button type="button" class="add-ingredient btn btn-default">Add ingredient</button></p>
+
+<div class="form-group">
+  <%= f.label :steps, :class => 'control-label' %>
+  <%= f.text_area :steps, :class => 'form-control', :rows => '5' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :time, :class => 'control-label' %>
+  <%= f.text_field :time, :class => 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :cooking, :class => 'control-label' %>
+  <%= f.text_area :cooking, :class => 'form-control', :rows => '2' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :notes, :class => 'control-label' %>
+  <%= f.text_area :notes, :class => 'form-control', :rows => '2' %>
+</div>
+
+<%= f.submit :class => 'btn btn-primary' %>

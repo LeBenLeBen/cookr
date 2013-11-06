@@ -1,0 +1,5 @@
+<div class="list-group">
+  <% @recipes.each do |recipe| %>
+    <%= link_to(recipe.title, recipe_path(recipe.id), :class => 'list-group-item') %>
+  <% end %>
+</div>
