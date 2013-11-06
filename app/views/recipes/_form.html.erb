@@ -10,19 +10,22 @@
 <%= f.label :ingredients, :class => 'control-label' %>
 <div class="ingredients">
   <%= f.fields_for :ingredients, @recipe.ingredients do |i_f|%>
-    <div data-id="<%= :id %>" class="recipe-ingredient row form-group">
-      <div class="col-xs-3">
-        <%= i_f.text_field :amout, :class => 'form-control' %>
+    <div class="recipe-ingredient row form-group">
+      <div class="col-sm-3">
+        <%= i_f.text_field :amount, :class => 'form-control' %>
       </div>
-      <div class="col-xs-9">
-        <div class="input-group">
+      <div class="col-sm-9">
+        <% unless i_f.object.new_record? %><div class="input-group"><% end %>
           <%= i_f.text_field :title, :class => 'form-control' %>
-          <span class="input-group-btn">
-            <button class="remove-button btn btn-default" type="button">
-              <span class="glyphicon glyphicon-remove"></span>
-            </button>
-          </span>
-        </div>
+          <% unless i_f.object.new_record? %>
+            <span class="input-group-addon">
+              <%= i_f.label :_destroy, :class => 'checkbox-inline' do %>
+                <%= i_f.check_box :_destroy %>
+                <%= t('delete') %>
+              <% end %>
+            </span>
+          <% end %>
+        <% unless i_f.object.new_record? %></div><% end %>
       </div>
     </div>
   <% end %>
@@ -39,14 +42,19 @@
   <%= f.text_field :time, :class => 'form-control' %>
 </div>
 
-<div class="form-group">
-  <%= f.label :cooking, :class => 'control-label' %>
-  <%= f.text_area :cooking, :class => 'form-control', :rows => '2' %>
-</div>
-
-<div class="form-group">
-  <%= f.label :notes, :class => 'control-label' %>
-  <%= f.text_area :notes, :class => 'form-control', :rows => '2' %>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <%= f.label :cooking, :class => 'control-label' %>
+      <%= f.text_area :cooking, :class => 'form-control', :rows => '2' %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <%= f.label :notes, :class => 'control-label' %>
+      <%= f.text_area :notes, :class => 'form-control', :rows => '2' %>
+    </div>
+  </div>
 </div>
 
 <%= f.submit :class => 'btn btn-primary' %>

@@ -12,50 +12,42 @@
  *= require_tree .
  */
 
+$brand-primary: #8363b4;
+$gray-dark: #444;
+$body-bg: #efefef;
+$well-bg: white;
+
+$headings-font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B';
+$headings-font-weight: 400;
+
 @import "bootstrap";
 
+/**
+ * Layout
+ */
 
-/* Space out content a bit */
 body {
-  padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .container {
-  max-width: 730px;
-}
-
-.header,
-.content,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 970px;
 }
 
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 30px;
+  padding: 20px 0;
+
+  background-color: white;
+  @include box-shadow(0 1px 2px rgba(0,0,0,.1));
 }
 
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  padding-bottom: 19px;
-}
 
-.footer {
-  margin-top: 30px;
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-@media screen and (min-width: 768px) {
-  .header,
-  .content,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+  a:hover {
+    text-decoration: none;
   }
 }

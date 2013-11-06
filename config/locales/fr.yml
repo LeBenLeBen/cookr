@@ -1,0 +1,21 @@
+fr:
+  delete: Supprimer
+
+  activerecord:
+    models:
+      recipe: recette
+      ingredient: ingrédient
+    attributes:
+      recipe:
+        title: Titre
+        steps: Étapes
+        time: Temps
+        cooking: Cuisson
+        notes: Notes
+    helpers:
+      label:
+        create: Envoyer
+
+  recipes:
+    new: Nouvelle recette
+    edit: Modifier la recette

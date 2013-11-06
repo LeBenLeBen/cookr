@@ -20,26 +20,15 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.order(:title).group_by{|r| r.title[0]}
   end
 
   def edit
     @recipe = Recipe.find(params[:id])
-
-    # logger.debug "****************************************************************"
-    # logger.debug @recipe.inspect
-    # logger.debug @recipe.ingredients.inspect
-    # logger.debug "****************************************************************"
   end
 
   def update
     @recipe = Recipe.find(params[:id])
-
-    # logger.debug "****************************************************************"
-    # logger.debug @recipe.attributes.inspect
-    # logger.debug "****************************************************************"
-    # logger.debug params[:recipe]
-    # logger.debug "****************************************************************"
 
     if @recipe.update_attributes(params[:recipe])
       redirect_to @recipe

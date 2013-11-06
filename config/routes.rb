@@ -1,5 +1,4 @@
 Cookr::Application.routes.draw do
-  get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -14,7 +13,6 @@ Cookr::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :recipes
-  resources :ingredients
 
   # Sample resource route with options:
   #   resources :products do
@@ -51,7 +49,7 @@ Cookr::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => 'recipes#index'
 
   # See how all your routes lay out with "rake routes"
 

@@ -12,14 +12,23 @@ gem 'sqlite3'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'compass-rails'
   gem 'bootstrap-sass', '~> 3.0.1.0.rc'
 
   gem 'handlebars_assets'
+
+  gem 'rb-fsevent'
+  gem 'guard-livereload'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development do
+  gem 'rb-fsevent'
+  gem 'guard-livereload'
 end
 
 gem 'jquery-rails'
