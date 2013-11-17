@@ -21,6 +21,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.order(:title).group_by{|r| r.title[0]}
+    @tags = Tag.order(:title)
   end
 
   def edit

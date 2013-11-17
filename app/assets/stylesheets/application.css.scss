@@ -10,24 +10,27 @@
  *
  *= require_self
  *= require_tree .
+ *
+ *= require font-awesome
  */
 
 $brand-primary: #8363b4;
 $gray-dark: #444;
-$body-bg: #efefef;
+$body-bg: rgb(248,248,248);
 $well-bg: white;
 
 $headings-font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B';
 $headings-font-weight: 400;
 
-@import "bootstrap";
+@import "bootstrap-custom";
 
 /**
  * Layout
  */
 
 body {
-  padding-bottom: 20px;
+  padding-bottom: 60px;
+  border-top: 3px solid $brand-primary;
 }
 
 .container {
@@ -50,4 +53,9 @@ body {
   a:hover {
     text-decoration: none;
   }
+}
+
+.index-letter {
+  position: absolute;
+  right: 100%;
 }

@@ -3,15 +3,18 @@ fr:
 
   activerecord:
     models:
-      recipe: recette
-      ingredient: ingrédient
+      recipe: Recette
+      ingredient: Ingrédient
+      tag: Tag
     attributes:
       recipe:
         title: Titre
+        ingredients: Ingrédients
         steps: Étapes
         time: Temps
         cooking: Cuisson
         notes: Notes
+        tags: Tags
     helpers:
       label:
         create: Envoyer
@@ -19,3 +22,11 @@ fr:
   recipes:
     new: Nouvelle recette
     edit: Modifier la recette
+    empty: Aucune recette
+    time:
+      one: "%{count} minute"
+      two: "%{count} minutes"
+      other: "%{count} minutes"
+
+  ingredients:
+    add: Ajouter un ingrédient

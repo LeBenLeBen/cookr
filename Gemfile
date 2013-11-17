@@ -14,6 +14,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'compass-rails'
   gem 'bootstrap-sass', '~> 3.0.1.0.rc'
+  gem 'font-awesome-sass'
 
   gem 'handlebars_assets'
 

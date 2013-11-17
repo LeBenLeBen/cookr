@@ -12,7 +12,8 @@
     <div class="header">
       <div class="container">
         <ul class="nav nav-pills pull-right">
-          <li<%= params['controller'] == 'recipes' && params['action'] == 'index' ? ' class=active' : '' %>><a href="<%= root_path %>">Recettes</a></li>
+          <li<%= params['controller'] == 'recipes' ? ' class=active' : '' %>><a href="<%= recipes_path %>"><i class="fa fa-cutlery fa-lg spaced-right"></i> <%= I18n.t('activerecord.models.recipe').pluralize %></a></li>
+          <li<%= params['controller'] == 'tags' ? ' class=active' : '' %>><a href="<%= tags_path %>"><i class="fa fa-tags fa-lg spaced-right"></i> <%= I18n.t('activerecord.models.tag').pluralize %></a></li>
         </ul>
         <h3 class="text-muted"><a href="/">Cookr</a></h3>
       </div>
