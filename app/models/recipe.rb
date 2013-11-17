@@ -10,7 +10,6 @@ class Recipe < ActiveRecord::Base
   attr_accessible :title,
     :steps,
     :time,
-    :cooking,
     :notes,
     :ingredients_attributes,
     :tag_list
