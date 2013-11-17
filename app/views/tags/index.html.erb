@@ -1,0 +1,12 @@
+<header class="page-header">
+  <h1><%= I18n.t('activerecord.models.tag').pluralize %></h1>
+</header>
+
+<div class="list-group">
+  <% @tags.each do |tag| %>
+    <%= link_to tag, :class => 'list-group-item' do %>
+      <span class="badge"><%= tag.recipes.count %></span>
+      <%= tag.title %>
+    <% end%>
+  <% end %>
+</div>
