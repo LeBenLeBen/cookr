@@ -9,19 +9,31 @@
   </head>
 
   <body>
-    <div class="header">
-      <div class="container">
-        <ul class="nav nav-pills pull-right">
-          <li<%= params['controller'] == 'recipes' ? ' class=active' : '' %>><a href="<%= recipes_path %>"><i class="fa fa-cutlery fa-lg spaced-right"></i> <%= I18n.t('activerecord.models.recipe').pluralize %></a></li>
-          <li<%= params['controller'] == 'tags' ? ' class=active' : '' %>><a href="<%= tags_path %>"><i class="fa fa-tags fa-lg spaced-right"></i> <%= I18n.t('activerecord.models.tag').pluralize %></a></li>
-        </ul>
-        <h3 class="text-muted"><a href="/">Cookr</a></h3>
-      </div>
-    </div>
+    <div class="site-wrapper">
+      <header class="site-header">
+        <div class="container">
+          <h3 class="text-muted"><a href="/">Cookr</a></h3>
+        </div>
+      </header>
 
-    <div class="container">
-      <div class="content">
-        <%= yield %>
+      <section class="site-content">
+        <nav class="site-nav">
+          <ul class="nav">
+            <li<%= params['controller'] == 'home' ? ' class=active' : '' %>><a href="<%= root_path %>"><i class="fa fa-home fa-2x"></i></a></li>
+            <li<%= params['controller'] == 'recipes' ? ' class=active' : '' %>><a href="<%= recipes_path %>" title="<%= I18n.t('activerecord.models.recipe').pluralize %>"><i class="fa fa-cutlery fa-2x"></i></a></li>
+            <li<%= params['controller'] == 'tags' ? ' class=active' : '' %>><a href="<%= tags_path %>" title="<%= I18n.t('activerecord.models.tag').pluralize %>"><i class="fa fa-tags fa-2x"></i></a></li>
+          </ul>
+        </nav>
+
+        <% if yield(:aside).present? %>
+          <aside class="page-sidebar">
+            <%= yield :aside %>
+          </aside>
+        <% end %>
+
+        <div class="container page-content">
+          <%= yield %>
+        </div>
       </div>
     </div>
 

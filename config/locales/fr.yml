@@ -12,7 +12,6 @@ fr:
         ingredients: Ingrédients
         steps: Étapes
         time: Temps
-        cooking: Cuisson
         notes: Notes
         tags: Tags
     helpers:
@@ -20,6 +19,7 @@ fr:
         create: Envoyer
 
   recipes:
+    search: Trouver une recette…
     new: Nouvelle recette
     edit: Modifier la recette
     empty: Aucune recette

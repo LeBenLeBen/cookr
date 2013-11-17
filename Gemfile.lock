@@ -38,6 +38,9 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    compass-flexbox (1.1.2)
+      compass
+      sass
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
     em-websocket (0.5.0)
@@ -147,6 +150,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.0.1.0.rc)
+  compass-flexbox
   compass-rails
   font-awesome-sass
   guard-livereload

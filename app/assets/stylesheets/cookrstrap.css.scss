@@ -8,7 +8,13 @@
  * Layout
  */
 .page-header {
-  border-bottom-color: #ccc;
+  margin-top: 20px;
+  padding-bottom: 0;
+  border-bottom: none;
+
+  h1 {
+    margin: 0;
+  }
 }
 
 .well {
@@ -17,6 +23,7 @@
 }
 
 // No extra space at the beginning or end of containers
+.page-header,
 .well,
 .panel-body {
   > *:first-child {
@@ -25,6 +32,23 @@
 
   > *:last-child {
     margin-bottom: 0;
+  }
+}
+
+.list-inline > li {
+  vertical-align: top;
+}
+
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  &:first-child {
+    border-bottom: 0;
   }
 }
 

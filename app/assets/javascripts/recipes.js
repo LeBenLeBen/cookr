@@ -9,4 +9,20 @@
     tpl.find('input:first').focus();
   });
 
+  jQuery('#recipes_filter').quicksearch('.recipe', {
+    'noResults': '.recipes-empty',
+    'show': function() {
+      var $this = jQuery(this);
+      $this.removeClass('hidden').closest('.recipes-group').removeClass('hidden');
+    },
+    'hide': function() {
+      var $this = jQuery(this);
+      $this.addClass('hidden');
+
+      if ($this.siblings('.recipe:not(.hidden)').length === 0) {
+        $this.closest('.recipes-group').addClass('hidden');
+      }
+    }
+  });
+
 })(jQuery);

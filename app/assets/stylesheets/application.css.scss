@@ -16,46 +16,126 @@
 
 $brand-primary: #8363b4;
 $gray-dark: #444;
-$body-bg: rgb(248,248,248);
+$body-bg: #efefef;
 $well-bg: white;
+
+$nav-link-hover-bg: lighten($brand-primary,5%);
 
 $headings-font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B';
 $headings-font-weight: 400;
 
+$list-group-border: $body-bg;
+$list-group-hover-bg: #fcfcfc;
+
 @import "bootstrap-custom";
+@import "flexbox";
 
 /**
  * Layout
  */
 
+html,
 body {
-  padding-bottom: 60px;
-  border-top: 3px solid $brand-primary;
+  height: 100%;
 }
 
 .container {
-  max-width: 970px;
+  max-width: 55em;
+  margin: 0;
 }
 
-.header {
-  margin-bottom: 30px;
-  padding: 20px 0;
+.site-wrapper {
+  height: 100%;
+  @include display-flex;
+  @include flex-direction(column);
+}
+
+.site-header {
+  padding: 10px 0;
+
+  position: relative;
+  z-index: 1;
 
   background-color: white;
-  @include box-shadow(0 1px 2px rgba(0,0,0,.1));
-}
+  @include box-shadow(0 1px 3px rgba(0,0,0,.1));
 
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
 
-  a:hover {
-    text-decoration: none;
+    a:hover {
+      text-decoration: none;
+    }
   }
 }
 
-.index-letter {
-  position: absolute;
-  right: 100%;
+.site-content {
+  @include display-flex;
+  @include flex(1);
+}
+
+.site-nav {
+  width: 60px;
+  background-color: darken($brand-primary, 10%);
+
+  .nav > li {
+    > a {
+      display: block;
+      height: 60px;
+      padding: 0;
+
+      color: white;
+      text-align: center;
+      line-height: 70px;
+
+      &:hover {
+        background-color: lighten($brand-primary,5%);
+      }
+    }
+
+    &.active a {
+      background-color: $brand-primary;
+    }
+  }
+}
+
+.page-sidebar {
+  width: 200px;
+  padding: 10px;
+  background-color: $brand-primary;
+
+  a {
+    color: $gray-lighter;
+  }
+
+  .badge {
+    background-color: darken($brand-primary, 10%);
+  }
+}
+
+.page-content {
+  margin-left: 10px;
+  margin-right: 10px;
+  @include flex(6);
+}
+
+@media (max-width: $screen-xs-max) {
+  .site-nav {
+    width: auto;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    .nav > li {
+      display: table-cell;
+      width: 60px;
+    }
+  }
+
+  .page-sidebar {
+    display: none;
+  }
 }
