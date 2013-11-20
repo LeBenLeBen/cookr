@@ -16,12 +16,7 @@
       <h4 class="text-muted index-letter"><%= starting_letter %></h4>
       <div class="list-group">
         <% @recipes[starting_letter].each do |recipe| %>
-          <%= link_to recipe_path(recipe.id), :class => 'list-group-item recipe' do %>
-            <h4 class="list-group-item-heading"><%= recipe.title %></h4>
-            <% if(recipe.time.present?) %>
-              <p class="list-group-item-text text-muted"><i class="fa fa-clock-o spaced-right"></i> <%= t('recipes.time', :count => recipe.time) %></p>
-            <% end %>
-          <% end %>
+          <%= render 'group_item', :recipe => recipe %>
         <% end %>
       </div>
     </div>

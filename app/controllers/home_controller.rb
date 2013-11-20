@@ -1,7 +1,9 @@
 class HomeController < ApplicationController
 
   def index
-    @recipes = Recipe.last(3);
+    ids = Recipe.pluck(:id)
+    @random_recipe = Recipe.find(ids.sample)
+    @recipes = Recipe.last(3)
   end
 
 end

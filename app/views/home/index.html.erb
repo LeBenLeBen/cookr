@@ -1,13 +1,23 @@
-<article class="recent-recipes">
-  <h2><%= t('recipes.recently_added') %></h2>
-  <div class="list-group">
-    <% @recipes.each do |recipe| %>
-      <%= link_to recipe_path(recipe.id), :class => 'list-group-item recipe' do %>
-        <h4 class="list-group-item-heading"><%= recipe.title %></h4>
-        <% if(recipe.time.present?) %>
-          <p class="list-group-item-text text-muted"><i class="fa fa-clock-o spaced-right"></i> <%= t('recipes.time', :count => recipe.time) %></p>
-        <% end %>
+<article class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= t('recipes.randomly') %></h3>
+  </div>
+  <div class="panel-body">
+    <div class="list-group">
+      <%= render 'recipes/group_item', :recipe => @random_recipe %>
+    </div>
+  </div>
+</article>
+
+<article class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= t('recipes.recently_added') %></h3>
+  </div>
+  <div class="panel-body">
+    <div class="list-group">
+      <% @recipes.each do |recipe| %>
+        <%= render 'recipes/group_item', :recipe => recipe %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </article>

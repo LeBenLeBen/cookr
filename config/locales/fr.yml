@@ -28,6 +28,7 @@ fr:
       two: "%{count} minutes"
       other: "%{count} minutes"
     recently_added: Ajouté récemment
+    randomly: Au hasard
 
   ingredients:
     add: Ajouter un ingrédient
