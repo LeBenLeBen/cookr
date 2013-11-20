@@ -88,6 +88,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.25)
     multi_json (1.8.2)
+    pg (0.17.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -156,6 +157,7 @@ DEPENDENCIES
   guard-livereload
   handlebars_assets
   jquery-rails
+  pg
   rails (= 3.2.12)
   rb-fsevent
   sass-rails (~> 3.2.3)
