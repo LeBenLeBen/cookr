@@ -8,7 +8,7 @@
  * Layout
  */
 .page-header {
-  margin-top: 20px;
+  margin-top: 0;
   padding-bottom: 0;
   border-bottom: none;
 
@@ -25,7 +25,8 @@
 // No extra space at the beginning or end of containers
 .page-header,
 .well,
-.panel-body {
+.panel-body,
+.list-group-item {
   > *:first-child {
     margin-top: 0;
   }

@@ -17,6 +17,10 @@ class Recipe < ActiveRecord::Base
   validates :title, presence: true,
                     length: { minimum: 3 }
 
+  def self.alphabetically
+    order(:title).group_by{|r| r.title[0]}
+  end
+
   def tag_list
     self.tags.map { |t| t.title }.join(", ")
   end

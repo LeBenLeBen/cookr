@@ -20,12 +20,15 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.order(:title).group_by{|r| r.title[0]}
+    @recipes = Recipe.alphabetically
     @tags = Tag.order(:title)
   end
 
   def edit
     @recipe = Recipe.find(params[:id])
+    unless @recipe.ingredients.present?
+      @recipe.ingredients.build
+    end
   end
 
   def update

@@ -4,9 +4,11 @@
   %><%= link_to 'Delete', recipe_path(@recipe), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
   </span>
   <h1><%= @recipe.title %></h1>
-  <ul class="list-inline lead text-muted">
-    <li><i class="fa fa-clock-o"></i> <%= t('recipes.time', :count => @recipe.time) %></li>
-  </ul>
+  <% if(@recipe.time.present?) %>
+    <ul class="list-inline lead text-muted">
+      <li><i class="fa fa-clock-o"></i> <%= t('recipes.time', :count => @recipe.time) %></li>
+    </ul>
+  <% end %>
 </header>
 
 <article class="recipe">

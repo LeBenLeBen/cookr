@@ -27,6 +27,7 @@ fr:
       one: "%{count} minute"
       two: "%{count} minutes"
       other: "%{count} minutes"
+    recently_added: Ajouté récemment
 
   ingredients:
     add: Ajouter un ingrédient
