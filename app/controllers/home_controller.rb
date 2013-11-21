@@ -2,7 +2,10 @@ class HomeController < ApplicationController
 
   def index
     ids = Recipe.pluck(:id)
-    @random_recipe = Recipe.find(ids.sample)
+    if ids.present?
+      @random_recipe = Recipe.find(ids.sample)
+    end
+
     @recipes = Recipe.last(3)
   end
 
