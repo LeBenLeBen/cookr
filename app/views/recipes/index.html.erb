@@ -23,15 +23,17 @@
   <% end %>
 <% end %>
 
-<% content_for :aside do %>
-  <ul class="nav nav-pills nav-stacked">
-    <% @tags.each do |tag| %>
-      <li>
-        <%= link_to tag, :class => 'tag' do %>
-          <span class="badge pull-right"><%= tag.recipes.count %></span>
-          <%= tag.title %>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+<% if @tags.present? %>
+  <% content_for :aside do %>
+    <ul class="nav nav-pills nav-stacked">
+      <% @tags.each do |tag| %>
+        <li>
+          <%= link_to tag, :class => 'tag' do %>
+            <span class="badge pull-right"><%= tag.recipes.count %></span>
+            <%= tag.title %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
 <% end %>
