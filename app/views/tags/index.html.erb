@@ -1,10 +1,15 @@
 <header class="page-header">
-  <h1><%= I18n.t('activerecord.models.tag').pluralize %></h1>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+    <%= search_field_tag :tags_filter, nil, :placeholder => t('tags.search'), :class => 'form-control' %>
+  </div>
 </header>
+
+<p class="tags-empty alert alert-info"><%= I18n.t('tags.empty') %></p>
 
 <div class="list-group">
   <% @tags.each do |tag| %>
-    <%= link_to tag, :class => 'list-group-item' do %>
+    <%= link_to tag, :class => 'list-group-item tag' do %>
       <span class="badge"><%= tag.recipes.count %></span>
       <%= tag.title %>
     <% end%>
