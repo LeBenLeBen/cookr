@@ -1,11 +1,13 @@
-<header class="page-header">
-  <ul class="list-unstyled list-inline pull-right">
-    <li><a href="<%= new_recipe_path %>" class="btn btn-primary"><i class="fa fa-plus spaced-right"></i> Nouvelle recette</a></li>
-    <li>
-      <%= search_field_tag :recipes_filter, nil, :placeholder => t('recipes.search'), :class => 'form-control' %>
-    </li>
-  </ul>
-  <h1>Recettes</h1>
+<header class="page-header row">
+  <div class="col-sm-6 hidden-xs">
+    <a href="<%= new_recipe_path %>" class="btn btn-primary"><i class="fa fa-plus spaced-right"></i> Nouvelle recette</a>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+      <%= search_field_tag :recipes_filter, nil, :placeholder => t('recipes.search'), :class => 'form-control pull-right' %>
+    </div>
+  </div>
 </header>
 
 <p class="recipes-empty alert alert-info"><%= I18n.t('recipes.empty') %></p>

@@ -1,7 +1,7 @@
 <header class="recipe-header page-header">
   <span class="btn-group pull-right">
-    <%= link_to 'Edit', edit_recipe_path(@recipe), :class => 'btn btn-default'
-  %><%= link_to 'Delete', recipe_path(@recipe), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
+    <%= link_to t('edit'), edit_recipe_path(@recipe), :class => 'btn btn-default'
+  %><%= link_to t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
   </span>
   <h1><%= @recipe.title %></h1>
   <% if(@recipe.time.present?) %>
