@@ -6,7 +6,7 @@ class HomeController < ApplicationController
       @random_recipe = Recipe.find(ids.sample)
     end
 
-    @recipes = Recipe.last(3)
+    @recipes = Recipe.last(3).reverse!
   end
 
 end
