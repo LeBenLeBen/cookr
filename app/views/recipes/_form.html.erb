@@ -16,7 +16,7 @@
       <%= f.fields_for :ingredients, @recipe.ingredients do |i_f|%>
         <div class="recipe-ingredient row">
           <div class="col-sm-3">
-            <%= i_f.text_field :amount, :class => 'form-control' %>
+            <%= i_f.text_field :amount, :class => 'form-control recipe-amount-field' %>
           </div>
           <div class="col-sm-9">
             <% unless i_f.object.new_record? %><div class="input-group"><% end %>
