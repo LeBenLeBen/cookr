@@ -40,7 +40,6 @@ body {
 }
 
 .container {
-  max-width: 55em;
   margin: 0;
 }
 
@@ -73,6 +72,7 @@ body {
 .site-content {
   @include display-flex;
   @include flex(1);
+  max-width: 1024px;
 }
 
 .site-nav {
@@ -103,6 +103,9 @@ body {
 .page-sidebar {
   width: 200px;
   padding: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
   background-color: $brand-primary;
 
   a {
@@ -117,7 +120,8 @@ body {
 .page-content {
   padding: 20px;
   @include flex(6);
-  overflow: auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: $screen-xs-max) {
