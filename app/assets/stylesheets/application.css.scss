@@ -39,6 +39,10 @@ body {
   height: 100%;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
 .container {
   margin: 0;
 }
