@@ -1,6 +1,7 @@
 class Tag < ActiveRecord::Base
 
-  has_and_belongs_to_many :recipes
+  has_many :recipes_tags, :dependent => :destroy
+  has_many :recipes, :through => :recipes_tags
 
   attr_accessible :title
 

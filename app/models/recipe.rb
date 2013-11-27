@@ -1,7 +1,8 @@
 class Recipe < ActiveRecord::Base
 
   has_many :ingredients, :dependent => :destroy
-  has_and_belongs_to_many :tags
+  has_many :recipes_tags, :dependent => :destroy
+  has_many :tags, :through => :recipes_tags
 
   accepts_nested_attributes_for :ingredients,
     :reject_if => :all_blank,
@@ -12,7 +13,8 @@ class Recipe < ActiveRecord::Base
     :time,
     :notes,
     :ingredients_attributes,
-    :tag_list
+    :tag_list,
+    :tag_count
 
   validates :title, presence: true,
                     length: { minimum: 3 }

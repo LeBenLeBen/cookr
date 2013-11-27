@@ -31,7 +31,7 @@
       <% @tags.each do |tag| %>
         <li>
           <%= link_to tag, :class => 'tag' do %>
-            <span class="badge pull-right"><%= tag.recipes.count %></span>
+            <span class="badge pull-right"><%= tag.recipe_count %></span>
             <%= tag.title %>
           <% end %>
         </li>

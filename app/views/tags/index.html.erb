@@ -10,7 +10,7 @@
 <div class="list-group">
   <% @tags.each do |tag| %>
     <%= link_to tag, :class => 'list-group-item tag' do %>
-      <span class="badge"><%= tag.recipes.count %></span>
+      <span class="badge"><%= tag.recipe_count %></span>
       <%= tag.title %>
     <% end%>
   <% end %>
