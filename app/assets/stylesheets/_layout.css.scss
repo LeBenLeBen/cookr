@@ -1,0 +1,120 @@
+/**
+ * Layout
+ */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  margin: 0;
+}
+
+.site-wrapper {
+  height: 100%;
+  @include display-flex;
+  @include flex-direction(column);
+}
+
+.site-header {
+  padding: 10px 0;
+
+  position: relative;
+  z-index: 1;
+
+  background-color: white;
+  @include box-shadow(0 1px 3px rgba(0,0,0,.1));
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.site-content {
+  @include display-flex;
+  @include flex(1);
+  max-width: 1024px;
+}
+
+.site-nav {
+  width: 60px;
+  background-color: darken($brand-primary, 10%);
+
+  .nav > li {
+    > a {
+      display: block;
+      height: 60px;
+      padding: 0;
+
+      color: white;
+      text-align: center;
+      line-height: 70px;
+
+      &:hover {
+        background-color: lighten($brand-primary,5%);
+      }
+    }
+
+    &.active a {
+      background-color: $brand-primary;
+    }
+  }
+}
+
+.page-sidebar {
+  width: 200px;
+  padding: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  background-color: $brand-primary;
+
+  a {
+    color: $gray-lighter;
+  }
+
+  .badge {
+    background-color: darken($brand-primary, 10%);
+  }
+}
+
+.page-content {
+  padding: 20px;
+  @include flex(6);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+// Responsiveness
+
+@media (max-width: $screen-xs-max) {
+  .site-nav {
+    width: auto;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    .nav > li {
+      display: table-cell;
+      width: 60px;
+    }
+  }
+
+  .page-sidebar {
+    display: none;
+  }
+}

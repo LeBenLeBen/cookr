@@ -1,5 +1,8 @@
 (function(jQuery) {
 
+  /**
+   * Change simple divisions (1/2, 1/3, …) to their UTF-8 equivalent
+   */
   jQuery(document).on('keyup', '.recipe-amount-field', function(e) {
     var val = jQuery(this).val(),
         replacement = '';

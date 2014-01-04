@@ -1,12 +1,10 @@
-@import "common";
-
 /**
  * EXTEND/OVERRID BOOTSTRAP
  */
 
-/**
- * Layout
- */
+
+// Layout
+
 .page-header {
   margin-top: 0;
   padding-bottom: 0;
@@ -53,16 +51,16 @@
   }
 }
 
-/**
- * Tables
- */
+
+// Tables
+
 .table tbody tr:first-child td {
   border-top: none;
 }
 
-/**
- * Forms
- */
+
+// Forms
+
 .form-horizontal .control-label {
   text-align: left;
 }
@@ -75,9 +73,9 @@ input[type="search"] {
   -webkit-appearance: none;
 }
 
-/**
- * Icons
- */
+
+// Icons
+
 // Add space between icons and text
 .spaced-right {
   margin-right: 0.333em;

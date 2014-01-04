@@ -1,5 +1,8 @@
 (function(jQuery) {
 
+  /**
+   * Append a new ingredient line to the form
+   */
   jQuery(document).on('click', '.add-ingredient', function(e) {
     var tpl = jQuery(HandlebarsTemplates['recipe/ingredient']({
       id: new Date().getTime()
@@ -9,6 +12,9 @@
     tpl.find('input:first').focus();
   });
 
+  /**
+   * Enable Quicksearch of recipes
+   */
   jQuery('#recipes_filter').quicksearch('.recipe', {
     'noResults': '.recipes-empty',
     'show': function() {

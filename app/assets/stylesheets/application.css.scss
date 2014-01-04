@@ -1,149 +1,19 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require_self
- *= require_tree .
- *
  *= require font-awesome
  */
 
-$brand-primary: #8363b4;
-$gray-dark: #444;
-$body-bg: #efefef;
-$well-bg: white;
+// Settings
+@import "settings/variables";
 
-$nav-link-hover-bg: lighten($brand-primary,5%);
-
-$headings-font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B';
-$headings-font-weight: 400;
-
-$list-group-border: $body-bg;
-$list-group-hover-bg: #fcfcfc;
-
+// Custom Bootstrap (vendor/assets/stylesheets/bootstrap-custom);
 @import "bootstrap-custom";
+
+// Mixins
+@import "compass";
 @import "flexbox";
 
-/**
- * Layout
- */
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-}
-
-.container {
-  margin: 0;
-}
-
-.site-wrapper {
-  height: 100%;
-  @include display-flex;
-  @include flex-direction(column);
-}
-
-.site-header {
-  padding: 10px 0;
-
-  position: relative;
-  z-index: 1;
-
-  background-color: white;
-  @include box-shadow(0 1px 3px rgba(0,0,0,.1));
-
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-
-    a:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-.site-content {
-  @include display-flex;
-  @include flex(1);
-  max-width: 1024px;
-}
-
-.site-nav {
-  width: 60px;
-  background-color: darken($brand-primary, 10%);
-
-  .nav > li {
-    > a {
-      display: block;
-      height: 60px;
-      padding: 0;
-
-      color: white;
-      text-align: center;
-      line-height: 70px;
-
-      &:hover {
-        background-color: lighten($brand-primary,5%);
-      }
-    }
-
-    &.active a {
-      background-color: $brand-primary;
-    }
-  }
-}
-
-.page-sidebar {
-  width: 200px;
-  padding: 10px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-
-  background-color: $brand-primary;
-
-  a {
-    color: $gray-lighter;
-  }
-
-  .badge {
-    background-color: darken($brand-primary, 10%);
-  }
-}
-
-.page-content {
-  padding: 20px;
-  @include flex(6);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-@media (max-width: $screen-xs-max) {
-  .site-nav {
-    width: auto;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-
-    .nav > li {
-      display: table-cell;
-      width: 60px;
-    }
-  }
-
-  .page-sidebar {
-    display: none;
-  }
-}
+// Site
+@import "cookstrap";
+@import "layout";
+@import "recipes";
