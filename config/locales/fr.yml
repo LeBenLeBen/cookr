@@ -29,7 +29,7 @@ fr:
       two: "%{count} minutes"
       other: "%{count} minutes"
     recently_added: Ajouté récemment
-    randomly: Au hasard
+    randomly: Recette au hasard
 
   ingredients:
     add: Ajouter un ingrédient
@@ -37,3 +37,10 @@ fr:
   tags:
     search: Trouver un tag…
     empty: Aucun tag
+
+  errors:
+    form:
+      title:
+        one: "%{count} erreur empêche la sauvegarde:"
+        two: "%{count} erreurs empêchent la sauvegarde:"
+        other: "%{count} erreurs empêchent la sauvegarde:"

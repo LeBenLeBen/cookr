@@ -1,6 +1,6 @@
 <div class="panel panel-danger">
   <div class="panel-heading">
-    <%= pluralize(errors.count, "error") %> prohibited this post from being saved:
+    <%= t('errors.form.title', :count => errors.count) %>
   </div>
   <div class="panel-body">
     <ul>
