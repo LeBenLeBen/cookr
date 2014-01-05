@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="container">
+    <h3 class="text-muted pull-left"><a href="/">Cookr</a></h3>
+
+    <ul class="header-text list-inline list-unstyled pull-right">
+      <% if current_user.present? %>
+        <li><%= current_user.email %></li>
+        <li class="btn-group">
+          <%= link_to raw('<span class="fa fa-cog spaced-right"></span> Settings'), edit_user_registration_path, :class => 'btn btn-default' %>
+          <%= link_to raw('<span class="fa fa-power-off spaced-right"></span> Sign out'), destroy_user_session_path, :method => :delete, :class => 'btn btn-default' %>
+        </li>
+      <% else %>
+        <li><%= link_to 'Sign in', new_user_session_path, :class => 'btn btn-default' %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>

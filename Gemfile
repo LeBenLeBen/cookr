@@ -3,6 +3,8 @@ ruby '2.0.0'
 
 gem 'rails', '3.2.12'
 
+gem 'devise'
+
 # Optimized for Heroku
 group :production do
   gem "pg" # PostgreSQL

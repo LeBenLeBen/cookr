@@ -13,6 +13,7 @@ body {
 
 .container {
   margin: 0;
+  width: auto;
 }
 
 .site-wrapper {
@@ -45,6 +46,12 @@ body {
   @include display-flex;
   @include flex(1);
   max-width: 1024px;
+}
+
+.devise-content {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 40px;
 }
 
 .site-nav {

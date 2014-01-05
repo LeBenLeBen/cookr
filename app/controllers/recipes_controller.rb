@@ -1,5 +1,7 @@
 class RecipesController < ApplicationController
 
+  before_filter :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+
   def new
     @recipe = Recipe.new
     @recipe.ingredients.build

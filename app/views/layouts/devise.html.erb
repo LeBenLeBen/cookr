@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render 'layouts/head' %>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <%= render 'layouts/header' %>
+
+      <section class="devise-content">
+        <% if alert.present? %><p class="alert alert-danger"><%= alert %></p><% end %>
+
+        <div class="well">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
