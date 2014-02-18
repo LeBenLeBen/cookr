@@ -124,4 +124,10 @@ body {
   .page-sidebar {
     display: none;
   }
+
+  // This is clearly not ideal but as it wasn’t designed to be edited on mobile, it’s not mandatory right now
+  // The nav should be refactored to include user settings and logout
+  .header-text {
+    display: none;
+  }
 }
