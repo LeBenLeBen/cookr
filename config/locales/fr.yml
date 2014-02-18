@@ -1,12 +1,15 @@
 fr:
   edit: Modifier
   delete: Supprimer
+  update: Sauvegarder
+  confirm: Êtes-vous certain?
 
   activerecord:
     models:
       recipe: Recette
       ingredient: Ingrédient
       tag: Tag
+      user: Utilisateur
     attributes:
       recipe:
         title: Titre
@@ -15,6 +18,12 @@ fr:
         time: Temps
         notes: Notes
         tags: Tags
+      user:
+        email: E-mail
+        password: Mot de passe
+        password_confirmation: Confirmation
+        current_password: Mot de passe actuel
+        remember_me: Se souvenir de moi
     helpers:
       label:
         create: Envoyer
@@ -37,6 +46,18 @@ fr:
   tags:
     search: Trouver un tag…
     empty: Aucun tag
+
+  users:
+    sign_up: Inscription
+    sign_in: Connexion
+    sign_out: Déconnexion
+    forgot_password: Mot de passe oublié?
+    new_password: Nouveau mot de passe
+    change_password: Modifier votre mot de passe
+    reset_instructions: Envoyer un lien de réinitialisation
+    resend_unlock: Renvoyer les instructions de déblocage
+    settings: Paramètres
+    cancel_account: Supprimer mon compte
 
   errors:
     form:

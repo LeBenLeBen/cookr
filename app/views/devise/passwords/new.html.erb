@@ -1,4 +1,4 @@
-<h2>Forgot your password?</h2>
+<h2><%= t('users.forgot_password') %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
@@ -8,5 +8,5 @@
     <%= f.email_field :email, :class => 'form-control', :autofocus => true %>
   </div>
 
-  <%= f.submit "Send me reset instructions", :class => 'btn btn-primary' %>
+  <%= f.submit t('users.reset_instructions'), :class => 'btn btn-primary' %>
 <% end %>

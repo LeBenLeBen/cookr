@@ -6,11 +6,11 @@
       <% if current_user.present? %>
         <li><%= current_user.email %></li>
         <li class="btn-group">
-          <%= link_to raw('<span class="fa fa-cog spaced-right"></span> Settings'), edit_user_registration_path, :class => 'btn btn-default' %>
-          <%= link_to raw('<span class="fa fa-power-off spaced-right"></span> Sign out'), destroy_user_session_path, :method => :delete, :class => 'btn btn-default' %>
+          <%= link_to raw('<span class="fa fa-cog spaced-right"></span> ' + t('users.settings')), edit_user_registration_path, :class => 'btn btn-default' %>
+          <%= link_to raw('<span class="fa fa-power-off spaced-right"></span> ' + t('users.sign_out')), destroy_user_session_path, :method => :delete, :class => 'btn btn-default' %>
         </li>
       <% else %>
-        <li><%= link_to 'Sign in', new_user_session_path, :class => 'btn btn-default' %></li>
+        <li><%= link_to t('users.sign_in'), new_user_session_path, :class => 'btn btn-default' %></li>
       <% end %>
     </ul>
   </div>
