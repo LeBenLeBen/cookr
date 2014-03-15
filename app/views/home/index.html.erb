@@ -1,7 +1,7 @@
 <% if @random_recipe.present? %>
   <article class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title"><%= t('recipes.randomly') %></h3>
+      <h3 class="panel-title"><i class="fa fa-fw fa-random"></i> <%= t('recipes.randomly') %></h3>
     </div>
     <div class="panel-body">
       <div class="list-group">
@@ -11,10 +11,25 @@
   </article>
 <% end %>
 
+<% if @last_seen_recipes.present? %>
+  <article class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-fw fa-eye"></i> <%= t('recipes.last_seen') %></h3>
+    </div>
+    <div class="panel-body">
+      <div class="list-group">
+        <% @last_seen_recipes.each do |recipe| %>
+          <%= render 'recipes/group_item', :recipe => recipe %>
+        <% end %>
+      </div>
+    </div>
+  </article>
+<% end %>
+
 <% if @recipes.present? %>
   <article class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title"><%= t('recipes.recently_added') %></h3>
+      <h3 class="panel-title"><i class="fa fa-fw fa-clock-o"></i> <%= t('recipes.recently_added') %></h3>
     </div>
     <div class="panel-body">
       <div class="list-group">

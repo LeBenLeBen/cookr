@@ -39,6 +39,7 @@ fr:
       other: "%{count} minutes"
     recently_added: Ajouté récemment
     randomly: Recette au hasard
+    last_seen: Récemment consulté
 
   ingredients:
     add: Ajouter un ingrédient

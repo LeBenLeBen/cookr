@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
 
   before_filter :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+  after_filter :store_history, :only => [:show]
 
   def new
     @recipe = Recipe.new
@@ -49,5 +50,14 @@ class RecipesController < ApplicationController
 
     redirect_to recipes_path
   end
+
+
+  private
+
+    def store_history
+      session[:recipe_history] ||= []
+      session[:recipe_history].delete_at(0) if session[:recipe_history].size >= 3
+      session[:recipe_history] << @recipe.id
+    end
 
 end
