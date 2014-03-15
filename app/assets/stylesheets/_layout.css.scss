@@ -45,7 +45,6 @@ body {
 .site-content {
   @include display-flex;
   @include flex(1);
-  max-width: 1024px;
 }
 
 .devise-content {
@@ -102,6 +101,9 @@ body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+  .page-content-inner {
+    max-width: 724px;
+  }
 
 
 // Responsiveness

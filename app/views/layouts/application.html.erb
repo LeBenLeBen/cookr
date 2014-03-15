@@ -24,9 +24,11 @@
         <% end %>
 
         <div class="container page-content">
-          <% if alert.present? %><p class="alert alert-danger"><%= alert %></p><% end %>
+          <div class="page-content-inner">
+            <% if alert.present? %><p class="alert alert-danger"><%= alert %></p><% end %>
 
-          <%= yield %>
+            <%= yield %>
+          </div>
         </div>
       </div>
     </div>
