@@ -34,8 +34,8 @@ fr:
     edit: Modifier la recette
     empty: Aucune recette
     time:
-      one: "%{count} minute"
-      two: "%{count} minutes"
+      zero: "%{count} minute"
+      one: "%{count} minutes"
       other: "%{count} minutes"
     recently_added: Ajouté récemment
     randomly: Recette au hasard
@@ -63,6 +63,6 @@ fr:
   errors:
     form:
       title:
-        one: "%{count} erreur empêche la sauvegarde:"
-        two: "%{count} erreurs empêchent la sauvegarde:"
+        zero: "%{count} erreur empêche la sauvegarde:"
+        one: "%{count} erreurs empêchent la sauvegarde:"
         other: "%{count} erreurs empêchent la sauvegarde:"

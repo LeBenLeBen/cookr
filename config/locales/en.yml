@@ -1,5 +1,68 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  edit: Edit
+  delete: Delete
+  update: Update
+  confirm: Are you sure?
+
+  activerecord:
+    models:
+      recipe: Recipe
+      ingredient: Ingredient
+      tag: Tag
+      user: User
+    attributes:
+      recipe:
+        title: Title
+        ingredients: Ingredients
+        steps: Steps
+        time: Time
+        notes: Notes
+        tags: Tags
+      user:
+        email: E-mail
+        password: Password
+        password_confirmation: Confirmation
+        current_password: Current password
+        remember_me: Remember me
+    helpers:
+      label:
+        create: Envoyer
+
+  recipes:
+    search: Find a recipe…
+    new: New recipe
+    edit: Edit recipe
+    empty: No recipe found
+    time:
+      zero: "%{count} minutes"
+      one: "%{count} minute"
+      other: "%{count} minutes"
+    recently_added: Recently added
+    randomly: Random recipe
+    last_seen: Last seen
+
+  ingredients:
+    add: Add an ingredient
+
+  tags:
+    search: Find a tag…
+    empty: No tag found
+
+  users:
+    sign_up: Sign up
+    sign_in: Sign in
+    sign_out: Sign out
+    forgot_password: Forgot password?
+    new_password: New password
+    change_password: Edit your password
+    reset_instructions: Send reset instructions
+    resend_unlock: Send unlock instructions again
+    settings: Settings
+    cancel_account: Delete my account
+
+  errors:
+    form:
+      title:
+        zero: "%{count} error prevents saving:"
+        one: "%{count} errors prevent saving:"
+        other: "%{count} errors prevent saving:"
