@@ -54,10 +54,10 @@ class RecipesController < ApplicationController
 
   private
 
-    def store_history
-      session[:recipe_history] ||= []
-      session[:recipe_history].delete_at(0) if session[:recipe_history].size >= 3
-      session[:recipe_history] << @recipe.id
-    end
+  def store_history
+    session[:recipe_history] ||= []
+    session[:recipe_history].delete_at(0) if session[:recipe_history].size >= 3
+    session[:recipe_history] << @recipe.id
+  end
 
 end
