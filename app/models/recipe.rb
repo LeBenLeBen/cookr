@@ -20,6 +20,11 @@ class Recipe < ActiveRecord::Base
     :tag_count,
     :image
 
+  attr_accessor :image_file_name,
+    :image_file_size,
+    :image_updated_at,
+    :image_content_type
+
   validates :title, presence: true,
                     length: { minimum: 3 }
 

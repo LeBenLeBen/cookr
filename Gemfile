@@ -22,9 +22,6 @@ group :assets do
 
   gem 'handlebars_assets'
 
-  gem 'rb-fsevent'
-  gem 'guard-livereload'
-
   gem 'uglifier', '>= 1.0.3'
 end
 
