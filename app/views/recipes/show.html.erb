@@ -46,6 +46,10 @@
       <% end %>
     </div>
     <div class="col-sm-8">
+      <% if @recipe.image.present? %>
+        <%= image_tag @recipe.image.url(:medium), :class => 'thumbnail' %>
+      <% end %>
+
       <% if @recipe.steps.present? %>
         <% steps = @recipe.steps.split( /\r?\n/ ) %>
         <table class="table-steps table">

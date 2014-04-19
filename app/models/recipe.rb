@@ -17,10 +17,20 @@ class Recipe < ActiveRecord::Base
     :notes,
     :ingredients_attributes,
     :tag_list,
-    :tag_count
+    :tag_count,
+    :image
 
   validates :title, presence: true,
                     length: { minimum: 3 }
+
+
+  has_attached_file :image, :styles => {
+    :thumb =>  '100x100#',
+    :medium => '472x472>'
+  }
+
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
 
   def self.alphabetically
     order(:title).group_by { |r| r.title[0] }

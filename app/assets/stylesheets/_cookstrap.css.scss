@@ -34,6 +34,9 @@
   }
 }
 
+
+// Lists
+
 .list-inline > li {
   vertical-align: top;
 }
@@ -49,6 +52,20 @@
   &:last-child {
     border-bottom: 0;
   }
+}
+
+
+// Media
+
+img.media-object {
+  border-radius: 3px;
+}
+
+
+// Panels
+
+.panel-list .panel-body {
+  padding: 0;
 }
 
 

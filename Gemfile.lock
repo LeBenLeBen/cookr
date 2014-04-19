@@ -30,11 +30,19 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.3)
     arel (3.0.2)
+    aws-sdk (1.38.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (3.0.1.0.rc)
       sass (~> 3.2)
     builder (3.0.4)
     chunky_png (1.2.7)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.4)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.0.9)
     compass (0.12.2)
       chunky_png (~> 1.2)
@@ -98,8 +106,16 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.25)
+    mini_portile (0.5.3)
     multi_json (1.8.2)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     orm_adapter (0.0.7)
+    paperclip (4.1.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.17.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -162,6 +178,7 @@ GEM
     uglifier (2.3.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uuidtools (2.1.4)
     warden (1.1.1)
       rack (>= 1.0)
 
@@ -169,6 +186,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk
   bootstrap-sass (~> 3.0.1.0.rc)
   compass-flexbox
   compass-rails
@@ -178,6 +196,7 @@ DEPENDENCIES
   handlebars_assets
   jquery-rails
   letter_opener
+  paperclip
   pg
   rails (= 3.2.12)
   rails_12factor

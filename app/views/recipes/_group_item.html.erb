@@ -1,6 +1,13 @@
 <%= link_to recipe_path(recipe.id), :class => 'list-group-item recipe' do %>
-  <h4 class="list-group-item-heading"><%= recipe.title %></h4>
-  <% if(recipe.time.present?) %>
-    <p class="list-group-item-text text-muted"><i class="fa fa-clock-o spaced-right"></i> <%= t('recipes.time', :count => recipe.time) %></p>
-  <% end %>
+  <div class="media">
+    <% if recipe.image.present? %>
+      <%= image_tag recipe.image.url(:thumb), :size => "100x100", :class => "media-object pull-left" %>
+    <% end %>
+    <div class="media-body">
+      <h4 class="list-group-item-heading media-heading"><%= recipe.title %></h4>
+      <% if(recipe.time.present?) %>
+        <p class="list-group-item-text text-muted"><i class="fa fa-clock-o spaced-right"></i> <%= t('recipes.time', :count => recipe.time) %></p>
+      <% end %>
+    </div>
+  </div>
 <% end %>
