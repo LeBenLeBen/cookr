@@ -8,6 +8,8 @@
 
 // Custom Bootstrap (vendor/assets/stylesheets/bootstrap-custom);
 @import "bootstrap-custom";
+@import "tokenfield-typeahead";
+@import "bootstrap-tokenfield";
 
 // Mixins
 @import "compass";

@@ -3,5 +3,8 @@
 //= require handlebars.runtime
 //= require fastclick.js
 //= require jquery.quicksearch.js
+//= require bloodhound.js
+//= require typeahead.jquery.js
+//= require bootstrap-tokenfield.js
 //= require_tree .
 //= require_tree ./templates
