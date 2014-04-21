@@ -66,3 +66,7 @@ en:
         zero: "%{count} error prevents saving:"
         one: "%{count} errors prevent saving:"
         other: "%{count} errors prevent saving:"
+
+  nav:
+    menu: Menu
+    home: Home

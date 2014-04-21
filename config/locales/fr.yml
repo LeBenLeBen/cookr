@@ -66,3 +66,7 @@ fr:
         zero: "%{count} erreur empêche la sauvegarde:"
         one: "%{count} erreurs empêchent la sauvegarde:"
         other: "%{count} erreurs empêchent la sauvegarde:"
+
+  nav:
+    menu: Menu
+    home: Accueil

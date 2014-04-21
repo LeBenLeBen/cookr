@@ -6,5 +6,9 @@
 //= require bloodhound.js
 //= require typeahead.jquery.js
 //= require bootstrap-tokenfield.js
+
+//= require bootstrap/transition
+//= require bootstrap/collapse
+
 //= require_tree .
 //= require_tree ./templates

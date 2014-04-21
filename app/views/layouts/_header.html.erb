@@ -1,17 +1,7 @@
 <header class="site-header">
   <div class="container">
-    <h3 class="text-muted pull-left"><a href="/">Cookr</a></h3>
+    <h3 class="brand pull-left"><a href="/">Cookr</a></h3>
 
-    <ul class="header-text list-inline list-unstyled pull-right">
-      <% if current_user.present? %>
-        <li><%= current_user.email %></li>
-        <li class="btn-group">
-          <%= link_to raw('<span class="fa fa-cog spaced-right"></span> ' + t('users.settings')), edit_user_registration_path, :class => 'btn btn-default' %>
-          <%= link_to raw('<span class="fa fa-power-off spaced-right"></span> ' + t('users.sign_out')), destroy_user_session_path, :method => :delete, :class => 'btn btn-default' %>
-        </li>
-      <% else %>
-        <li><%= link_to t('users.sign_in'), new_user_session_path, :class => 'btn btn-default' %></li>
-      <% end %>
-    </ul>
+    <button type="button" data-toggle="collapse" data-target=".site-nav" class="visible-xs btn btn-default pull-right"><%= t('nav.menu') %></button>
   </div>
 </header>

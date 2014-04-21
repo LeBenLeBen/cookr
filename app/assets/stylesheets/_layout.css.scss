@@ -31,10 +31,10 @@ body {
   background-color: white;
   @include box-shadow(0 1px 3px rgba(0,0,0,.1));
 
-  h3 {
+  .brand {
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 40px;
+    line-height: 34px;
 
     a:hover {
       text-decoration: none;
@@ -54,18 +54,22 @@ body {
 }
 
 .site-nav {
-  width: 60px;
   background-color: darken($brand-primary, 10%);
 
   .nav > li {
     > a {
       display: block;
-      height: 60px;
-      padding: 0;
+      height: 54px;
+      padding: 0 16px 0 10px;
 
       color: white;
-      text-align: center;
-      line-height: 70px;
+      line-height: 54px;
+      vertical-align: middle;
+
+      i {
+        line-height: inherit;
+        vertical-align: inherit;
+      }
 
       &:hover {
         background-color: lighten($brand-primary,5%);
@@ -108,28 +112,37 @@ body {
 
 // Responsiveness
 
+@media (min-width: $screen-sm-min) {
+  .site-nav {
+    display: block !important;
+    height: auto !important;
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .site-nav .nav > li > a {
+    padding: 0 10px;
+  }
+  .site-nav__icon {
+    margin-right: 0;
+  }
+  .site-nav__text {
+    display: none;
+  }
+}
+
 @media (max-width: $screen-xs-max) {
   .site-nav {
-    width: auto;
+    width: 100%;
 
     position: absolute;
-    top: 0;
+    top: 54px;
     right: 0;
-    z-index: 2;
-
-    .nav > li {
-      display: table-cell;
-      width: 60px;
-    }
+    left: 0;
+    z-index: 1;
   }
 
   .page-sidebar {
-    display: none;
-  }
-
-  // This is clearly not ideal but as it wasn’t designed to be edited on mobile, it’s not mandatory right now
-  // The nav should be refactored to include user settings and logout
-  .header-text {
     display: none;
   }
 }
