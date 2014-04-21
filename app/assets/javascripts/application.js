@@ -9,6 +9,7 @@
 
 //= require bootstrap/transition
 //= require bootstrap/collapse
+//= require bootstrap/dropdown
 
 //= require_tree .
 //= require_tree ./templates

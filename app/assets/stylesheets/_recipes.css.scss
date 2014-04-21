@@ -15,3 +15,7 @@
   color: $gray-light;
   font-weight: 300;
 }
+
+.recipe-title {
+  @include hyphenation();
+}

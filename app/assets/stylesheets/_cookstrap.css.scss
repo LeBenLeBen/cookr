@@ -35,6 +35,24 @@
 }
 
 
+// Buttons
+
+.btn-muted {
+  @extend .btn-link;
+  color: $text-muted;
+
+  &:hover,
+  &:focus {
+    color: $gray;
+  }
+  &:active,
+  &.active {
+    color: $gray-dark;
+  }
+}
+
+
+
 // Lists
 
 .list-inline > li {

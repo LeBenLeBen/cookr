@@ -1,9 +1,14 @@
 <header class="recipe-header page-header">
-  <span class="btn-group pull-right">
-    <%= link_to t('edit'), edit_recipe_path(@recipe), :class => 'btn btn-default'
-  %><%= link_to t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
-  </span>
-  <h1><%= @recipe.title %></h1>
+  <h1 class="recipe-title">
+    <%= @recipe.title %>
+    <span class="recipe-actions dropdown">
+      <button type="button" class="btn btn-muted dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog fa-2x"></span></button>
+      <ul class="dropdown-menu pull-right">
+        <li><%= link_to raw('<i class="fa fa-pencil spaced-right"></i> ') + t('edit'), edit_recipe_path(@recipe) %></li>
+        <li><%= link_to raw('<i class="fa fa-trash-o spaced-right"></i> ') + t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => t('confirm') } %></li>
+      </ul>
+    </span>
+  </h1>
   <% if(@recipe.time.present?) %>
     <ul class="list-inline lead text-muted">
       <li><i class="fa fa-clock-o"></i> <%= t('recipes.time', :count => @recipe.time) %></li>
