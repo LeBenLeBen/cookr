@@ -1,6 +1,6 @@
 <h2><%= t('users.settings') %></h2>
 
-<%= form_for(resource, :as => resource_name, :url => user_registration_path(resource_name), :html => { :method => :put }) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="form-group">
@@ -28,4 +28,4 @@
 
 <h3><%= t('users.cancel_account') %></h3>
 
-<p><%= link_to t('users.cancel_account'), user_registration_path(resource_name), :confirm => t('confirm'), :method => :delete %></p>
+<p><%= link_to t('users.cancel_account'), registration_path(resource_name), :confirm => t('confirm'), :method => :delete %></p>

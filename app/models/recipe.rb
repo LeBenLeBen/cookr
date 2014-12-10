@@ -11,16 +11,6 @@ class Recipe < ActiveRecord::Base
     :reject_if => :all_blank,
     :allow_destroy => true
 
-  attr_accessible :title,
-    :steps,
-    :time,
-    :notes,
-    :ingredients_attributes,
-    :tag_list,
-    :tag_count,
-    :image,
-    :asset_file_name
-
   validates :title, presence: true,
                     length: { minimum: 3 }
 

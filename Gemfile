@@ -1,28 +1,27 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.2'
 
-gem 'rails', '3.2.12'
+gem 'rails', '4.1.8'
 
 gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'sprockets', '2.11.0' # Avoid error with stylesheet_link_tag in 2.12
+
+gem 'sass-rails',   '~> 4.0'
+gem 'compass-rails'
+gem 'compass-flexbox'
+gem 'bootstrap-sass', '~> 3.0.3'
+gem 'font-awesome-sass', '~> 4.2.0'
+
+gem 'handlebars_assets'
+
+gem 'uglifier', '>= 1.0.3'
 
 # Optimized for Heroku
 group :production do
   gem "pg" # PostgreSQL
   gem "rails_12factor" # Heroku gem to avoid plugins injection
-end
-
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'compass-rails'
-  gem 'compass-flexbox'
-  gem 'bootstrap-sass', '~> 3.0.1.0.rc'
-  gem 'font-awesome-sass'
-
-  gem 'handlebars_assets'
-
-  gem 'uglifier', '>= 1.0.3'
 end
 
 group :development do

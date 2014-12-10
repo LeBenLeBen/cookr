@@ -1,10 +1,13 @@
 /*
  *= require_self
- *= require font-awesome
  */
 
 // Settings
 @import "settings/variables";
+
+// Font Awesome
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 // Custom Bootstrap (vendor/assets/stylesheets/bootstrap-custom);
 @import "bootstrap-custom";
