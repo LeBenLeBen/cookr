@@ -45,7 +45,7 @@
             <h3 class="panel-title"><%= I18n.t('activerecord.attributes.recipe.notes') %></h3>
           </div>
           <div class="panel-body">
-            <%= @recipe.notes %>
+            <%= simple_format(Rinku.auto_link(@recipe.notes)) %>
           </div>
         </div>
       <% end %>

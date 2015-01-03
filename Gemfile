@@ -7,6 +7,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'sprockets', '2.11.0' # Avoid error with stylesheet_link_tag in 2.12
+gem 'rinku'
 
 gem 'sass-rails',   '~> 4.0'
 gem 'compass-rails'

@@ -25,6 +25,8 @@
 .well,
 .panel-body,
 .list-group-item {
+  word-wrap: break-word;
+
   > *:first-child {
     margin-top: 0;
   }
