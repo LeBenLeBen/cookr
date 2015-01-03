@@ -33,10 +33,16 @@ fr:
     new: Nouvelle recette
     edit: Modifier la recette
     empty: Aucune recette
+    minutes: "Minutes"
+    quantity: "Personnes"
     time:
       zero: "%{count} minute"
       one: "%{count} minutes"
       other: "%{count} minutes"
+    people:
+      zero: "%{count} personne"
+      one: "%{count} personne"
+      other: "%{count} personnes"
     recently_added: Ajouté récemment
     randomly: Recette au hasard
     last_seen: Récemment consulté

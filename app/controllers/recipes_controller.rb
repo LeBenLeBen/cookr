@@ -60,6 +60,7 @@ class RecipesController < ApplicationController
       :steps,
       :time,
       :notes,
+      :quantity,
       :ingredients_attributes,
       :tag_list,
       :tag_count,
