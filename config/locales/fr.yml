@@ -18,6 +18,7 @@ fr:
         time: Temps
         notes: Notes
         tags: Tags
+        quantity: Quantité
       user:
         email: E-mail
         password: Mot de passe

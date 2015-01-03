@@ -18,6 +18,7 @@ en:
         time: Time
         notes: Notes
         tags: Tags
+        quantity: Quantity
       user:
         email: E-mail
         password: Password
