@@ -3,6 +3,7 @@ class TagsController < ApplicationController
   def show
     @tag = Tag.find(params[:id])
     @recipes = @tag.recipes.alphabetically
+    @tags = Tag.order(:title)
   end
 
   def index

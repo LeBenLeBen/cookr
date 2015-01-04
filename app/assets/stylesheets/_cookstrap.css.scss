@@ -130,3 +130,11 @@ input[type="search"] {
 .label-default {
   background-color: $gray-light;
 }
+
+
+// Nav
+
+.nav-pills > li.active a {
+  font-weight: bold;
+  background-color: lighten($brand-primary,5%);
+}

@@ -16,3 +16,18 @@
     <% end %>
   <% end %>
 </div>
+
+<% if @tags.present? %>
+  <% content_for :aside do %>
+    <ul class="nav nav-pills nav-stacked">
+      <% @tags.each do |tag| %>
+        <li<% if tag == @tag %> class="active"<% end %>>
+          <%= link_to tag, :class => 'tag' do %>
+            <span class="badge pull-right"><%= tag.recipe_count %></span>
+            <%= tag.title %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
