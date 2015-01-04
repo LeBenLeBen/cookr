@@ -3,6 +3,8 @@ ruby '2.1.2'
 
 gem 'rails', '4.1.8'
 
+gem 'pg'
+
 gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk'
@@ -23,8 +25,7 @@ gem 'uglifier', '>= 1.0.3'
 
 # Optimized for Heroku
 group :production do
-  gem "pg" # PostgreSQL
-  gem "rails_12factor" # Heroku gem to avoid plugins injection
+  gem 'rails_12factor' # Heroku gem to avoid plugins injection
 end
 
 group :development do
