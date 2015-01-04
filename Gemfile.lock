@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/Compass/compass-rails.git
+  revision: f2fb2298ea364ca30a7c64a4e9dcbd14137fd7b4
+  branch: master
+  specs:
+    compass-rails (2.0.2)
+      compass (~> 1.0.0)
+      sass-rails (<= 5.0.1)
+      sprockets (< 2.13)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -61,8 +71,6 @@ GEM
       sass
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    compass-rails (2.0.1)
-      compass (~> 1.0.0)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -210,7 +218,7 @@ DEPENDENCIES
   aws-sdk
   bootstrap-sass (~> 3.0.3)
   compass-flexbox
-  compass-rails
+  compass-rails!
   devise
   font-awesome-sass (~> 4.2.0)
   foreman

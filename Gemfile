@@ -12,7 +12,7 @@ gem 'foreman'
 gem 'unicorn'
 
 gem 'sass-rails', '~> 5.0.1'
-gem 'compass-rails'
+gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
 gem 'compass-flexbox'
 gem 'bootstrap-sass', '~> 3.0.3'
 gem 'font-awesome-sass', '~> 4.2.0'
