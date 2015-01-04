@@ -118,3 +118,15 @@ input[type="search"] {
 .spaced-left {
   margin-left: 0.333em;
 }
+
+
+// Labels
+
+.label {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.label-default {
+  background-color: $gray-light;
+}

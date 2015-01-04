@@ -1,13 +1,6 @@
 <header class="recipe-header page-header">
   <h1 class="recipe-title">
     <%= @recipe.title %>
-    <span class="recipe-actions dropdown">
-      <button type="button" class="btn btn-muted dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog fa-2x"></span></button>
-      <ul class="dropdown-menu pull-right">
-        <li><%= link_to raw('<i class="fa fa-pencil spaced-right"></i> ') + t('edit'), edit_recipe_path(@recipe) %></li>
-        <li><%= link_to raw('<i class="fa fa-trash-o spaced-right"></i> ') + t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => t('confirm') } %></li>
-      </ul>
-    </span>
   </h1>
   <% if @recipe.time.present? || @recipe.quantity.present? %>
     <ul class="list-inline lead text-muted">
@@ -50,6 +43,11 @@
           </div>
         </div>
       <% end %>
+
+      <ul class="recipe-actions list-inline">
+        <li><%= link_to raw('<i class="fa fa-pencil spaced-right"></i> ') + t('edit'), edit_recipe_path(@recipe) %></li>
+        <li><%= link_to raw('<i class="fa fa-trash-o spaced-right"></i> ') + t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => t('confirm') } %></li>
+      </ul>
     </div>
     <div class="col-sm-8">
       <% if @recipe.image.present? %>
@@ -72,7 +70,7 @@
 
       <ul class="list-inline">
         <% @recipe.tags.each do |tag| %>
-          <li><%= link_to tag.title, tag, :class => 'text-muted' %></li>
+          <li><%= link_to tag.title, tag, :class => 'label label-default' %></li>
         <% end %>
       </ul>
     </div>
