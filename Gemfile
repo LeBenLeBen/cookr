@@ -12,6 +12,7 @@ gem 'sprockets', '2.11.0' # Avoid error with stylesheet_link_tag in 2.12
 gem 'rinku'
 gem 'foreman'
 gem 'unicorn'
+gem 'newrelic_rpm'
 
 gem 'sass-rails', '~> 5.0.1'
 gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'

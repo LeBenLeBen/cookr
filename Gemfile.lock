@@ -132,6 +132,7 @@ GEM
     mini_portile (0.6.1)
     minitest (5.4.3)
     multi_json (1.10.1)
+    newrelic_rpm (3.9.9.275)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -226,6 +227,7 @@ DEPENDENCIES
   handlebars_assets
   jquery-rails
   letter_opener
+  newrelic_rpm
   paperclip
   pg
   rails (= 4.1.8)
