@@ -1,64 +1,75 @@
-Cookr
-=====
+# Cookr
 
 Cookr is a simple Rails application to manage cooking recipes organized by tags.
 
-*It is an experimental project and a work in progress. But it works!*
+A live demo is available at [cookr.herokuapp.com](http://cookr.herokuapp.com/). It’s hosted on a Heroku free plan, it could take a little time to boot. Be patient.
 
-A live demo is available at [cookr.herokuapp.com](http://cookr.herokuapp.com/). It is hosted on a Heroku free plan, it might take up to 30 seconds to start. Be patient.
+## Installation
 
+### Virtualization with [Drifter](https://github.com/liip/drifter)
 
-Installation
-------------
+Vagrant and Virtualbox or Vagrant-LXS are required. Check Drifter documentation if necessary.
 
-Note: Ruby >= 2.1, PostgreSQL and [Bundler](http://bundler.io/) are required.
-
-Clone the repository and enter the project folder:
-
-```
-git clone git@github.com:LeBenLeBen/cookr.git && cd cookr
+```bash
+git clone --recursive git@github.com:LeBenLeBen/cookr.git
+cd cookr
+vagrant up
 ```
 
-Install dependencies with Bundler:
+Wait for the provisioning to complete, then enter the box and start the server.
 
+```bash
+vagrant ssh
+bundle exec foreman start
 ```
+
+Go to [cookr.lo:5000](http://cookr.lo:5000).
+
+### Local installation
+
+Ruby >= 2.4, PostgreSQL and [Bundler](http://bundler.io/) are required.
+
+```bash
+git clone git@github.com:LeBenLeBen/cookr.git
+cd cookr
 bundle install
 ```
 
-Copy the database configuration file (PostgreSQL):
-
-```
-cp config/database.example.yml config/database.yml
-```
+#### Setup database
 
 Create the PostgreSQL user (default password is _cookr_):
 
-```
+```bash
 createuser cookr -P
 ```
 
 Create the PostgreSQL database:
 
-```
+```bash
 createdb cookr
 ```
 
-Setup the database:
+Copy the database configuration file (PostgreSQL):
 
-```
-rake db:migrate
+```bash
+cp config/database.example.yml config/database.yml
 ```
 
-Run the server with Foreman:
+Update it to match your settings, then load the schema into the database:
 
+```bash
+rails db:migrate
 ```
-foreman start
+
+#### Start the server
+
+```bash
+bundle exec foreman start
 ```
 
 Go to [localhost:5000](http://localhost:5000).
 
-Create a user
--------------
+## Create a user
 
 Registrations are disabled. You can use the console (`rails c`) to create a new user.
 
@@ -66,7 +77,6 @@ Registrations are disabled. You can use the console (`rails c`) to create a new 
 User.create(:email => '', :password => '', :password_confirmation => '')
 ```
 
-License
--------
+## License
 
 Cookr is licensed under [GPL version 3](http://www.gnu.org/copyleft/gpl.html).

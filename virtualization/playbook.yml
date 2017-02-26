@@ -17,3 +17,10 @@
     - { role: git }
     - { role: postgresql }
     - { role: ruby }
+
+  tasks:
+    - name: Copy database configuration file
+      copy:
+        src: /vagrant/config/database.example.yml
+        dest: /vagrant/config/database.yml
+        force: no
