@@ -5,4 +5,4 @@
 config/database.yml
 *.dump
 .env
-public/system/*
+public/system/*/.vagrant/
