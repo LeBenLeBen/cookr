@@ -1,28 +1,30 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.4.0'
 
-gem 'rails', '4.1.8'
+gem 'rails', '~> 5.0'
+gem 'responders'
 
 gem 'pg'
 
 gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'sprockets', '2.11.0' # Avoid error with stylesheet_link_tag in 2.12
+gem 'sprockets'
 gem 'rinku'
 gem 'foreman'
 gem 'unicorn'
 gem 'newrelic_rpm'
 
 gem 'sass-rails', '~> 5.0.1'
-gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
+gem 'compass-rails', git: 'https://github.com/Compass/compass-rails', branch: 'master'
 gem 'compass-flexbox'
 gem 'bootstrap-sass', '~> 3.0.3'
 gem 'font-awesome-sass', '~> 4.2.0'
 
 gem 'handlebars_assets'
 
-gem 'uglifier', '>= 1.0.3'
+gem 'uglifier'
+gem 'therubyracer'
 
 # Optimized for Heroku
 group :production do
@@ -32,8 +34,8 @@ end
 group :development do
   gem 'rb-fsevent'
   gem 'guard-livereload'
-  gem 'sqlite3'
   gem 'letter_opener'
+  gem 'web-console'
 end
 
 gem 'jquery-rails'

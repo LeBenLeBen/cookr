@@ -1,4 +1,4 @@
-class Recipe < ActiveRecord::Base
+class Recipe < ApplicationRecord
 
   has_many :ingredients, :dependent => :destroy
   has_many :recipes_tags, :dependent => :destroy
