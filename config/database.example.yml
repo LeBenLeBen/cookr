@@ -1,4 +1,5 @@
 development:
+  host: localhost
   adapter: postgresql
   encoding: unicode
   database: cookr

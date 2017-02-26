@@ -6,3 +6,4 @@ config/database.yml
 *.dump
 .env
 public/system/*/.vagrant/
+/.vagrant
