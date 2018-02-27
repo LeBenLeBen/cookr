@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 
-  before_filter :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
-  after_filter :store_history, :only => [:show]
+  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+  after_action :store_history, :only => [:show]
 
   def new
     @recipe = Recipe.new
