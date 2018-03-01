@@ -12,7 +12,7 @@ module Admin
     private
 
     def verify_admin
-      redirect_to root_url unless current_user.role == "admin"
+      redirect_to root_url unless current_user.admin?
     end
 
     # Override this value to specify the number of elements to display at a time
