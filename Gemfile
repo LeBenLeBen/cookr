@@ -14,6 +14,7 @@ gem 'rinku'
 gem 'foreman'
 gem 'unicorn'
 gem 'newrelic_rpm'
+gem "administrate"
 
 gem 'sass-rails', '~> 5.0.1'
 gem 'compass-rails', git: 'https://github.com/Compass/compass-rails', branch: 'master'

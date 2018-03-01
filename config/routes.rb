@@ -1,5 +1,15 @@
 Cookr::Application.routes.draw do
 
+  namespace :admin do
+    resources :users
+    resources :ingredients
+    resources :recipes
+    resources :recipes_tags
+    resources :tags
+
+    root to: "users#index"
+  end
+
   # Disable user registration but allow profile update
   devise_for :users, :skip => [:registrations]
   as :user do
