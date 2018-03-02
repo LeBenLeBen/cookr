@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-  ROLES = %i[admin author]
+  ROLES = %w[admin author]
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
