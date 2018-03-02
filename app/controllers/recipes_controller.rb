@@ -1,6 +1,5 @@
 class RecipesController < ApplicationController
 
-  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
   after_action :store_history, :only => [:show]
 
   def new
@@ -10,6 +9,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.user = current_user
 
     if @recipe.save
       redirect_to @recipe
@@ -23,8 +23,9 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.alphabetically
-    @tags = Tag.order(:title)
+    recipes = current_user.recipes
+    @recipes = recipes.alphabetically
+    @tags = Tag.joins(:recipes).where('recipes.user' => current_user)
   end
 
   def edit

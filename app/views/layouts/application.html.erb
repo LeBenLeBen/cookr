@@ -11,13 +11,13 @@
       <section class="site-content">
         <nav class="collapse site-nav">
           <ul class="nav">
-            <li<%= params['controller'] == 'home' ? ' class=active' : '' %>>
-              <%= link_to raw('<i class="fa-fw spaced-right fa fa-home fa-2x site-nav__icon"></i><span class="site-nav__text">' + t('nav.home') + '</span>'), root_path, :title => t('nav.home') %>
-            </li>
-            <li<%= params['controller'] == 'recipes' ? ' class=active' : '' %>>
-              <%= link_to raw('<i class="fa-fw spaced-right fa fa-cutlery fa-2x site-nav__icon"></i><span class="site-nav__text">' + t('activerecord.models.recipe').pluralize + '</span>'), recipes_path, :title => t('activerecord.models.recipe').pluralize %>
-            </li>
             <% if current_user.present? %>
+              <li<%= params['controller'] == 'home' ? ' class=active' : '' %>>
+                <%= link_to raw('<i class="fa-fw spaced-right fa fa-home fa-2x site-nav__icon"></i><span class="site-nav__text">' + t('nav.home') + '</span>'), root_path, :title => t('nav.home') %>
+              </li>
+              <li<%= params['controller'] == 'recipes' ? ' class=active' : '' %>>
+                <%= link_to raw('<i class="fa-fw spaced-right fa fa-cutlery fa-2x site-nav__icon"></i><span class="site-nav__text">' + t('activerecord.models.recipe').pluralize + '</span>'), recipes_path, :title => t('activerecord.models.recipe').pluralize %>
+              </li>
               <li><%= link_to raw('<i class="fa-fw spaced-right fa fa-cog fa-2x site-nav__icon"></i><span class="site-nav__text">' + t('users.settings') + '</span>'), edit_user_registration_path, :title => t('users.settings') %></li>
               <li><%= link_to raw('<i class="fa-fw spaced-right fa fa-power-off fa-2x site-nav__icon"></i><span class="site-nav__text">' + t('users.sign_out') + '</span>'), destroy_user_session_path, :method => :delete, :title => t('users.sign_out') %></li>
             <% else %>
