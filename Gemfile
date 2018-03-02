@@ -8,7 +8,7 @@ gem 'pg'
 
 gem 'devise'
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk', '~> 2.3.0'
 gem 'sprockets'
 gem 'rinku'
 gem 'foreman'
