@@ -12,11 +12,10 @@ gem 'aws-sdk'
 gem 'sprockets'
 gem 'rinku'
 gem 'foreman'
-gem 'unicorn'
-gem 'newrelic_rpm'
 gem "administrate"
 gem 'cancancan', '~> 2.0'
 
+gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0.1'
 gem 'compass-rails', git: 'https://github.com/Compass/compass-rails', branch: 'master'
 gem 'compass-flexbox'
@@ -30,6 +29,8 @@ gem 'therubyracer'
 
 # Optimized for Heroku
 group :production do
+  gem 'unicorn'
+  gem 'newrelic_rpm'
   gem 'rails_12factor' # Heroku gem to avoid plugins injection
 end
 
@@ -39,5 +40,3 @@ group :development do
   gem 'letter_opener'
   gem 'web-console'
 end
-
-gem 'jquery-rails'
