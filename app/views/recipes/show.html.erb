@@ -44,10 +44,12 @@
         </div>
       <% end %>
 
-      <ul class="recipe-actions list-inline">
-        <li><%= link_to raw('<i class="fa fa-pencil spaced-right"></i> ') + t('edit'), edit_recipe_path(@recipe) %></li>
-        <li><%= link_to raw('<i class="fa fa-trash-o spaced-right"></i> ') + t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => t('confirm') } %></li>
-      </ul>
+      <% if can? :manage, @recipe %>
+        <ul class="recipe-actions list-inline">
+          <li><%= link_to raw('<i class="fa fa-pencil spaced-right"></i> ') + t('edit'), edit_recipe_path(@recipe) %></li>
+          <li><%= link_to raw('<i class="fa fa-trash-o spaced-right"></i> ') + t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => t('confirm') } %></li>
+        </ul>
+      <% end %>
     </div>
     <div class="col-sm-8">
       <% if @recipe.image.present? %>

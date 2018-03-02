@@ -2,6 +2,8 @@ class RecipesController < ApplicationController
 
   after_action :store_history, :only => [:show]
 
+  load_and_authorize_resource
+
   def new
     @recipe = Recipe.new
     @recipe.ingredients.build
