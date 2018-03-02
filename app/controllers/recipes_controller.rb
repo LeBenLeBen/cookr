@@ -27,7 +27,7 @@ class RecipesController < ApplicationController
   def index
     recipes = current_user.recipes
     @recipes = recipes.alphabetically
-    @tags = Tag.joins(:recipes).where('recipes.user' => current_user)
+    @tags = Tag.joins(:recipes).where('recipes.user' => current_user).distinct
   end
 
   def edit
