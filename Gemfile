@@ -7,6 +7,7 @@ gem 'responders'
 gem 'pg'
 
 gem 'devise'
+gem 'devise_invitable', '~> 1.7.0'
 gem 'paperclip'
 gem 'aws-sdk', '~> 2.3.0'
 gem 'sprockets'

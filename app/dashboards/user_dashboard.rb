@@ -22,6 +22,11 @@ class UserDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     role: Field::Select.with_options(collection: User::ROLES),
+    invitation_token: Field::String,
+    invitation_created_at: Field::DateTime,
+    invitation_sent_at: Field::DateTime,
+    invitation_accepted_at: Field::DateTime,
+    invited_by_id: Field::Number
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -51,7 +56,12 @@ class UserDashboard < Administrate::BaseDashboard
     :last_sign_in_ip,
     :created_at,
     :updated_at,
-    :role
+    :role,
+    :invitation_token,
+    :invitation_created_at,
+    :invitation_sent_at,
+    :invitation_accepted_at,
+    :invited_by_id
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -59,15 +69,6 @@ class UserDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
     :role
   ].freeze
 

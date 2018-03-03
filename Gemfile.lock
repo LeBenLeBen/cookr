@@ -106,6 +106,9 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    devise_invitable (1.7.3)
+      actionmailer (>= 4.1.0)
+      devise (>= 4.0.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -299,6 +302,7 @@ DEPENDENCIES
   compass-flexbox
   compass-rails!
   devise
+  devise_invitable (~> 1.7.0)
   font-awesome-sass (~> 4.2.0)
   foreman
   guard-livereload
