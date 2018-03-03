@@ -19,19 +19,19 @@ ActiveRecord::Schema.define(version: 20180303100112) do
     t.integer "recipe_id"
     t.text "amount"
     t.text "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "recipes", id: :serial, force: :cascade do |t|
-    t.string "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "title", limit: 255
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "steps"
     t.integer "time"
-    t.string "notes"
-    t.string "image_file_name"
-    t.string "image_content_type"
+    t.string "notes", limit: 255
+    t.string "image_file_name", limit: 255
+    t.string "image_content_type", limit: 255
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.integer "quantity"
@@ -45,25 +45,25 @@ ActiveRecord::Schema.define(version: 20180303100112) do
   end
 
   create_table "tags", id: :serial, force: :cascade do |t|
-    t.string "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "title", limit: 255
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "recipe_count", default: 0
   end
 
   create_table "users", id: :serial, force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
+    t.string "email", limit: 255, default: "", null: false
+    t.string "encrypted_password", limit: 255, default: "", null: false
+    t.string "reset_password_token", limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.integer "sign_in_count", default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "current_sign_in_ip", limit: 255
+    t.string "last_sign_in_ip", limit: 255
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "role", default: "author"
     t.string "invitation_token"
     t.datetime "invitation_created_at"
