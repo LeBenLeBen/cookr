@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
 
   protected
     def authenticate_inviter!
-      authenticate_user!(force: true)
       require_admin
+      super
     end
 
   private
