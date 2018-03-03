@@ -5,14 +5,16 @@ class HomeController < ApplicationController
     ids = recipes.pluck(:id)
     @random_recipe = recipes.find(ids.sample) if ids.present?
 
-    @last_seen_recipes = []
-    session[:recipe_history].each do |r|
-      recipe = recipes.find_by_id(r)
-      if recipe.present?
-        @last_seen_recipes << recipe
+    if session[:recipe_history]
+      @last_seen_recipes = []
+      session[:recipe_history].each do |r|
+        recipe = recipes.find_by_id(r)
+        if recipe.present?
+          @last_seen_recipes << recipe
+        end
       end
+      @last_seen_recipes = @last_seen_recipes.reverse!
     end
-    @last_seen_recipes = @last_seen_recipes.reverse!
 
     @recipes = recipes.last(3).reverse!
   end
