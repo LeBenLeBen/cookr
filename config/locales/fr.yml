@@ -73,6 +73,8 @@ fr:
         zero: "%{count} erreur empêche la sauvegarde:"
         one: "%{count} erreurs empêchent la sauvegarde:"
         other: "%{count} erreurs empêchent la sauvegarde:"
+    unauthorized:
+      page: "Vous n’êtes pas autorisé à accéder à cette page."
 
   nav:
     menu: Menu

@@ -7,12 +7,15 @@
 module Admin
   class ApplicationController < Administrate::ApplicationController
     before_action :authenticate_user!
-    before_action :verify_admin
+    before_action :require_admin
 
     private
 
-    def verify_admin
-      redirect_to root_url unless current_user.admin?
+    def require_admin
+      unless current_user && current_user.admin?
+        flash[:error] = t "errors.unauthorized.page"
+        redirect_to root_path
+      end
     end
 
     # Override this value to specify the number of elements to display at a time

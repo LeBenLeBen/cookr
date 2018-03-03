@@ -12,12 +12,24 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private
-
-  def extract_locale_from_accept_language_header
-    if request.env['HTTP_ACCEPT_LANGUAGE']
-      request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+  protected
+    def authenticate_inviter!
+      authenticate_user!(force: true)
+      require_admin
     end
-  end
+
+  private
+    def extract_locale_from_accept_language_header
+      if request.env['HTTP_ACCEPT_LANGUAGE']
+        request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+      end
+    end
+
+    def require_admin
+      unless current_user && current_user.admin?
+        flash[:error] = t "errors.unauthorized.page"
+        redirect_to root_path
+      end
+    end
 
 end

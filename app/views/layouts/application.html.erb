@@ -34,7 +34,12 @@
 
         <div class="container page-content">
           <div class="page-content-inner">
-            <% if alert.present? %><p class="alert alert-danger"><%= alert %></p><% end %>
+            <% if flash[:error] -%>
+              <p class="alert alert-danger"><%=h flash[:error] %></p>
+            <% end -%>
+            <% if flash[:notice] -%>
+              <p class="alert alert-warning"><%=h flash[:notice] %></p>
+            <% end -%>
 
             <%= yield %>
           </div>

@@ -73,6 +73,8 @@ en:
         zero: "%{count} error prevents saving:"
         one: "%{count} errors prevent saving:"
         other: "%{count} errors prevent saving:"
+    unauthorized:
+      page: "You are not authorized to access this page."
 
   nav:
     menu: Menu
