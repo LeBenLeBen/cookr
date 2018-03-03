@@ -1,11 +1,402 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+ingredient_1:
+  id: 68
+  recipe_id: 12
+  amount: '1'
+  title: Pâte feuilletée
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+ingredient_2:
+  id: 69
+  recipe_id: 12
+  amount: 100gr
+  title: Fromage rapé pour gâteau
+
+ingredient_3:
+  id: 70
+  recipe_id: 12
+  amount: 100gr
+  title: Lardons
+
+ingredient_4:
+  id: 71
+  recipe_id: 12
+  amount: '3'
+  title: Oeufs
+
+ingredient_5:
+  id: 72
+  recipe_id: 12
+  amount: 1.5dl
+  title: Crème
+
+ingredient_6:
+  id: 73
+  recipe_id: 13
+  amount: 500gr
+  title: Courge
+
+ingredient_7:
+  id: 74
+  recipe_id: 13
+  amount: 1cs
+  title: Beurre
+
+ingredient_8:
+  id: 75
+  recipe_id: 13
+  amount: '2'
+  title: Oignons
+
+ingredient_9:
+  id: 76
+  recipe_id: 13
+  amount: '1'
+  title: Pomme de terre farineuse
+
+ingredient_10:
+  id: 77
+  recipe_id: 13
+  amount: 6dl
+  title: Bouillon de légumes
+
+ingredient_11:
+  id: 78
+  recipe_id: 13
+  amount: ''
+  title: Thym ou autre aromatique
+
+ingredient_12:
+  id: 79
+  recipe_id: 13
+  amount: 1cc
+  title: Sucre
+
+ingredient_13:
+  id: 80
+  recipe_id: 13
+  amount: 1dl
+  title: Crème
+
+ingredient_14:
+  id: 84
+  recipe_id: 15
+  amount: '1'
+  title: Pâte brisée non-sucrée ou feuilletée
+
+ingredient_15:
+  id: 86
+  recipe_id: 15
+  amount: 2dl
+  title: Crème
+
+ingredient_16:
+  id: 87
+  recipe_id: 15
+  amount: '1'
+  title: Jaune d'oeuf
+
+ingredient_17:
+  id: 88
+  recipe_id: 15
+  amount: 30gr
+  title: Parmesan
+
+ingredient_180:
+  id: 100
+  recipe_id: 18
+  amount: 500gr
+  title: Farine
+
+ingredient_191:
+  id: 101
+  recipe_id: 18
+  amount: 1,5cc
+  title: Sel
+
+ingredient_202:
+  id: 102
+  recipe_id: 18
+  amount: 3cs
+  title: Sucre
+
+ingredient_213:
+  id: 103
+  recipe_id: 18
+  amount: 60gr
+  title: Beurre
+
+ingredient_224:
+  id: 104
+  recipe_id: 18
+  amount: 2dl
+  title: Lait
+
+ingredient_235:
+  id: 105
+  recipe_id: 18
+  amount: 1dl
+  title: Eau
+
+ingredient_246:
+  id: 106
+  recipe_id: 18
+  amount: 25gr
+  title: Levure fraîche
+
+ingredient_252:
+  id: 132
+  recipe_id: 25
+  amount: '2'
+  title: Pommes acidulées (Canada, Boskoop) par personne
+
+ingredient_263:
+  id: 133
+  recipe_id: 25
+  amount: 1cs
+  title: Sucre par pomme
+
+ingredient_274:
+  id: 134
+  recipe_id: 25
+  amount: 1-2
+  title: Bâtonnet de cannelle
+
+ingredient_285:
+  id: 135
+  recipe_id: 26
+  amount: 1kg
+  title: Pommes de terre fermes
+
+ingredient_296:
+  id: 136
+  recipe_id: 26
+  amount: 1dl
+  title: Bouillon de légumes
+
+ingredient_307:
+  id: 137
+  recipe_id: 26
+  amount: 1cs
+  title: Moutarde
+
+ingredient_318:
+  id: 138
+  recipe_id: 26
+  amount: 4cs
+  title: Vinaigre blanc (pomme)
+
+ingredient_329:
+  id: 139
+  recipe_id: 26
+  amount: 6cs
+  title: Huile de tournesol
+
+ingredient_330:
+  id: 140
+  recipe_id: 26
+  amount: ''
+  title: Ciboulette
+
+ingredient_347:
+  id: 177
+  recipe_id: 33
+  amount: '12'
+  title: Tranches de pain de la veille
+
+ingredient_358:
+  id: 178
+  recipe_id: 33
+  amount: '4'
+  title: Oeufs
+
+ingredient_369:
+  id: 179
+  recipe_id: 33
+  amount: '4'
+  title: Verres de lait
+
+ingredient_370:
+  id: 180
+  recipe_id: 33
+  amount: '1'
+  title: Gousse de vanille
+
+ingredient_381:
+  id: 181
+  recipe_id: 33
+  amount: ''
+  title: Beurre
+
+ingredient_392:
+  id: 182
+  recipe_id: 34
+  amount: '2'
+  title: Blancs de poulet
+
+ingredient_403:
+  id: 183
+  recipe_id: 34
+  amount: 50gr
+  title: Farine
+
+ingredient_414:
+  id: 184
+  recipe_id: 34
+  amount: '1'
+  title: Oeuf
+
+ingredient_425:
+  id: 185
+  recipe_id: 34
+  amount: 1cs
+  title: Lait
+
+ingredient_436:
+  id: 186
+  recipe_id: 34
+  amount: ''
+  title: Chapelure
+
+ingredient_447:
+  id: 187
+  recipe_id: 34
+  amount: ''
+  title: Huile
+
+ingredient_456:
+  id: 206
+  recipe_id: 37
+  amount: '4'
+  title: Tomates
+
+ingredient_467:
+  id: 207
+  recipe_id: 37
+  amount: '1'
+  title: Poivron
+
+ingredient_478:
+  id: 208
+  recipe_id: 37
+  amount: 500gr
+  title: Viande hachée 50/50
+
+ingredient_489:
+  id: 209
+  recipe_id: 37
+  amount: '1'
+  title: Oignon
+
+ingredient_490:
+  id: 210
+  recipe_id: 37
+  amount: 1.5dl
+  title: Vin
+
+ingredient_501:
+  id: 211
+  recipe_id: 37
+  amount: 1/2
+  title: Bouillon de boeuf
+
+ingredient_512:
+  id: 212
+  recipe_id: 37
+  amount: ''
+  title: Sel, poivre, épices, aromates
+
+ingredient_523:
+  id: 213
+  recipe_id: 37
+  amount: ''
+  title: Fromage râpé
+
+ingredient_53:
+  id: 85
+  recipe_id: 15
+  amount: 400gr net
+  title: Poireaux
+
+ingredient_541:
+  id: 251
+  recipe_id: 44
+  amount: '3'
+  title: Oeufs
+
+ingredient_552:
+  id: 252
+  recipe_id: 44
+  amount: 10g
+  title: Levure chimique
+
+ingredient_563:
+  id: 253
+  recipe_id: 44
+  amount: 175g
+  title: Farine
+
+ingredient_574:
+  id: 254
+  recipe_id: 44
+  amount: 20g
+  title: Sucre
+
+ingredient_585:
+  id: 255
+  recipe_id: 44
+  amount: 50g
+  title: Beurre fondu
+
+ingredient_596:
+  id: 256
+  recipe_id: 44
+  amount: 200g
+  title: Lait tiède
+
+ingredient_607:
+  id: 257
+  recipe_id: 45
+  amount: 1.5kg
+  title: Poireaux
+
+ingredient_618:
+  id: 258
+  recipe_id: 45
+  amount: 4-5
+  title: Pommes de terre
+
+ingredient_629:
+  id: 259
+  recipe_id: 45
+  amount: '1'
+  title: Oignon
+
+ingredient_630:
+  id: 260
+  recipe_id: 45
+  amount: 4dl
+  title: Vin blanc
+
+ingredient_641:
+  id: 261
+  recipe_id: 45
+  amount: ''
+  title: Huile d'olive
+
+ingredient_652:
+  id: 262
+  recipe_id: 45
+  amount: '1'
+  title: Bouillon
+
+ingredient_663:
+  id: 263
+  recipe_id: 45
+  amount: 1dl
+  title: Crème
+
+ingredient_674:
+  id: 264
+  recipe_id: 45
+  amount: ''
+  title: Vinaigre de vin
+

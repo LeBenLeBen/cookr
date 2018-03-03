@@ -1,11 +1,79 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+tag_1:
+  id: 39
+  title: Pain
+  recipe_count: 1
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+tag_2:
+  id: 33
+  title: Salade
+  recipe_count: 1
+
+tag_3:
+  id: 10
+  title: Sauce
+  recipe_count: 0
+
+tag_4:
+  id: 2
+  title: Riz
+  recipe_count: 0
+
+tag_5:
+  id: 4
+  title: Accompagnement
+  recipe_count: 0
+
+tag_6:
+  id: 14
+  title: Soupe
+  recipe_count: 1
+
+tag_7:
+  id: 3
+  title: Végétarien
+  recipe_count: 2
+
+tag_8:
+  id: 5
+  title: Viande
+  recipe_count: 0
+
+tag_9:
+  id: 38
+  title: Entrée
+  recipe_count: 1
+
+tag_10:
+  id: 40
+  title: Confiture
+  recipe_count: 0
+
+tag_11:
+  id: 17
+  title: Volaille
+  recipe_count: 1
+
+tag_12:
+  id: 23
+  title: Apéritif
+  recipe_count: 0
+
+tag_13:
+  id: 11
+  title: Poisson
+  recipe_count: 0
+
+tag_14:
+  id: 24
+  title: Pâtes
+  recipe_count: 0
+
+tag_15:
+  id: 1
+  title: Plat
+  recipe_count: 6
+
+tag_16:
+  id: 6
+  title: Dessert
+  recipe_count: 1

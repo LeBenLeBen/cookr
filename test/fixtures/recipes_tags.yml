@@ -1,11 +1,67 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+recipes_tag_1:
+  recipe_id: 12
+  tag_id: 1
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+recipes_tag_2:
+  recipe_id: 13
+  tag_id: 14
+
+recipes_tag_3:
+  recipe_id: 13
+  tag_id: 3
+
+recipes_tag_4:
+  recipe_id: 13
+  tag_id: 15
+
+recipes_tag_5:
+  recipe_id: 15
+  tag_id: 1
+
+recipes_tag_6:
+  recipe_id: 15
+  tag_id: 3
+
+recipes_tag_7:
+  recipe_id: 18
+  tag_id: 20
+
+recipes_tag_8:
+  recipe_id: 25
+  tag_id: 32
+
+recipes_tag_9:
+  recipe_id: 25
+  tag_id: 6
+
+recipes_tag_10:
+  recipe_id: 26
+  tag_id: 33
+
+recipes_tag_11:
+  recipe_id: 34
+  tag_id: 17
+
+recipes_tag_12:
+  recipe_id: 34
+  tag_id: 1
+
+recipes_tag_13:
+  recipe_id: 18
+  tag_id: 39
+
+recipes_tag_14:
+  recipe_id: 13
+  tag_id: 1
+
+recipes_tag_15:
+  recipe_id: 13
+  tag_id: 38
+
+recipes_tag_16:
+  recipe_id: 37
+  tag_id: 1
+
+recipes_tag_174:
+  recipe_id: 45
+  tag_id: 1

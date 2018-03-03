@@ -1,9 +1,192 @@
-one:
-  id: 1
-  title: Tomato sauce
+recipe_1:
+  id: 12
+  title: Quiche aux lardons
+  steps: "Placer la pâte sur la plaque et la piquer. Mélanger les oeufs et la crème
+    puis assaisonner.\r\nEtaler les lardons sur la plaque, puis le fromage et enfin
+    ajouter le mélange.\r\nCuire 20 minutes à 220°C dans le bas du four."
+  time: 30
+  notes: ''
+  image_file_name: quiche.jpg
+  image_content_type: image/jpeg
+  image_file_size: 555540
+  quantity: 4
   user_id: 2
 
-two:
-  id: 2
-  title: Fajitas
+recipe_2:
+  id: 13
+  title: Velouté de courge
+  steps: "Peler et couper la courge et la pomme de terre en petits dés.\r\nFaire chauffer
+    le beurre dans une casserole. Faire revenir les oignons puis ajouter la courge
+    et la pomme de terre puis le bouillon. Ajouter les herbes aromatiques et le sucre.
+    Cuire 20 minutes à feu doux.\r\nRetirer les éventuelles herbes aromatiques, réserver
+    le liquide et broyer les légumes. Remettre le liquide en fonction de la consistance
+    souhaitée puis assaisonner à volontés avec du poivre, du curry et de la muscade.
+    Ajouter la crème pour terminer."
+  time: 45
+  notes: La courge muscade est un bon choix pour la soupe.
+  image_file_name: veloute.jpg
+  image_content_type: image/jpeg
+  image_file_size: 21427
+  quantity: 2
   user_id: 3
+
+recipe_3:
+  id: 26
+  title: Salade de pommes de terre
+  steps: "Cuire les pommes de terre à l'eau salée durant environ 30 minutes.\r\nAmener
+    le bouillon à ébullition. Y incorporer la moutarde, le vinaigre, saler, poivrer.
+    Ajouter l'huile en filet tout en remuant.\r\nÉgoutter les pommes de terre et les
+    éplucher encore chaudes. Les couper en rondelles et ajouter à la sauce chaude.
+    Mélanger délicatement. Laisser reposer environ 1h à température ambiante."
+  time: 90
+  notes: ''
+  image_file_name: salade-pdt.jpg
+  image_content_type: image/jpeg
+  image_file_size: 68103
+  quantity: 4
+  user_id: 2
+
+recipe_4:
+  id: 15
+  title: Tarte aux poireaux
+  steps: "Abaissez la pâte sur une plaque et la piquer.\r\nSupprimez les feuilles
+    abîmées, ne conserver que le blanc et la partie vert clair des poireaux. Coupez-les
+    en 4 dans le sens de la longueur puis en tronçons d'un demi centimètre. Lavez-les
+    et égouttez-les.\r\nFaites revenir vivement les poireaux dans le beurre, laissez-les
+    suer 2 minutes en remuant.\r\nAssaisonnez avec une pincée de sel, mouillez avec
+    la crème et poursuivez la cuisson à feu vif pendant 3 minutes, jusqu'à réduction
+    de la crème. Ajoutez une touche de muscade et un soupçon de poivre, retirez du
+    feu et lassez tiédir.\r\nIncorporez le jaune d'oeuf à la masse presque froide,
+    mélangez et ajoutez le parmesan. Remuez et rectifiez l'assaisonnement.\r\nRépartissez
+    l'appareil aux poireaux sur la pâte. Faites cuire 20 minutes dans le bas du four
+    préchauffé à 220°C."
+  time: 45
+  notes: 'Source: Croq''Menu, Roland Pierroz'
+  image_file_name: tarte-aux-poireaux.jpg
+  image_content_type: image/jpeg
+  image_file_size: 275930
+  quantity: 4
+  user_id: 3
+
+recipe_5:
+  id: 18
+  title: Tresse au beurre
+  steps: "Mettre la farine dans une terrine, ajouter le sel et le sucre dans les bords
+    et recouvrir avec la farine depuis le centre.\r\nDiluer la levure dans le lait
+    et l'eau et mettre au cœur de la farine avec le beurre. Mélanger le tout.\r\nPlacer
+    la terrine dans l'évier avec de l'eau bouillante et laisser lever 20 minutes.
+    Une fois levée, sortir la pâte et la couper en deux parties. Ajouter un chouilla
+    de farine si la pâte est trop collante.\r\nTresser, badigeonner de jaune d'oeuf
+    et enfourner dans un four froid, 11 minutes à 250ºC, puis 10-15 minutes à 180ºC."
+  time: 60
+  notes: ''
+  image_file_name: tresse.jpg
+  image_content_type: image/jpeg
+  image_file_size: 52043
+  quantity: 4
+  user_id: 3
+
+recipe_6:
+  id: 33
+  title: Pain perdu
+  steps: "Battre les oeufs en omelette dans une terrine. Ajouter la vanille, le lait
+    et bien fouetter.\r\nMettre un peu de beurre dans une poêle et y faire dorer chaque
+    chaque tranche de pain préalablement imbibée dans le liquide.\r\nSaupoudrer généreusement
+    de sucre et de cannelle."
+  time: 15
+  notes: 'Source: http://www.slate.fr/culture/75836/pain-perdu-vraie-recette'
+  image_file_name: pain-perdu.jpg
+  image_content_type: image/jpeg
+  image_file_size: 67492
+  quantity: 6
+  user_id: 3
+
+recipe_7:
+  id: 45
+  title: Papet vaudois
+  steps: "Laver soigneusement les poireaux, les couper en morceaux de 2 à 3 cm. Couper
+    l'oignon en carré. Mettre tout ça dans une grande casserole, les faire revenir
+    dans l'huile d'olive.\r\nAjouter le vin et le petit cube de bouillon, saler et
+    poivrer, laisser mijoter une quinzaine de minutes. Si nécessaire rajouter un peu
+    de vin.\r\nAjouter les patates épluchées et coupées en morceaux, laisser mijoter
+    pendant une bonne vingtaine de minutes.\r\nCinq minutes avant la fin de la cuisson,
+    ajouter la crème, touiller la moindre puis ajouter une lampée de vinaigre."
+  time: 60
+  notes: 'Source: http://topio.ch/'
+  image_file_name: papet.jpg
+  image_content_type: image/jpeg
+  image_file_size: 299164
+  quantity: 4
+  user_id: 3
+
+recipe_8:
+  id: 25
+  title: Compote de pommes
+  steps: "Peler les pommes, enlever le coeur, les couper en dés et les mettre dans
+    une casserole.\r\nAjouter le sucre, la cannelle et cuire à feu moyen jusqu'à que
+    les pommes soient défaites. Écraser avec la cuillère si nécessaire.\r\nConsommer
+    chaud, tiède ou froid."
+  time: 25
+  notes: Pour un goût unique, remplacer le sucre par le miel.
+  image_file_name: compote.jpg
+  image_content_type: image/jpeg
+  image_file_size: 53470
+  quantity:
+  user_id: 3
+
+recipe_9:
+  id: 34
+  title: Nuggets de poulet
+  steps: "Couper les blancs de poulet en petits morceaux de la taille d’un nugget.\r\nMettre
+    la farine dans une assiette creuse. Dans un bol, battre l'oeuf avec le lait. Dans
+    une autre assiette creuse, mettre un bon tas de chapelure.\r\nPrendre un morceau
+    de poulet, le rouler dans la farine, puis le tremper dans le mélange aux œufs,
+    et enfin le rouler dans la chapelure. \r\nFaire chauffez 2 ou 3 cuillères d’huile
+    dans une poêle. Y faire cuire les nuggets 4 à 5 minutes de chaque côté. Ils doivent
+    être bien dorés, tout en restant moelleux."
+  time: 20
+  notes: 'Source: http://www.slate.fr/life/79008/vraie-recette-nuggets-poulet'
+  image_file_name: nuggets.png
+  image_content_type: image/png
+  image_file_size: 908957
+  quantity: 2
+  user_id: 2
+
+recipe_10:
+  id: 44
+  title: Pancakes
+  steps: "Battre les œufs en omelette, y verser le lait petit à petit puis le sucre.\r\nDans
+    un saladier, mettre la levure, la farine, puis verser le mélange liquide au centre
+    tout en fouettant.\r\nMélanger jusqu’à ce que le mélange soit parfaitement homogène.
+    Filmer et laisser au frais 20 minutes environ.\r\nFaire chauffer une poêle, la
+    graisser légèrement, une fois bien chaude, verser une louche de pâte.\r\nQuand
+    vous voyez des petites bulles remonter sur toute la surface du pancake, le retourner.\r\nLaisser
+    l’autre côté cuire pendant 1 à 2 minutes et ainsi de suite jusqu’à la fin du saladier."
+  time:
+  notes: http://captainsugarus.tumblr.com/post/138279722193/les-pancakes-cest-moelleux-cest-doux-cest
+  image_file_name: pancakes.jpg
+  image_content_type: image/jpeg
+  image_file_size: 72467
+  quantity:
+  user_id: 3
+
+recipe_11:
+  id: 37
+  title: Tomates et poivrons farcis
+  steps: "Préparer les ingrédients, faire tremper le bouillon dans le vin et émincer
+    l'oignon.\r\nFaire revenir l'oignon et la viande dans de l'huile chaude jusqu'à
+    ce que toute l'eau se soit évaporée. Pendant ce temps couper le poivron en deux,
+    couper un chapeau aux tomates et vider le tout. Une fois la viande prête, mouiller
+    avec le vin. Saler, poivrer, épicer selon convenance.\r\nAligner les légumes dans
+    un plat a gratin et les garnir avec la viande en replaçant les chapeaux sur les
+    tomates. Commencer par cuire sous une feuille d'aluminium les poivrons — pendant
+    15 minutes — puis ajouter les tomates et prolonger la cuisson encore 25 minutes.
+    Sortir le plat du four, retirer les chapeaux des tomates, ajouter le fromage râpé
+    et enfourner à nouveau 5 minutes pour gratiner."
+  time: 90
+  notes: ''
+  image_file_name: tomates-farcies.jpg
+  image_content_type: image/jpeg
+  image_file_size: 144268
+  quantity: 4
+  user_id: 2

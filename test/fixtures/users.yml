@@ -1,14 +1,17 @@
-john:
+admin:
   id: 1
+  email: admin@cookr.ch
+  encrypted_password: "$2a$10$w9yuN..iEwdtpWi0AMY5Qebk355wlx7BKu...skscsh7kjflIygbK"
   role: admin
-  email: admin@cookr.com
 
 jessica:
   id: 2
+  email: jessica@cookr.ch
+  encrypted_password: "$2a$10$.svA9Uix.dyPh.bCk2YqWOls3WRWHQR4mkmTd//8JBuFs2GGZsPq6"
   role: author
-  email: jessica@cookr.com
 
 mark:
   id: 3
+  email: mark@cookr.ch
+  encrypted_password: "$2a$10$3ofBXmRdJVHFFO0lYqzY9.kpjhhXQU6/odtTgLvJ3Isa1DvH4YegW"
   role: author
-  email: mark@cookr.com
