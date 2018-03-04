@@ -17,6 +17,7 @@
     - { role: git }
     - { role: postgresql }
     - { role: ruby }
+    - { role: nodejs }
 
   tasks:
     - name: Copy database configuration file

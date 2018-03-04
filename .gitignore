@@ -8,3 +8,9 @@ config/database.yml
 public/system/*/.vagrant/
 /.vagrant
 /public/system
+/public/packs
+/public/packs-test
+/public/assets
+/node_modules
+yarn-debug.log*
+.yarn-integrity

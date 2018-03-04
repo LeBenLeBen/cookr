@@ -16,10 +16,6 @@
   font-weight: 300;
 }
 
-.recipe-title {
-  @include hyphenation();
-}
-
 .recipe-actions {
   margin-bottom: 20px;
 }

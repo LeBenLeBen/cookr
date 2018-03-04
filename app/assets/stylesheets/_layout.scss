@@ -2,20 +2,15 @@
  * Layout
  */
 
-html,
-body {
-  height: 100%;
-}
-
 .container {
   margin: 0;
   width: auto;
 }
 
 .site-wrapper {
-  height: 100%;
-  @include display-flex;
-  @include flex-direction(column);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-header {
@@ -25,7 +20,7 @@ body {
   z-index: 1;
 
   background-color: white;
-  @include box-shadow(0 1px 3px rgba(0,0,0,.1));
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
 
   .brand {
     margin-top: 0;
@@ -39,8 +34,8 @@ body {
 }
 
 .site-content {
-  @include display-flex;
-  @include flex(1);
+  display: flex;
+  flex: 1 1 auto;
 }
 
 .devise-content {
@@ -97,7 +92,7 @@ body {
 
 .page-content {
   padding: 20px;
-  @include flex(6);
+  flex: 6 6 auto;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }

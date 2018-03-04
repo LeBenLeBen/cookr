@@ -1,0 +1,19 @@
+{
+  "name": "cookr",
+  "version": "1.0.0",
+  "author": {
+    "name": "Benoît Burgener",
+    "url": "http://www.benoitburgener.ch"
+  },
+  "license": "GPL-3.0-only",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "^3.1.1",
+    "@rails/webpacker": "^3.2.2",
+    "jquery": "^3.3.1",
+    "jquery-ujs": "^1.2.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.11.2"
+  }
+}

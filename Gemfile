@@ -16,17 +16,7 @@ gem 'foreman'
 gem "administrate"
 gem 'cancancan', '~> 2.0'
 
-gem 'jquery-rails'
-gem 'sass-rails', '~> 5.0.1'
-gem 'compass-rails', git: 'https://github.com/Compass/compass-rails', branch: 'master'
-gem 'compass-flexbox'
-gem 'bootstrap-sass', '~> 3.0.3'
-gem 'font-awesome-sass', '~> 4.2.0'
-
-gem 'handlebars_assets'
-
-gem 'uglifier'
-gem 'therubyracer'
+gem 'webpacker', '~> 3.2'
 
 # Optimized for Heroku
 group :production do

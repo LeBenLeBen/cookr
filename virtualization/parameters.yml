@@ -22,4 +22,8 @@ database_name: "cookr"
 # Root directory of your project for the webserver and other purposes
 root_directory: "/vagrant/"
 
+# Freeze ruby version
 ruby_version: 2.4.1
+
+# Required by webpacker gem
+nodejs_with_yarn: true

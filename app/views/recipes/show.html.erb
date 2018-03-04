@@ -4,8 +4,8 @@
   </h1>
   <% if @recipe.time.present? || @recipe.quantity.present? %>
     <ul class="list-inline lead text-muted">
-      <% if @recipe.time.present? %><li><i class="fa fa-clock-o"></i> <%= t('recipes.time', :count => @recipe.time) %></li><% end %>
-      <% if @recipe.quantity.present? %><li><i class="fa fa-male"></i> <%= t('recipes.people', :count => @recipe.quantity) %></li><% end %>
+      <% if @recipe.time.present? %><li><i class="fa fa-clock"></i> <%= t('recipes.time', :count => @recipe.time) %></li><% end %>
+      <% if @recipe.quantity.present? %><li><i class="fa fa-users"></i> <%= t('recipes.people', :count => @recipe.quantity) %></li><% end %>
     </ul>
   <% end %>
 </header>
@@ -46,8 +46,8 @@
 
       <% if can? :manage, @recipe %>
         <ul class="recipe-actions list-inline">
-          <li><%= link_to raw('<i class="fa fa-pencil spaced-right"></i> ') + t('edit'), edit_recipe_path(@recipe) %></li>
-          <li><%= link_to raw('<i class="fa fa-trash-o spaced-right"></i> ') + t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => t('confirm') } %></li>
+          <li><%= link_to raw('<i class="fa fa-pencil-alt spaced-right"></i> ') + t('edit'), edit_recipe_path(@recipe) %></li>
+          <li><%= link_to raw('<i class="fa fa-trash-alt spaced-right"></i> ') + t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => t('confirm') } %></li>
         </ul>
       <% end %>
     </div>

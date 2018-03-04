@@ -1,5 +1,5 @@
 /**
- * EXTEND/OVERRID BOOTSTRAP
+ * EXTEND/OVERRIDE BOOTSTRAP
  */
 
 
@@ -13,7 +13,7 @@
 
 .well {
   border: none;
-  @include box-shadow(0 1px 2px rgba(0,0,0,.1));
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
 
 // No extra space at the beginning or end of containers
