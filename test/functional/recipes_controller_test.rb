@@ -20,10 +20,16 @@ class RecipesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "author cannot see others’ recipe" do
+  test "user can see others’ recipes" do
+    sign_in users(:jessica)
+    get :show, params: { id: users(:mark).recipes.first.id }
+    assert_response :success
+  end
+
+  test "author cannot edit others’ recipe" do
     assert_raises(CanCan::AccessDenied) do
       sign_in users(:jessica)
-      get :show, params: { id: users(:mark).recipes.first.id }
+      get :edit, params: { id: users(:mark).recipes.first.id }
     end
   end
 end
