@@ -19,6 +19,7 @@ gem 'simple_form'
 
 gem 'webpacker', '~> 3.2'
 gem 'css-class-string'
+gem 'vanilla-ujs', :github => 'hauleth/vanilla-ujs'
 
 # Optimized for Heroku
 group :production do

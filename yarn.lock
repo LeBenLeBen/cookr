@@ -3655,10 +3655,6 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
-modular-ujs@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/modular-ujs/-/modular-ujs-2.0.1.tgz#d379bcd0978f4fd6b8c64d28171f47dda1174c94"
-
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"

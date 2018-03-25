@@ -44,15 +44,6 @@ environment.plugins.insert(
   extractIcons
 );
 
-environment.plugins.insert(
-  'Provide',
-  new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    'window.jQuery': 'jquery'
-  })
-)
-
 environment.loaders.append('erb', erb)
 
 module.exports = environment
