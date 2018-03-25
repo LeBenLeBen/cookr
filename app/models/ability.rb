@@ -3,6 +3,7 @@ class Ability
 
   def initialize(user)
     if user.present?
+      can :read, Recipe
       can :manage, Recipe, user_id: user.id
     end
 
