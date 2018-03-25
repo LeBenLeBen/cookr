@@ -8,7 +8,7 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable,
          :registerable, :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :recipes
+  has_many :recipes, :dependent => :destroy
 
   validates :role, inclusion: { in: ROLES }
 
