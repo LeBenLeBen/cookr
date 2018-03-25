@@ -1,0 +1,29 @@
+/*----------------------------------------*\
+  RECIPE CARD
+\*----------------------------------------*/
+
+.recipe-card {
+  display: block;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .recipe-card__body {
+      transform: translateY(25%);
+    }
+  }
+}
+
+  .recipe-card__body {
+    margin: -32px $spacing-unit-small 0;
+    padding: $spacing-unit-small;
+
+    position: relative;
+    z-index: 2;
+
+    border-radius: $border-radius-default;
+    background-color: white;
+    box-shadow: 1px 2px 7px rgba($alt-color-900,.1);
+    transition: transform .2s ease-out;
+  }

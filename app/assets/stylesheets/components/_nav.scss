@@ -1,0 +1,39 @@
+/*----------------------------------------*\
+  NAV
+\*----------------------------------------*/
+
+.nav {
+  @extend %list-inline;
+  @extend %list-inline--tight;
+}
+
+.nav--right {
+  justify-content: flex-end;
+}
+
+  .nav__link {
+    display: block;
+    padding: $spacing-unit-small;
+
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba($alt-color-900,.25);
+
+    border: none;
+    transition: background .2s ease-out;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(0,0,0,.075);
+      text-decoration: none;
+    }
+
+    &.active {
+      background-color: rgba(0,0,0,.15);
+    }
+
+    @include media('md') {
+      padding: $spacing-unit-default;
+    }
+  }

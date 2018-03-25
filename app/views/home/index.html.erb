@@ -1,44 +1,28 @@
-<% if @random_recipe.present? %>
-  <article class="panel panel-default panel-list">
-    <div class="panel-heading">
-      <h3 class="panel-title"><i class="fa fa-fw fa-random"></i> <%= t('recipes.randomly') %></h3>
-    </div>
-    <div class="panel-body">
-      <div class="list-group">
-        <%= render 'recipes/group_item', :recipe => @random_recipe %>
-      </div>
-    </div>
-  </article>
-<% end %>
-
-<% if @last_seen_recipes.present? %>
-  <article class="panel panel-default panel-list">
-    <div class="panel-heading">
-      <h3 class="panel-title"><i class="fa fa-fw fa-eye"></i> <%= t('recipes.last_seen') %></h3>
-    </div>
-    <div class="panel-body">
-      <div class="list-group">
-        <% @last_seen_recipes.each do |recipe| %>
-          <%= render 'recipes/group_item', :recipe => recipe %>
-        <% end %>
-      </div>
-    </div>
-  </article>
-<% end %>
+<%- title t('nav.home') %>
 
 <% if @recipes.present? %>
-  <article class="panel panel-default panel-list">
-    <div class="panel-heading">
-      <h3 class="panel-title"><i class="fa fa-fw fa-clock"></i> <%= t('recipes.recently_added') %></h3>
-    </div>
-    <div class="panel-body">
-      <div class="list-group">
-        <% @recipes.each do |recipe| %>
-          <%= render 'recipes/group_item', :recipe => recipe %>
-        <% end %>
+  <ul class="list-stacked list-stacked--large">
+    <li>
+      <div class="grid grid--multiline grid--large">
+        <div class="grid__item sm-w-1/2 lg-w-3/5">
+          <% if @random_recipe.present? %>
+            <h2 class="mrgt0"><%= t('recipes.randomly') %></h2>
+            <%= render 'recipes/card_large', :recipe => @random_recipe %>
+          <% end %>
+        </div>
+        <div class="grid__item sm-w-1/2 lg-w-2/5">
+          <h2 class="mrgt0"><%= t('recipes.recently_added') %></h2>
+          <%= render 'recipes/group', :recipes => @recipes %>
+        </div>
       </div>
-    </div>
-  </article>
+    </li>
+    <% if @last_seen_recipes.present? %>
+      <li>
+        <h2 class="mrgt0"><%= t('recipes.last_seen') %></h2>
+        <%= render 'recipes/card-grid', :recipes => @last_seen_recipes %>
+      </li>
+    <% end %>
+  </ul>
 <% else %>
-  <p class="alert alert-info"><%= I18n.t('recipes.empty') %></p>
+  <p class="alert alert--info"><%= I18n.t('recipes.empty') %></p>
 <% end %>

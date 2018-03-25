@@ -1,10 +1,14 @@
-(function(jQuery) {
+document.addEventListener('DOMContentLoaded', function() {
 
   /**
    * Change simple divisions (1/2, 1/3, …) to their UTF-8 equivalent
    */
-  jQuery(document).on('keyup', '.recipe-amount-field', function(e) {
-    var val = jQuery(this).val(),
+  document.addEventListener('keyup', function(e) {
+    if (!e.target.matches('.recipe-amount-field')) {
+      return;
+    }
+
+    var val = e.target.value,
         replacement = '';
 
     switch(val) {
@@ -26,8 +30,8 @@
     }
 
     if (replacement) {
-      jQuery(this).val(replacement);
+      e.target.value = replacement;
     }
   });
 
-})(jQuery);
+});

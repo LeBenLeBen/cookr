@@ -1,0 +1,27 @@
+/*----------------------------------------*\
+  RECIPE IMAGE PLACEHOLDER
+\*----------------------------------------*/
+
+.recipe-image-placeholder {
+  max-width: 100%;
+  padding-top: 66.66666%;
+
+  position: relative;
+
+  background-color: $alt-color-200;
+  border-radius: $border-radius-default;
+  box-shadow: 0 0 0 1px rgba($alt-color-900,.1) inset;
+
+  .icon {
+    width: 50%;
+    height: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    stroke: none;
+    fill: $alt-color-300;
+  }
+}

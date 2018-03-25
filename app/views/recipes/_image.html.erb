@@ -1,0 +1,11 @@
+<% if image.present? %>
+  <div class="thumb">
+    <%= image_tag image.url(size), class: 'img-responsive' %>
+  </div>
+<% else %>
+  <% geometry = Paperclip::Geometry.parse(image.styles[size].geometry) %>
+  <% width = geometry.width.to_s.split('.')[0] %>
+  <div class="recipe-image-placeholder" style="width:<%= width %>px">
+    <%= render 'shared/icon', id: 'recipe-placeholder', classnames: 'icon--100' %>
+  </div>
+<% end %>

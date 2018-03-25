@@ -1,12 +1,12 @@
-<%= link_to recipe_path(recipe.id), :class => 'list-group-item recipe' do %>
-  <div class="media">
-    <% if recipe.image.present? %>
-      <%= image_tag recipe.image.url(:thumb), :size => "100x100", :class => "media-object pull-left" %>
-    <% end %>
-    <div class="media-body">
-      <h4 class="list-group-item-heading media-heading"><%= recipe.title %></h4>
+<%= link_to recipe_path(recipe.id), class: 'link-ghost' do %>
+  <div class="media media--small media--middle">
+    <div class="media__left">
+      <%= render 'recipes/image', size: :thumb, image: recipe.image %>
+    </div>
+    <div class="media__body">
+      <h4 class="mrgv0"><%= recipe.title %></h4>
       <% if recipe.time.present? || recipe.quantity.present? %>
-        <ul class="list-inline list-group-item-text text-muted">
+        <ul class="list-inline text-muted mrgt--">
           <% if recipe.time.present? %><li><%= t('recipes.time', :count => recipe.time) %></li><% end %>
           <% if recipe.quantity.present? %><li><%= t('recipes.people', :count => recipe.quantity) %></li><% end %>
         </ul>

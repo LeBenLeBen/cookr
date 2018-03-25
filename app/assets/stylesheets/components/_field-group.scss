@@ -1,0 +1,31 @@
+/*----------------------------------------*\
+  FIELD GROUP
+\*----------------------------------------*/
+
+.field-group {
+  display: flex;
+
+  > :first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  > :last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  * + * {
+    border-left: 0 !important;
+  }
+}
+
+  .field-group__addon {
+    display: block;
+    padding: $spacing-unit-tiny $spacing-unit-small;
+
+    flex-shrink: 0;
+
+    border: $field-border;
+    border-radius: $field-border-radius;
+    background-color: $alt-color-200;
+  }

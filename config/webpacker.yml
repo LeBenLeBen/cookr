@@ -17,6 +17,7 @@ default: &default
   cache_manifest: false
 
   extensions:
+    - .erb
     - .js
     - .sass
     - .scss
@@ -37,7 +38,7 @@ development:
     host: "0.0.0.0"
     port: 3000
     public: cookr.lo:3000
-    hmr: false
+    hmr: true
     # Inline should be set to true if using HMR
     inline: true
     overlay: true

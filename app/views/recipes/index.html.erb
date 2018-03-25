@@ -1,45 +1,43 @@
-<header class="page-header row">
-  <div class="col-sm-6 hidden-xs">
-    <a href="<%= new_recipe_path %>" class="btn btn-primary"><i class="fa fa-plus spaced-right"></i> <%= t('recipes.new') %></a>
-  </div>
-  <div class="col-xs-12 col-sm-6">
+<%- title t('nav.my_recipes') %>
+
+<div class="grid grid--multiline">
+  <div class="grid__item md-w-2/3">
+    <h1>Mes recettes</h1>
+
     <% if @recipes.present? %>
-      <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-        <%= search_field_tag :recipes_filter, nil, :placeholder => t('recipes.search'), :class => 'form-control pull-right' %>
+      <ul class="list-stacked list-stacked--divided">
+        <% @recipes.each do |recipe| %>
+          <li><%= render 'recipes/group_item', :recipe => recipe %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p class="alert alert--info"><%= t('recipes.empty') %></p>
+    <% end %>
+  </div>
+  <div class="grid__item md-w-1/3">
+    <a href="<%= new_recipe_path %>" class="btn btn--primary btn--block mrgb">
+      <%= render 'shared/icon', id: 'plus', classnames: 'icon--100' %>
+      <%= t('recipes.new') %>
+    </a>
+
+    <% if @tags.present? %>
+      <div class="panel">
+        <div class="panel__header">
+          <h3 class="panel__title"><%= t('activerecord.attributes.recipe.tags') %></h3>
+        </div>
+        <div class="panel__body">
+          <ul class="list-stacked list-stacked--divided">
+            <% @tags.each do |tag| %>
+              <li>
+                <%= link_to tag do %>
+                  <span class="badge pull-right"><%= tag.recipe_count %></span>
+                  <%= tag.title %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     <% end %>
   </div>
-</header>
-
-<p class="recipes-empty alert alert-info"><%= I18n.t('recipes.empty') %></p>
-
-<% if @recipes.present? %>
-  <% @recipes.keys.sort.each do |starting_letter| %>
-    <div class="recipes-group">
-      <h4 class="text-muted index-letter"><%= starting_letter %></h4>
-      <div class="list-group">
-        <% @recipes[starting_letter].each do |recipe| %>
-          <%= render 'group_item', :recipe => recipe %>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
-<% else %>
-  <p class="alert alert-info"><%= I18n.t('recipes.empty') %></p>
-<% end %>
-
-<% if @tags.present? %>
-  <% content_for :aside do %>
-    <ul class="nav nav-pills nav-stacked">
-      <% @tags.each do |tag| %>
-        <li>
-          <%= link_to tag, :class => 'tag' do %>
-            <span class="badge pull-right"><%= tag.recipe_count %></span>
-            <%= tag.title %>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
-<% end %>
+</div>

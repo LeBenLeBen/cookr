@@ -1,13 +1,110 @@
-// Settings
-@import "settings/variables";
+/*!
+ *  カンバス KANBASU
+ *  Distributed under the MIT License
+ *  Copyright (c) 2015 Liip AG
+ */
 
-// Custom Bootstrap (vendor/assets/stylesheets/bootstrap-custom);
-@import "../../../vendor/assets/stylesheets/bootstrap-custom";
-@import "../../../vendor/assets/stylesheets/tokenfield-typeahead";
-@import "../../../vendor/assets/stylesheets/bootstrap-tokenfield";
+/**
+ * Settings
+ */
 
-// Site
-@import "cookstrap";
-@import "layout";
-@import "typography";
-@import "recipes";
+@import '~kanbasu/src/scss/settings/settings';
+@import 'settings/settings';
+
+
+/**
+ * Tools
+ */
+
+@import '~kanbasu/src/scss/tools/functions';
+@import '~kanbasu/src/scss/tools/mixins';
+@import '~kanbasu/src/scss/tools/rtl';
+
+
+/**
+ * Vendors
+ */
+
+@import '~kanbasu/src/scss/vendor/normalize';
+
+
+/**
+ * Defaults
+ */
+
+@import '~kanbasu/src/scss/defaults/box-model';
+@import '~kanbasu/src/scss/defaults/elements';
+@import '~kanbasu/src/scss/defaults/typography';
+@import '~kanbasu/src/scss/defaults/table';
+@import '~kanbasu/src/scss/defaults/forms';
+
+
+/**
+ * Base
+ */
+
+@import 'base/layout';
+@import 'base/typography';
+@import 'base/forms';
+
+
+/**
+ * Helpers
+ */
+
+@import '~kanbasu/src/scss/helpers/text';
+// @import '~kanbasu/src/scss/helpers/text-responsive';
+@import '~kanbasu/src/scss/helpers/float';
+@import '~kanbasu/src/scss/helpers/spacings';
+// @import '~kanbasu/src/scss/helpers/spacings-responsive';
+@import '~kanbasu/src/scss/helpers/images';
+@import '~kanbasu/src/scss/helpers/positionning';
+@import '~kanbasu/src/scss/helpers/display';
+// @import '~kanbasu/src/scss/helpers/align';
+// @import '~kanbasu/src/scss/helpers/align-responsive';
+
+
+/**
+ * Components
+ */
+
+@import '~kanbasu/src/scss/components/grid';
+@import '~kanbasu/src/scss/components/widths';
+@import '~kanbasu/src/scss/components/widths-responsive';
+@import '~kanbasu/src/scss/components/btn';
+@import '~kanbasu/src/scss/components/box';
+@import '~kanbasu/src/scss/components/media';
+// @import '~kanbasu/src/scss/components/media-responsive';
+@import '~kanbasu/src/scss/components/list';
+@import '~kanbasu/src/scss/components/list-inline';
+@import '~kanbasu/src/scss/components/list-stacked';
+// @import '~kanbasu/src/scss/components/embed-responsive';
+@import '~kanbasu/src/scss/components/container';
+@import '~kanbasu/src/scss/components/pusher';
+// @import '~kanbasu/src/scss/components/table-responsive';
+
+@import 'components/btn';
+@import 'components/nav';
+@import 'components/icon';
+@import 'components/box';
+@import 'components/panel';
+@import 'components/alert';
+@import 'components/thumb';
+@import 'components/recipe-card';
+@import 'components/tag';
+@import 'components/table';
+@import 'components/wysiwyg';
+@import 'components/badge';
+@import 'components/container';
+@import 'components/field-group';
+@import 'components/dropdown';
+@import 'components/dropdown-list';
+@import 'components/recipe-image-placeholder';
+
+
+/**
+ * Vendor components
+ */
+
+@import '~choices.js/assets/styles/scss/choices.scss';
+@import 'vendor/choices';

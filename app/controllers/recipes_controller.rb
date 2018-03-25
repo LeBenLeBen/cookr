@@ -25,8 +25,7 @@ class RecipesController < ApplicationController
   end
 
   def index
-    recipes = current_user.recipes
-    @recipes = recipes.alphabetically
+    @recipes = current_user.recipes.alphabetically
     @tags = Tag.joins(:recipes).where('recipes.user' => current_user).distinct
   end
 
@@ -65,7 +64,7 @@ class RecipesController < ApplicationController
       :notes,
       :quantity,
       :ingredients_attributes,
-      :tag_list,
+      :tags,
       :tag_count,
       :image,
       :asset_file_name,

@@ -15,8 +15,10 @@ gem 'rinku'
 gem 'foreman'
 gem "administrate"
 gem 'cancancan', '~> 2.0'
+gem 'simple_form'
 
 gem 'webpacker', '~> 3.2'
+gem 'css-class-string'
 
 # Optimized for Heroku
 group :production do

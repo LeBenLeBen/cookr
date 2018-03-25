@@ -1,0 +1,5 @@
+<ul class="list-stacked list-stacked--divided">
+  <% recipes.each do |recipe| %>
+    <li><%= render 'recipes/group_item', :recipe => recipe %></li>
+  <% end %>
+</ul>

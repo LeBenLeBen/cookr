@@ -1,0 +1,35 @@
+/*----------------------------------------*\
+  FORMS
+\*----------------------------------------*/
+
+.field {
+  transition: all .2s ease-out;
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba($alt-color-400, .25);
+  }
+}
+
+// .field--invalid {
+//   border-color: $danger-color;
+// }
+
+.form-group {
+  ~ .form-group {
+    margin-top: $spacing-unit-default;
+  }
+
+  .form-group ~ .form-group {
+    margin-top: $spacing-unit-small;
+  }
+}
+
+.field-help {
+  font-size: rem(14px);
+}
+
+.field-error {
+  @extend .field-help;
+
+  color: $danger-color;
+}

@@ -1,6 +1,6 @@
 module DeviseHelper
 
-  # Rewrite devise errors with Bootstrap style
+  # Rewrite devise errors for styling purpose
   def devise_error_messages!
     return "" if resource.errors.empty?
 
@@ -10,12 +10,12 @@ module DeviseHelper
                       :resource => resource.class.model_name.human.downcase)
 
     html = <<-HTML
-    <div class="panel panel-danger">
-      <div class="panel-heading">
+    <div class="panel panel--danger mrgb">
+      <div class="panel__header">
         #{sentence}
       </div>
-      <div class="panel-body">
-        <ul>
+      <div class="panel__body">
+        <ul class="mrgv0">
         #{messages}
         </ul>
       </div>

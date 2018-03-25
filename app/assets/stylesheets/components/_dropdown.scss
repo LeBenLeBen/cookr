@@ -1,0 +1,32 @@
+/*----------------------------------------*\
+  DROPDOWN
+\*----------------------------------------*/
+
+.dropdown {
+  min-width: max-content;
+  max-width: 200px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity .2s ease-out;
+
+  .dropdown-toggle:hover + &,
+  .dropdown-toggle:focus + &,
+  &:hover,
+  &:focus,
+  &:focus-within {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.dropdown--right {
+  left: auto;
+  right: 0;
+}

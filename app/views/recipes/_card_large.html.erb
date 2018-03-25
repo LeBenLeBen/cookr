@@ -1,0 +1,12 @@
+<%= link_to recipe_path(recipe.id), class: 'recipe-card' do %>
+  <%= render 'recipes/image', size: :card_large, image: recipe.image %>
+  <div class="recipe-card__body">
+    <h3 class="h4 mrgv0"><%= recipe.title %></h3>
+    <% if recipe.time.present? || recipe.quantity.present? %>
+      <ul class="list-inline text-muted mrgt--">
+        <% if recipe.time.present? %><li><%= t('recipes.time', :count => recipe.time) %></li><% end %>
+        <% if recipe.quantity.present? %><li><%= t('recipes.people', :count => recipe.quantity) %></li><% end %>
+      </ul>
+    <% end %>
+  </div>
+<% end %>

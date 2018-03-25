@@ -1,0 +1,47 @@
+/*----------------------------------------*\
+  TABLE
+\*----------------------------------------*/
+
+.table {
+  th,
+  td {
+    vertical-align: top;
+  }
+}
+
+.table--divided {
+  tr + tr {
+    border-top: $list-separator-style;
+  }
+
+  th,
+  td {
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.table--spaced {
+  td,
+  th {
+    padding-left: $spacing-unit-small;
+    padding-right: $spacing-unit-small;
+  }
+
+  tr:not(:first-child) {
+    td,
+    th {
+      padding-top: $spacing-unit-default;
+    }
+  }
+  tr:not(:last-child) {
+    td,
+    th {
+      padding-bottom: $spacing-unit-default;
+    }
+  }
+}

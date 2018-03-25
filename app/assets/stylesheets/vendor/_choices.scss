@@ -1,0 +1,37 @@
+/*----------------------------------------*\
+  CHOICES
+\*----------------------------------------*/
+
+.#{$choices-selector}__input {
+  padding-top: 6px;
+  padding-bottom: 7px;
+  margin-bottom: 3px;
+
+  background-color: transparent;
+}
+
+.#{$choices-selector}__inner {
+  padding: 7px $spacing-unit-small 3px;
+}
+
+.#{$choices-selector}__list--multiple {
+  .#{$choices-selector}__item {
+    padding: 2px 7px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+
+    color: $field-color;
+
+    &.is-highlighted {
+      background-color: $alt-color-200;
+    }
+  }
+}
+
+.#{$choices-selector}__list--dropdown {
+  .#{$choices-selector}__item--selectable {
+    &.is-highlighted {
+      background-color: $alt-color-200;
+    }
+  }
+}

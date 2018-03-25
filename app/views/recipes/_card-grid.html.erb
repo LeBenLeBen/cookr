@@ -1,0 +1,7 @@
+<div class="grid grid--multiline">
+  <% recipes.each do |recipe| %>
+    <div class="grid__item sm-w-1/2 md-w-1/3">
+      <%= render 'recipes/card', :recipe => recipe %>
+    </div>
+  <% end %>
+</div>

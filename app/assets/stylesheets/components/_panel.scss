@@ -1,0 +1,52 @@
+/*----------------------------------------*\
+  PANEL
+\*----------------------------------------*/
+
+.panel {
+  display: block;
+  overflow: hidden;
+
+  background-color: white;
+  border: 1px solid $alt-color-300;
+  border-radius: $border-radius-default;
+  box-shadow: 0 2px 4px rgba($alt-color-300,.25);
+}
+
+  .panel__header {
+    padding: $spacing-unit-small;
+
+    font-weight: 500;
+
+    background-color: $alt-color-300;
+
+    @include media('md') {
+      padding-left: $spacing-unit-default;
+      padding-right: $spacing-unit-default;
+    }
+  }
+
+    .panel__title {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      font-size: rem(18px);
+      line-height: 1;
+    }
+
+  .panel__body {
+    padding: $spacing-unit-small;
+
+    @include media('md') {
+      padding: $spacing-unit-default;
+    }
+  }
+
+.panel--danger {
+  border-color: $danger-color;
+
+  .panel__header {
+    color: white;
+
+    background-color: $danger-color;
+  }
+}

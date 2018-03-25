@@ -1,0 +1,32 @@
+/*----------------------------------------*\
+  DROPDOWN LIST
+\*----------------------------------------*/
+
+.dropdown-list {
+  @extend %list;
+  overflow: hidden;
+
+  background-color: white;
+  border: 1px solid $alt-color-300;
+  border-top: 0;
+  border-bottom-left-radius: $border-radius-default;
+  border-bottom-right-radius: $border-radius-default;
+  box-shadow: 0 3px 12px rgba($alt-color-900,.2);
+
+  > li + li {
+    border-top: 1px solid $alt-color-200;
+  }
+}
+
+  .dropdown-list__link {
+    padding: $spacing-unit-small;
+
+    transition: background .2s ease-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      background-color: $alt-color-100;
+    }
+  }

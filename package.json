@@ -8,10 +8,15 @@
   "license": "GPL-3.0-only",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "^3.1.1",
     "@rails/webpacker": "^3.2.2",
-    "jquery": "^3.3.1",
-    "jquery-ujs": "^1.2.2"
+    "choices.js": "^3.0.3",
+    "kanbasu": "^2.1.0",
+    "modular-ujs": "^2.0.1",
+    "rails-erb-loader": "^5.3.0",
+    "svg-sprite-loader": "^3.6.2",
+    "svgo": "^1.0.5",
+    "svgo-loader": "^2.1.0",
+    "ucreate-icons": "github:eucalyptuss/ucreate-icons"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.11.2"

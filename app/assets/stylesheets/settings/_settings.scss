@@ -1,0 +1,244 @@
+/*----------------------------------------*\
+  GLOBAL SETTINGS
+\*----------------------------------------*/
+
+// Use this setting to prefix all the components classes
+$namespace:                         '';
+
+// Flip all left/right properties for right-to-left languages
+$rtl:                               false;
+
+
+/**
+ * Colors
+ */
+
+$brand-color:                       #D45D79;
+
+$alt-color-100:                     #f5f3f7;
+$alt-color-200:                     #e9e4ec;
+$alt-color-300:                     #ddd5e2;
+$alt-color-400:                     #9f8aad;
+$alt-color-500:                     #866c98;
+$alt-color-700:                     #6C567B;
+$alt-color-900:                     #52415d;
+
+$danger-color:                      #E36161;
+$info-color:                        #68A2E1;
+
+
+/**
+ * Typography
+ */
+
+$font-family-default:               "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+
+$font-size-default:                 16px;
+$font-size-small:                   .75rem;
+$font-size-large:                   1.5rem;
+
+$line-height-default:               1.45;
+
+$text-color:                        $alt-color-900;
+$link-color:                        $brand-color;
+$muted-color:                       $alt-color-400;
+
+
+/**
+ * Spacings
+ */
+
+$ratio:                             1.61803398875;
+
+$spacing-unit-default:              24px;
+$spacing-unit-tiny:                 floor($spacing-unit-default / ($ratio * 2));
+$spacing-unit-small:                floor($spacing-unit-default / $ratio);
+$spacing-unit-large:                floor($spacing-unit-default * $ratio);
+$spacing-unit-huge:                 floor($spacing-unit-default * ($ratio * 2));
+
+$spacings:                          (
+                                      'tight' 0,
+                                      'tiny' $spacing-unit-tiny,
+                                      'small' $spacing-unit-small,
+                                      'large' $spacing-unit-large,
+                                      'huge' $spacing-unit-huge
+                                    );
+
+
+/**
+ * Responsiveness
+ */
+
+// Use EM media-queries for better browser consistency
+// See http://zellwk.com/blog/media-query-units
+$screen-xs-max:                     640px  / 16px * 1em;
+$screen-sm-min:                     641px  / 16px * 1em;
+$screen-sm-max:                     768px  / 16px * 1em;
+$screen-md-min:                     769px  / 16px * 1em;
+$screen-md-max:                     1024px / 16px * 1em;
+$screen-lg-min:                     1025px / 16px * 1em;
+
+$breakpoints-default:               (
+                                      'sm' '(min-width: #{$screen-sm-min})',
+                                      'md' '(min-width: #{$screen-md-min})',
+                                      'lg' '(min-width: #{$screen-lg-min})'
+                                    );
+$breakpoints-desc:                  (
+                                      'xs' '(max-width: #{$screen-xs-max})',
+                                      'sm' '(max-width: #{$screen-sm-max})',
+                                      'md' '(max-width: #{$screen-md-max})'
+                                    );
+
+
+/**
+ * Miscellaneous
+ */
+
+$border-radius-default:             6px;
+$border-radius-small:               2px;
+$border-radius-large:               8px;
+
+
+/*----------------------------------------*\
+  COMPONENTS
+\*----------------------------------------*/
+
+/**
+ * Buttons
+ */
+
+$btn-padding:                       $spacing-unit-small/$ratio $spacing-unit-small;
+$btn-color:                         inherit;
+$btn-font-size:                     inherit;
+$btn-font-family:                   inherit;
+$btn-border:                        2px solid transparent;
+$btn-bkg:                           transparent;
+$btn-border-radius:                 $border-radius-default;
+
+$btn-small-padding:                 $spacing-unit-tiny/$ratio $spacing-unit-tiny;
+$btn-small-font-size:               $font-size-small;
+$btn-small-border:                  $btn-border;
+$btn-small-border-radius:           $border-radius-small;
+
+$btn-large-padding:                 $spacing-unit-default/$ratio $spacing-unit-default;
+$btn-large-font-size:               $font-size-large;
+$btn-large-border:                  $btn-border;
+$btn-large-border-radius:           $border-radius-large;
+
+$btn-default-color:                 $brand-color;
+$btn-default-bkg-color:             lighten($brand-color, 39%);
+$btn-default-hover-bkg-color:       lighten($brand-color, 39%);
+$btn-default-active-bkg-color:      lighten($brand-color, 39%);
+
+$btn-primary-color:                 white;
+$btn-primary-bkg-color:             $brand-color;
+$btn-primary-hover-bkg-color:       $brand-color;
+$btn-primary-active-bkg-color:      $brand-color;
+
+
+/**
+ * Forms
+ */
+
+$field-padding:                     $spacing-unit-small/$ratio $spacing-unit-small;
+
+$field-color:                       inherit;
+$field-font-size:                   inherit;
+$field-font-family:                 inherit;
+$field-line-height:                 $line-height-default;
+
+$field-bkg-color:                   white;
+$field-border:                      1px solid $alt-color-400;
+$field-focus-border-color:          $alt-color-900;
+$field-border-radius:               $border-radius-default;
+
+$field-disabled-bkg-color:          $alt-color-300;
+$field-disabled-color:              $alt-color-500;
+
+$field-small-padding:               $spacing-unit-tiny/$ratio $spacing-unit-tiny;
+$field-small-font-size:             $font-size-small;
+$field-small-border:                $field-border;
+$field-small-border-radius:         $border-radius-small;
+
+$field-large-padding:               $spacing-unit-default/$ratio $spacing-unit-default;
+$field-large-font-size:             $font-size-large;
+$field-large-border:                $field-border;
+$field-large-border-radius:         $border-radius-large;
+
+$field-help-color:                  $alt-color-400;
+
+
+/**
+ * Lists
+ */
+
+$list-separator-style:              1px solid $alt-color-200;
+
+
+/**
+ * Box
+ */
+
+$box-default-color:                 inherit;
+$box-default-bkg-color:             white;
+
+$box-primary-color:                 white;
+$box-primary-bkg-color:             $brand-color;
+
+
+/**
+ * Widths
+ */
+
+$widths-columns:                    6,5,4,3,2,1;
+$widths-breakpoints:                $breakpoints-default;
+
+
+/**
+ * Media responsive
+ */
+
+$media-collapse:                    $screen-sm-max;
+
+
+/**
+ * Container
+ */
+
+$container-gutter-width:            $spacing-unit-small;
+$container-max-width:               1080px;
+
+
+/**
+ * Table responsive
+ */
+
+$table-responsive-collapse:         $screen-sm-max;
+
+
+/*----------------------------------------*\
+  VENDORS
+\*----------------------------------------*/
+
+/**
+ * Choices.
+ */
+
+$choices-selector: 'choices';
+$choices-font-size-lg: 20px;
+$choices-font-size-md: 18px;
+$choices-font-size-sm: 16px;
+$choices-guttering: 24px;
+$choices-border-radius: $field-border-radius;
+$choices-border-radius-item: $border-radius-small;
+$choices-bg-color: $field-bkg-color;
+$choices-bg-color-disabled: #EAEAEA;
+$choices-bg-color-dropdown: $alt-color-100;
+$choices-text-color: $field-color;
+$choices-keyline-color: $alt-color-400;
+$choices-primary-color: $alt-color-300;
+$choices-disabled-color: #eaeaea;
+$choices-highlight-color: $alt-color-300;
+$choices-button-icon-path: '~choices.js/assets/icons';
+$choices-button-dimension: 8px;
+$choices-button-offset: 8px;

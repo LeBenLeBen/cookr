@@ -2,8 +2,6 @@
 
 Cookr is a simple Rails application to manage cooking recipes organized by tags.
 
-A live demo is available at [cookr.herokuapp.com](http://cookr.herokuapp.com/). It’s hosted on a Heroku free plan, it could take a little time to boot. Be patient.
-
 ## Installation
 
 ### Virtualization with [Drifter](https://github.com/liip/drifter)

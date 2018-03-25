@@ -5,14 +5,25 @@
   </head>
 
   <body>
-    <div class="site-wrapper">
+    <div class="master">
       <%= render 'layouts/header' %>
 
-      <section class="devise-content">
-        <% if alert.present? %><p class="alert alert-danger"><%= alert %></p><% end %>
+      <section class="site-content site-content--shrinked">
+        <div class="site-content__body">
+          <div class="container">
+            <% if alert.present? %>
+              <div class="alert alert--danger media media--small mrgb">
+                <div class="media__left">
+                  <%= render 'shared/icon', id: 'error', classnames: 'icon--100' %>
+                </div>
+                <div class="media__body">
+                  <%= alert %>
+                </div>
+              </div>
+            <% end %>
 
-        <div class="well">
-          <%= yield %>
+            <%= yield %>
+          </div>
         </div>
       </div>
     </div>

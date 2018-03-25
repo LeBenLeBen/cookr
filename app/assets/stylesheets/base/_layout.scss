@@ -1,0 +1,79 @@
+/*----------------------------------------*\
+  LAYOUT
+\*----------------------------------------*/
+
+body {
+  background-color: $alt-color-100;
+}
+
+.master {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+
+  color: white;
+
+  background-color: $brand-color;
+  box-shadow: 0 -1px 0 rgba(0,0,0,.15) inset;
+}
+
+  .brand {
+    display: block;
+    padding: $spacing-unit-small $spacing-unit-default;
+
+    position: relative;
+
+    color: darken($brand-color, 30%);
+    font-size: rem(22px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -1px;
+    text-shadow: 0 1px 1px rgba(255,255,255,.25);
+
+    transition: letter-spacing .2s ease-out;
+
+    &:hover,
+    &:focus {
+      letter-spacing: 5px;
+      text-decoration: none;
+    }
+
+    @include media('md') {
+      font-size: rem(28px);
+    }
+  }
+
+.site-nav {
+  position: relative;
+
+  background-color: #6C567B;
+}
+
+.site-content {
+  flex: 1 0 auto;
+
+  padding-top: $spacing-unit-default;
+  padding-bottom: $spacing-unit-default;
+
+  @include media('md') {
+    padding-top: $spacing-unit-large;
+    padding-bottom: $spacing-unit-large;
+  }
+}
+
+.site-content--shrinked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .site-content__body {
+    width: 100%;
+    max-width: 24em;
+  }

@@ -17,26 +17,17 @@ class Recipe < ApplicationRecord
 
 
   has_attached_file :image, :styles => {
-    :thumb =>  '100x100#',
-    :medium => '472x472>'
+    thumb:      '100x66#',
+    medium:     '740x494#',
+    card:       '544x362#',
+    card_large: '604x402#',
   }
 
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
-
   def self.alphabetically
-    order(:title).group_by { |r| r.title[0] }
+    order(:title)
   end
-
-  def tag_list
-    self.tags.map { |t| t.title }.join(", ")
-  end
-
-  def tag_list=(new_value)
-    tag_names = new_value.split(/,\s+/)
-    self.tags = tag_names.map { |title| Tag.where('title = ?', title).first or Tag.create(:title => title) }
-  end
-
 
   protected
 

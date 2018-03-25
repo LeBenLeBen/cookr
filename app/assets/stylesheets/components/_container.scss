@@ -1,0 +1,14 @@
+/*----------------------------------------*\
+  CONTAINER
+\*----------------------------------------*/
+
+.container {
+  @include media('md') {
+    padding-left: $spacing-unit-default;
+    padding-right: $spacing-unit-default;
+  }
+}
+
+.container--small {
+  max-width: 800px;
+}

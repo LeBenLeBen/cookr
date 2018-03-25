@@ -1,7 +1,79 @@
 <header class="site-header">
-  <div class="container">
-    <h3 class="brand pull-left"><a href="/">Cookr</a></h3>
+  <div class="site-header__left">
+    <% if current_user.present? %>
+      <ul class="nav">
+        <li class="relative-parent hidden-md-up">
+          <button class="nav__link dropdown-toggle btn btn--bare" title="<%= t('nav.menu') %>">
+            <%= render 'shared/icon', id: 'hamburger', classnames: 'icon--100' %>
+          </button>
+          <div class="dropdown">
+            <ul class="dropdown-list">
+              <li>
+                <%= link_to root_path,
+                  class: class_string('dropdown-list__link media media--tiny': true, 'active': params['controller'] == 'home') do %>
+                  <div class="media__left"><%= render 'shared/icon', id: 'home', classnames: 'icon--75' %></div>
+                  <div class="media__body"><%= t('nav.home') %></div>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to recipes_path, class: class_string('dropdown-list__link media media--tiny': true, 'active': params['controller'] == 'recipes' || params['controller'] == 'tags') do %>
+                  <div class="media__left"><%= render 'shared/icon', id: 'restaurant', classnames: 'icon--75' %></div>
+                  <div class="media__body"><%= t('nav.my_recipes') %></div>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="hidden-sm-down">
+          <%= link_to root_path,
+            class: class_string('nav__link': true, 'active': params['controller'] == 'home'),
+            title: t('nav.home') do %>
+            <%= render 'shared/icon', id: 'home', classnames: 'icon--100' %>
+          <% end %>
+        </li>
+        <li class="hidden-sm-down">
+          <%= link_to recipes_path, class: class_string('nav__link': true, 'active': params['controller'] == 'recipes' || params['controller'] == 'tags') do %>
+            <%= render 'shared/icon', id: 'restaurant', classnames: 'icon--100 mrgr--' %><%= t('nav.my_recipes') %>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
 
-    <button type="button" data-toggle="collapse" data-target=".site-nav" class="visible-xs btn btn-default pull-right"><%= t('nav.menu') %></button>
+  <a href="/" class="brand">Cookr</a>
+
+  <div class="site-header__right">
+    <ul class="nav nav--right">
+      <li class="relative-parent">
+        <button class="<%= class_string('nav__link dropdown-toggle btn btn--bare': true, 'active': current_page?(controller: 'devise/registrations', action: 'edit')) %>">
+          <%= render 'shared/icon', id: 'user', classnames: 'icon--100' %>
+        </button>
+        <div class="dropdown dropdown--right">
+          <ul class="dropdown-list">
+            <% if current_user.present? %>
+              <li>
+                <%= link_to edit_user_registration_path, class: 'dropdown-list__link media media--tiny' do %>
+                  <div class="media__left"><%= render 'shared/icon', id: 'settings', classnames: 'icon--75' %></div>
+                  <div class="media__body"><%= t('users.settings') %></div>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete, class: 'dropdown-list__link media media--tiny' do %>
+                  <div class="media__left"><%= render 'shared/icon', id: 'power', classnames: 'icon--75' %></div>
+                  <div class="media__body"><%= t('users.sign_out') %></div>
+                <% end %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to new_user_session_path, class: 'dropdown-list__link media media--tiny' do %>
+                  <div class="media__left"><%= render 'shared/icon', id: 'power', classnames: 'icon--75' %></div>
+                  <div class="media__body"><%= t('users.sign_in') %></div>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </li>
+    </ul>
   </div>
 </header>

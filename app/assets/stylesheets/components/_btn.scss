@@ -1,0 +1,25 @@
+/*----------------------------------------*\
+  BUTTON
+\*----------------------------------------*/
+
+.btn {
+  font-weight: 500;
+
+  transition: all .2s ease-out;
+}
+
+.btn--primary {
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 4px rgba($brand-color, .25);
+  }
+}
+
+.btn--default {
+  border-color: $btn-default-color;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 4px rgba($btn-default-color, .25);
+  }
+}

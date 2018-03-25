@@ -1,0 +1,6 @@
+<%= link_to recipe_path(recipe.id), class: 'recipe-card' do %>
+  <%= render 'recipes/image', size: :card, image: recipe.image %>
+  <div class="recipe-card__body">
+    <h3 class="h4 mrgv0"><%= recipe.title %></h3>
+  </div>
+<% end %>

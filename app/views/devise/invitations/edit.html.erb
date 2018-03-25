@@ -7,14 +7,14 @@
   <% if f.object.class.require_password_on_accepting %>
     <div class="form-group">
       <%= f.label :password %>
-      <%= f.password_field :password, :class => 'form-control' %>
+      <%= f.password_field :password, :class => 'field' %>
     </div>
 
     <div class="form-group">
       <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, :class => 'form-control' %>
+      <%= f.password_field :password_confirmation, :class => 'field' %>
     </div>
   <% end %>
 
-  <p><%= f.submit t("devise.invitations.edit.submit_button"), :class => 'btn btn-primary' %></p>
+  <p><%= f.submit t("devise.invitations.edit.submit_button"), :class => 'btn btn--primary' %></p>
 <% end %>

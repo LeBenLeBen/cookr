@@ -1,0 +1,25 @@
+/*----------------------------------------*\
+  THUMB
+\*----------------------------------------*/
+
+.thumb {
+  display: block;
+  overflow: hidden;
+
+  position: relative;
+
+  border-radius: $border-radius-default;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 1;
+
+    box-shadow: 0 0 0 1px rgba($alt-color-900,.1) inset;
+    border-radius: inherit;
+  }
+}

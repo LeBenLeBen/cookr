@@ -1,80 +1,104 @@
-<header class="recipe-header page-header">
-  <h1 class="recipe-title">
-    <%= @recipe.title %>
-  </h1>
-  <% if @recipe.time.present? || @recipe.quantity.present? %>
-    <ul class="list-inline lead text-muted">
-      <% if @recipe.time.present? %><li><i class="fa fa-clock"></i> <%= t('recipes.time', :count => @recipe.time) %></li><% end %>
-      <% if @recipe.quantity.present? %><li><i class="fa fa-users"></i> <%= t('recipes.people', :count => @recipe.quantity) %></li><% end %>
-    </ul>
-  <% end %>
-</header>
+<%- title "#{@recipe.title} · #{t('activerecord.models.recipe')}" %>
 
-<article class="recipe">
-  <div class="row">
-    <div class="col-sm-4">
-      <% if @recipe.ingredients.present? %>
-        <div class="recipe-ingredients panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title"><%= I18n.t('activerecord.attributes.recipe.ingredients') %></h3>
-          </div>
-          <div class="panel-body">
-            <table class="table table-condensed">
-              <tbody>
-                <% @recipe.ingredients.each do |ingredient| %>
-                  <tr>
-                    <td><%= ingredient.amount %></td>
-                    <td><%= ingredient.title %></td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      <% end %>
-
-      <% if @recipe.notes.present? %>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title"><%= I18n.t('activerecord.attributes.recipe.notes') %></h3>
-          </div>
-          <div class="panel-body">
-            <%= simple_format(Rinku.auto_link(@recipe.notes)) %>
-          </div>
-        </div>
-      <% end %>
-
-      <% if can? :manage, @recipe %>
-        <ul class="recipe-actions list-inline">
-          <li><%= link_to raw('<i class="fa fa-pencil-alt spaced-right"></i> ') + t('edit'), edit_recipe_path(@recipe) %></li>
-          <li><%= link_to raw('<i class="fa fa-trash-alt spaced-right"></i> ') + t('delete'), recipe_path(@recipe), :method => 'delete', :data => { :confirm => t('confirm') } %></li>
+<header class="mrgb">
+  <div class="pusher pusher--bottom">
+    <div class="pusher__body">
+      <h1 class="mrgb0"><%= @recipe.title %></h1>
+      <% if @recipe.time.present? || @recipe.quantity.present? %>
+        <ul class="list-inline lead text-muted mrgt-">
+          <% if @recipe.time.present? %>
+            <li>
+              <%= render 'shared/icon', id: 'time', classnames: 'icon--100' %>
+              <%= t('recipes.time', :count => @recipe.time) %>
+            </li>
+          <% end %>
+          <% if @recipe.quantity.present? %>
+            <li>
+              <%= render 'shared/icon', id: 'people', classnames: 'icon--100' %>
+              <%= t('recipes.people', :count => @recipe.quantity) %>
+            </li>
+          <% end %>
         </ul>
       <% end %>
     </div>
-    <div class="col-sm-8">
-      <% if @recipe.image.present? %>
-        <%= image_tag @recipe.image.url(:medium), :class => 'thumbnail' %>
-      <% end %>
 
-      <% if @recipe.steps.present? %>
-        <% steps = @recipe.steps.split( /\r?\n/ ) %>
-        <table class="table-steps table">
-          <tbody>
-            <% steps.each.with_index do |step, i| %>
-              <tr>
-                <td><span class="h2 recipe-step-index"><%= i+1 %></span></td>
-                <td class="recipe-step"><%= step %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      <% end %>
+    <% if can? :manage, @recipe %>
+      <ul class="list-inline mrgt-">
+        <li>
+          <%= link_to edit_recipe_path(@recipe) do %>
+            <%= render 'shared/icon', id: 'edit', classnames: 'icon--100 mrgr--' %><%= t('edit') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to recipe_path(@recipe), :method => 'delete', :data => { :confirm => t('confirm') } do %>
+            <%= render 'shared/icon', id: 'bin', classnames: 'icon--100 mrgr--' %><%= t('delete') %>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</header>
 
-      <ul class="list-inline">
+<div class="grid grid--multiline grid--large">
+  <div class="grid__item md-w-2/3">
+    <%= render 'recipes/image', size: :medium, image: @recipe.image %>
+
+    <% if @recipe.steps.present? %>
+      <% steps = @recipe.steps.split( /\r?\n/ ) %>
+      <table class="table table--divided table--spaced mrgt mrgb0">
+        <tbody>
+          <% steps.each.with_index do |step, i| %>
+            <tr>
+              <td class="text-center" width="1">
+                <span class="h1"><%= i+1 %></span>
+              </td>
+              <td><%= step %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+  <div class="grid__item md-w-1/3">
+    <% if @recipe.ingredients.present? %>
+      <div class="panel panel-default">
+        <div class="panel__header">
+          <h3 class="panel__title"><%= t('activerecord.attributes.recipe.ingredients') %></h3>
+        </div>
+        <div class="panel__body">
+          <table class="table table--divided mrgb0">
+            <tbody>
+              <% @recipe.ingredients.each do |ingredient| %>
+                <tr>
+                  <td class="text-right text-bold"><%= ingredient.amount %></td>
+                  <td><%= ingredient.title %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <% end %>
+
+    <% if @recipe.notes.present? %>
+      <div class="panel panel-default mrgt+">
+        <div class="panel__header">
+          <h3 class="panel__title"><%= t('activerecord.attributes.recipe.notes') %></h3>
+        </div>
+        <div class="panel__body wysiwyg">
+          <%= simple_format(Rinku.auto_link(@recipe.notes)) %>
+        </div>
+      </div>
+    <% end %>
+
+    <% if @recipe.tags %>
+      <ul class="list-inline mrgt+">
         <% @recipe.tags.each do |tag| %>
-          <li><%= link_to tag.title, tag, :class => 'label label-default' %></li>
+          <li class="mrgb-- mrgr-- pdgh0">
+            <%= link_to tag.title, tag, :class => 'tag' %>
+          </li>
         <% end %>
       </ul>
-    </div>
+    <% end %>
   </div>
-</article>
+</div>
