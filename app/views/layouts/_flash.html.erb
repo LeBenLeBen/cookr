@@ -1,5 +1,5 @@
 <% if flash[:error] -%>
-  <div class="alert alert--danger media media--small">
+  <div class="alert alert--danger media media--small mrgb">
     <div class="media__left">
       <%= render 'shared/icon', id: 'danger', classnames: 'icon--100' %>
     </div>
@@ -9,7 +9,7 @@
   </div>
 <% end -%>
 <% if flash[:notice] -%>
-  <div class="alert alert--info media media--small">
+  <div class="alert alert--info media media--small mrgb">
     <div class="media__left">
       <%= render 'shared/icon', id: 'info', classnames: 'icon--100' %>
     </div>
