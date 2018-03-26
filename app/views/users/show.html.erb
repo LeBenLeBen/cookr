@@ -1,0 +1,14 @@
+<%- title t('nav.my_recipes') %>
+<% content_for :container_class { "container--small" } %>
+
+<h1><%= possessive(@user.username.capitalize, t('activerecord.models.recipe.other')) %></h1>
+
+<% if @recipes.present? %>
+  <ul class="list-stacked list-stacked--divided">
+    <% @recipes.each do |recipe| %>
+      <li><%= render 'recipes/group_item', :recipe => recipe %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p class="alert alert--info"><%= t('recipes.empty') %></p>
+<% end %>

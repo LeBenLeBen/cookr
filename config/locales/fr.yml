@@ -6,10 +6,18 @@ fr:
 
   activerecord:
     models:
-      recipe: Recette
-      ingredient: Ingrédient
-      tag: Tag
-      user: Utilisateur
+      recipe:
+        one: Recette
+        other: Recettes
+      ingredient:
+        one: Ingrédient
+        other: Ingrédients
+      tag:
+        one: Tag
+        other: Tags
+      user:
+        one: Utilisateur
+        other: Utilisateurs
     attributes:
       recipe:
         title: Titre
@@ -73,6 +81,7 @@ fr:
     resend_unlock: Renvoyer les instructions de déblocage
     settings: Paramètres
     cancel_account: Supprimer mon compte
+    profile: Mon profil
 
   errors:
     form:
@@ -87,3 +96,6 @@ fr:
     menu: Menu
     home: Accueil
     my_recipes: Mes recettes
+
+  i18n_helper:
+    possessive: "%{thing} de %{owner}"

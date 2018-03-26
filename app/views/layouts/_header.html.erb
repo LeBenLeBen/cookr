@@ -52,6 +52,12 @@
           <ul class="dropdown-list">
             <% if current_user.present? %>
               <li>
+                <%= link_to user_path(username: current_user.username), class: 'dropdown-list__link media media--tiny' do %>
+                  <div class="media__left"><%= render 'shared/icon', id: 'user', classnames: 'icon--75' %></div>
+                  <div class="media__body"><%= t('users.profile') %></div>
+                <% end %>
+              </li>
+              <li>
                 <%= link_to edit_user_registration_path, class: 'dropdown-list__link media media--tiny' do %>
                   <div class="media__left"><%= render 'shared/icon', id: 'settings', classnames: 'icon--75' %></div>
                   <div class="media__body"><%= t('users.settings') %></div>

@@ -21,6 +21,10 @@ Cookr::Application.routes.draw do
   resources :recipes
   resources :tags, :only => [:index, :show]
 
+  get '/u/:username' => 'users#show', via: :get,
+    :constraints => { :username => /[a-zA-Z0-9_.\-]+/ },
+    :as => :user
+
   root :to => 'home#index'
 
 end
