@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
   before_action :set_locale
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def set_locale
     locale = extract_locale_from_accept_language_header
@@ -16,6 +17,11 @@ class ApplicationController < ActionController::Base
     def authenticate_inviter!
       require_admin
       super
+    end
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:account_update, keys: [:username])
+      devise_parameter_sanitizer.permit(:accept_invitation, keys: [:username])
     end
 
   private

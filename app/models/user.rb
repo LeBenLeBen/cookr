@@ -11,7 +11,22 @@ class User < ApplicationRecord
   has_many :recipes, :dependent => :destroy
 
   validates :role, inclusion: { in: ROLES }
+  validates :username,
+    presence: true,
+    uniqueness: true,
+    length: {
+      in: 2...31,
+    },
+    :format =>  {
+      with: /\A[a-zA-Z0-9_.\-]+\z/,
+      message: I18n.t('activerecord.errors.models.user.attributes.username.format')
+    }
 
+  before_validation(on: :create) do
+    unless self.username.present?
+      self.username = "user-#{rand(10000...99999)}"
+    end
+  end
 
   def admin?
     self.role === "admin"
