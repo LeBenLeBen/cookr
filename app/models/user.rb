@@ -13,7 +13,9 @@ class User < ApplicationRecord
   validates :role, inclusion: { in: ROLES }
   validates :username,
     presence: true,
-    uniqueness: true,
+    uniqueness: {
+      :case_sensitive => false,
+    },
     length: {
       in: 2...31,
     },
