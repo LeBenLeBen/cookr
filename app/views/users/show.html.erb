@@ -1,4 +1,4 @@
-<%- title t('nav.my_recipes') %>
+<%- title possessive(@user.username.capitalize, t('activerecord.models.recipe.other')) %>
 <% content_for :container_class { "container--small" } %>
 
 <h1><%= possessive(@user.username.capitalize, t('activerecord.models.recipe.other')) %></h1>
