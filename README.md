@@ -21,7 +21,7 @@ vagrant ssh
 bundle exec foreman start
 ```
 
-Go to [cookr.lo:5000](http://cookr.lo:5000).
+Go to [cookr.lo](http://cookr.lo).
 
 ### Local installation
 

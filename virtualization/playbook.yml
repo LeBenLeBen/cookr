@@ -15,6 +15,7 @@
   roles:
     - { role: base }
     - { role: git }
+    - { role: nginx, web_directory: "/vagrant/public", site_template: "rails-site.j2", proxy_port: 5000 }
     - { role: postgresql }
     - { role: ruby }
     - { role: nodejs }
