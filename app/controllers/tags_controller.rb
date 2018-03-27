@@ -2,7 +2,7 @@ class TagsController < ApplicationController
 
   def show
     @tag = Tag.find(params[:id])
-    @recipes = @tag.recipes.where(user: current_user).alphabetically
+    @recipes = @tag.recipes.alphabetically
   end
 
   def index

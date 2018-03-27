@@ -81,7 +81,6 @@ en:
     resend_unlock: Send unlock instructions again
     settings: Settings
     cancel_account: Delete my account
-    profile: My profile
 
   errors:
     form:
@@ -94,7 +93,7 @@ en:
 
   nav:
     menu: Menu
-    home: Home
+    browse: Browse
     my_recipes: My recipes
 
   i18n_helper:

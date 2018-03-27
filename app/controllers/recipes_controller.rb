@@ -24,11 +24,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
-  def index
-    @recipes = current_user.recipes.alphabetically
-    @tags = Tag.joins(:recipes).where('recipes.user' => current_user).distinct
-  end
-
   def edit
     @recipe = Recipe.find(params[:id])
     unless @recipe.ingredients.present?

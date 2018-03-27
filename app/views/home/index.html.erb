@@ -1,14 +1,14 @@
-<%- title t('nav.home') %>
+<%- title t('nav.browse') %>
 
-<% if @recipes.present? %>
+<h1><%= t('nav.browse') %></h1>
+
+<% if @random_recipe.present? %>
   <ul class="list-stacked list-stacked--large">
     <li>
       <div class="grid grid--multiline grid--large">
         <div class="grid__item sm-w-1/2 lg-w-3/5">
-          <% if @random_recipe.present? %>
-            <h2 class="mrgt0"><%= t('recipes.randomly') %></h2>
-            <%= render 'recipes/card_large', :recipe => @random_recipe %>
-          <% end %>
+          <h2 class="mrgt0"><%= t('recipes.randomly') %></h2>
+          <%= render 'recipes/card_large', :recipe => @random_recipe %>
         </div>
         <div class="grid__item sm-w-1/2 lg-w-2/5">
           <h2 class="mrgt0"><%= t('recipes.recently_added') %></h2>
@@ -22,7 +22,21 @@
         <%= render 'recipes/card-grid', :recipes => @last_seen_recipes %>
       </li>
     <% end %>
+    <% if @tags.present? %>
+      <li>
+        <h2 class="mrgt0"><%= t('activerecord.models.tag.other') %></h2>
+        <% if @tags %>
+          <ul class="list-inline">
+            <% @tags.each do |tag| %>
+              <li class="mrgb-- mrgr-- pdgh0">
+                <%= link_to tag.title, tag, :class => 'tag' %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </li>
+    <% end %>
   </ul>
 <% else %>
-  <p class="alert alert--info"><%= I18n.t('recipes.empty') %></p>
+  <p class="text-muted"><%= I18n.t('recipes.empty') %></p>
 <% end %>

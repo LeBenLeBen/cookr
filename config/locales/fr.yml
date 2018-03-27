@@ -81,7 +81,6 @@ fr:
     resend_unlock: Renvoyer les instructions de déblocage
     settings: Paramètres
     cancel_account: Supprimer mon compte
-    profile: Mon profil
 
   errors:
     form:
@@ -94,7 +93,7 @@ fr:
 
   nav:
     menu: Menu
-    home: Accueil
+    browse: Explorer
     my_recipes: Mes recettes
 
   i18n_helper:

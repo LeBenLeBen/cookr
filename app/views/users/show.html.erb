@@ -1,7 +1,17 @@
-<%- title possessive(@user.username.capitalize, t('activerecord.models.recipe.other')) %>
+<%- title @title %>
 <% content_for :container_class { "container--small" } %>
 
-<h1><%= possessive(@user.username.capitalize, t('activerecord.models.recipe.other')) %></h1>
+<div class="pusher pusher--middle mrgb">
+  <div class="pusher__body mrgt--">
+    <h1 class="mrgb0"><%= @title %></h1>
+  </div>
+  <div class="mrgt--">
+    <a href="<%= new_recipe_path %>" class="btn btn--primary">
+      <%= render 'shared/icon', id: 'plus', classnames: 'icon--100' %>
+      <%= t('recipes.new') %>
+    </a>
+  </div>
+</div>
 
 <% if @recipes.present? %>
   <ul class="list-stacked list-stacked--divided">
@@ -10,5 +20,5 @@
     <% end %>
   </ul>
 <% else %>
-  <p class="alert alert--info"><%= t('recipes.empty') %></p>
+  <p class="text-muted"><%= t('recipes.empty') %></p>
 <% end %>
