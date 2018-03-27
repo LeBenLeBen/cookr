@@ -4,7 +4,7 @@
       <%= render 'recipes/image', size: :thumb, image: recipe.image %>
     </div>
     <div class="media__body">
-      <h4 class="mrgv0"><%= recipe.title %></h4>
+      <h3 class="mrgv0"><%= recipe.title %></h3>
       <% if recipe.time.present? || recipe.quantity.present? %>
         <ul class="list-inline text-muted mrgt--">
           <% if recipe.time.present? %><li><%= t('recipes.time', :count => recipe.time) %></li><% end %>

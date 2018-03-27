@@ -1,8 +1,7 @@
 <%- title "#{@tag.title} · #{t('activerecord.models.tag.one')}" %>
+<% content_for :container_class { "container--small" } %>
 
-<header class="page-header">
-  <h1><span class="text-muted">#</span><%= @tag.title %></h1>
-</header>
+<h1><span class="text-muted">#</span><%= @tag.title %></h1>
 
 <% if @recipes.present? %>
   <ul class="list-stacked list-stacked--divided">
@@ -11,5 +10,5 @@
     <% end %>
   </ul>
 <% else %>
-  <p class="alert alert--info"><%= t('recipes.empty') %></p>
+  <p class="text-muted"><%= t('recipes.empty') %></p>
 <% end %>

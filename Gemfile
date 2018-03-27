@@ -18,7 +18,7 @@ gem 'cancancan', '~> 2.0'
 gem 'simple_form'
 
 gem 'webpacker', '~> 3.2'
-gem 'css-class-string'
+gem 'active_link_to'
 gem 'vanilla-ujs', :github => 'hauleth/vanilla-ujs'
 
 # Optimized for Heroku
