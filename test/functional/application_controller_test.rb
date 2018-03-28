@@ -3,9 +3,9 @@ require 'test_helper'
 class HomeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  test "users can browse" do
-    sign_in users(:mark)
+  test "anonymous should be redirected to login" do
+    @controller = HomeController.new
     get :index
-    assert_response :success
+    assert_response :redirect
   end
 end

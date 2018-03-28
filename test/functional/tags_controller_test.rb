@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class TagsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  include Devise::Test::ControllerHelpers
+
+  test "users can view recipes by tags" do
+    sign_in users(:jessica)
+    get :show, params: { id: tags(:tag_1).id }
+    assert_response :success
+  end
 end

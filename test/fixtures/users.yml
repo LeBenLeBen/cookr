@@ -2,19 +2,19 @@ admin:
   id: 1
   email: admin@cookr.ch
   username: admin
-  encrypted_password: "$2a$10$w9yuN..iEwdtpWi0AMY5Qebk355wlx7BKu...skscsh7kjflIygbK"
+  encrypted_password: "$2a$10$LUH5LkGUr/WwEU0MqlG9NelnErFnGHOctlX9fZet2MREyCRTrxXge" # 123456
   role: admin
 
 jessica:
   id: 2
   email: jessica@cookr.ch
   username: jessica
-  encrypted_password: "$2a$10$.svA9Uix.dyPh.bCk2YqWOls3WRWHQR4mkmTd//8JBuFs2GGZsPq6"
+  encrypted_password: "$2a$10$FggC2oYsSIxVoKDwNX.SQuARW5rz6EuGcwk8QbdbZX07UV6t2k1FK" # 123456
   role: author
 
 mark:
   id: 3
   email: mark@cookr.ch
   username: mark
-  encrypted_password: "$2a$10$3ofBXmRdJVHFFO0lYqzY9.kpjhhXQU6/odtTgLvJ3Isa1DvH4YegW"
+  encrypted_password: "$2a$10$8nvlvA/uDiRF.LkSNj9z9urx.fsYqNDvqqsZDWwoo5fTjos2Me8xO" # 123456
   role: author
