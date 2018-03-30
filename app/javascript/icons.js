@@ -11,5 +11,7 @@ import 'ucreate-icons/outline/people';
 import 'ucreate-icons/outline/info';
 import 'ucreate-icons/outline/error';
 import 'ucreate-icons/outline/hamburger';
+import 'ucreate-icons/outline/arrow-right';
+import 'ucreate-icons/outline/arrow-left';
 
 import '../assets/icons/recipe-placeholder';

@@ -107,13 +107,13 @@ $border-radius-large:               8px;
  * Buttons
  */
 
-$btn-padding:                       $spacing-unit-small/$ratio $spacing-unit-small;
+$btn-padding:                       $spacing-unit-small/$ratio 20px;
 $btn-color:                         inherit;
 $btn-font-size:                     inherit;
 $btn-font-family:                   inherit;
 $btn-border:                        2px solid transparent;
 $btn-bkg:                           transparent;
-$btn-border-radius:                 $border-radius-default;
+$btn-border-radius:                 100px;
 
 $btn-small-padding:                 $spacing-unit-tiny/$ratio $spacing-unit-tiny;
 $btn-small-font-size:               $font-size-small;

@@ -281,6 +281,7 @@ DEPENDENCIES
   devise_invitable (~> 1.7.0)
   foreman
   guard-livereload
+  kaminari
   letter_opener
   newrelic_rpm
   paperclip

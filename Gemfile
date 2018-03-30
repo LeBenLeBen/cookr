@@ -16,6 +16,7 @@ gem 'foreman'
 gem "administrate"
 gem 'cancancan', '~> 2.0'
 gem 'simple_form'
+gem 'kaminari'
 
 gem 'webpacker', '~> 3.2'
 gem 'active_link_to'

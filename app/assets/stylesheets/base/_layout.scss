@@ -59,11 +59,11 @@ body {
   flex: 1 0 auto;
 
   padding-top: $spacing-unit-default;
-  padding-bottom: $spacing-unit-default;
+  padding-bottom: $spacing-unit-large;
 
   @include media('md') {
     padding-top: $spacing-unit-large;
-    padding-bottom: $spacing-unit-large;
+    padding-bottom: $spacing-unit-huge;
   }
 }
 
