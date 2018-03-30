@@ -49,8 +49,9 @@ fr:
     new: Nouvelle recette
     edit: Modifier la recette
     empty: Aucune recette
-    minutes: "Minutes"
-    quantity: "Personnes"
+    by_html: Par %{author}
+    minutes: Minutes
+    quantity: Personnes
     time:
       zero: "%{count} minute"
       one: "%{count} minutes"

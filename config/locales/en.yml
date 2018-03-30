@@ -49,8 +49,9 @@ en:
     new: New recipe
     edit: Edit recipe
     empty: No recipe found
-    minutes: "Minutes"
-    quantity: "People"
+    by_html: Par %{author}
+    minutes: Minutes
+    quantity: People
     time:
       zero: "%{count} minutes"
       one: "%{count} minute"
