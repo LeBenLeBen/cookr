@@ -59,18 +59,17 @@ class RecipesController < ApplicationController
       :notes,
       :quantity,
       :ingredients_attributes,
-      :tags,
       :tag_count,
       :image,
       :asset_file_name,
       :ingredients_attributes => [
         :id,
         :amount,
-        :title
+        :title,
+        :_destroy
       ],
-      :tags_attributes => [
-        :title
-      ])
+      :tag_ids => []
+    )
   end
 
   def store_history
