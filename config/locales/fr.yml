@@ -63,6 +63,7 @@ fr:
     recently_added: Ajouté récemment
     randomly: Recette au hasard
     last_seen: Récemment consulté
+    deleted: La recette a été supprimée
 
   ingredients:
     add: Ajouter un ingrédient

@@ -45,7 +45,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
 
-    redirect_to recipes_path
+    redirect_to root_path, :flash => { :notice => I18n.t('recipes.deleted') }
   end
 
 

@@ -63,6 +63,7 @@ en:
     recently_added: Recently added
     randomly: Random recipe
     last_seen: Last seen
+    deleted: The recipe has been deleted
 
   ingredients:
     add: Add an ingredient
