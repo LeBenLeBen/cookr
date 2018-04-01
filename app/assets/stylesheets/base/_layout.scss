@@ -2,12 +2,17 @@
   LAYOUT
 \*----------------------------------------*/
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: $alt-color-100;
 }
 
 .master {
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
