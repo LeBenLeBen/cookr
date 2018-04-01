@@ -24,6 +24,11 @@
   }
 }
 
+.field-required.field-required {
+  text-decoration: none;
+  color: $danger-color;
+}
+
 .field-help {
   font-size: rem(14px);
 }
