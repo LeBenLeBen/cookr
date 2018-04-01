@@ -43,17 +43,15 @@
   <a href="/" class="brand">Cookr</a>
 
   <div class="site-header__right">
-    <ul class="nav nav--right">
-      <% if current_user.present? %>
+    <% if current_user.present? %>
+      <ul class="nav nav--right">
         <li id="search-container"></li>
-      <% end %>
-      <li class="relative-parent">
-        <button class="nav__link dropdown-toggle btn btn--bare<%= ' active' if current_page?(controller: 'devise/registrations', action: 'edit') %>">
-          <%= render 'shared/icon', id: 'user', classnames: 'icon--100' %>
-        </button>
-        <div class="dropdown dropdown--right">
-          <ul class="dropdown-list">
-            <% if current_user.present? %>
+        <li class="relative-parent">
+          <button class="nav__link dropdown-toggle btn btn--bare<%= ' active' if current_page?(controller: 'devise/registrations', action: 'edit') %>">
+            <%= render 'shared/icon', id: 'user', classnames: 'icon--100' %>
+          </button>
+          <div class="dropdown dropdown--right">
+            <ul class="dropdown-list">
               <li>
                 <%= active_link_to edit_user_registration_path, class: 'dropdown-list__link media media--tiny' do %>
                   <div class="media__left"><%= render 'shared/icon', id: 'settings', classnames: 'icon--75' %></div>
@@ -66,17 +64,10 @@
                   <div class="media__body"><%= t('users.sign_out') %></div>
                 <% end %>
               </li>
-            <% else %>
-              <li>
-                <%= active_link_to new_user_session_path, class: 'dropdown-list__link media media--tiny' do %>
-                  <div class="media__left"><%= render 'shared/icon', id: 'power', classnames: 'icon--75' %></div>
-                  <div class="media__body"><%= t('users.sign_in') %></div>
-                <% end %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </li>
-    </ul>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    <% end %>
   </div>
 </header>

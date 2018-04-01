@@ -14,7 +14,7 @@ fr:
       locked: "Votre compte est verrouillé."
       not_found_in_database: "Email ou mot de passe invalide."
       timeout: "Votre session est expirée, veuillez vous reconnecter pour continuer."
-      unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
+      unauthenticated: ""
       unconfirmed: "Vous devez valider votre compte pour continuer."
     mailer:
       confirmation_instructions:
