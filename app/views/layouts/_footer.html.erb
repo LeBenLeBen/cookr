@@ -1,0 +1,19 @@
+<%= javascript_include_tag 'rails' %>
+<script type="text/javascript">
+  I18n.defaultLocale = '<%= I18n.default_locale %>';
+  I18n.locale = '<%= I18n.locale %>';
+
+  window.Cookr = {
+    env: '<%= Rails.env %>',
+    config: {
+      algolia: {
+        appId: '<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] || '' %>',
+        apiKey: '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] || '' %>',
+      }
+    },
+    paths: {
+      icons: '<%= asset_pack_path 'assets/icons.svg' %>'
+    }
+  };
+</script>
+<%= javascript_pack_tag 'application' %>

@@ -1,4 +1,5 @@
 class Recipe < ApplicationRecord
+  include AlgoliaSearch
 
   belongs_to :user, :autosave => true
   has_many :ingredients, :dependent => :destroy
@@ -15,7 +16,6 @@ class Recipe < ApplicationRecord
   validates :title, presence: true,
                     length: { minimum: 3 }
 
-
   has_attached_file :image, :styles => {
     thumb:      '100x66#',
     medium:     '740x494#',
@@ -24,6 +24,13 @@ class Recipe < ApplicationRecord
   }
 
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
+  algoliasearch per_environment: true do
+    attribute :title
+    attribute :url do
+      Rails.application.routes.url_helpers.recipe_path(self.id)
+    end
+  end
 
   def self.alphabetically
     order(:title)

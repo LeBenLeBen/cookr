@@ -45,7 +45,6 @@ fr:
         create: Envoyer
 
   recipes:
-    search: Trouver une recette…
     new: Nouvelle recette
     edit: Modifier la recette
     empty: Aucune recette
@@ -100,3 +99,7 @@ fr:
 
   i18n_helper:
     possessive: "%{thing} de %{owner}"
+
+  search:
+    placeholder: Rechercher…
+    no_results: Aucun résultat

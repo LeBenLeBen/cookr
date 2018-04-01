@@ -63,6 +63,8 @@
 // @import '~kanbasu/src/scss/helpers/align';
 // @import '~kanbasu/src/scss/helpers/align-responsive';
 
+@import 'helpers/transitions';
+
 
 /**
  * Components
@@ -101,6 +103,7 @@
 @import 'components/dropdown-list';
 @import 'components/recipe-image-placeholder';
 @import 'components/pagination';
+@import 'components/search';
 
 
 /**

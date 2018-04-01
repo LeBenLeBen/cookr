@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.4.1'
 
+gem 'dotenv-rails', groups: [:development]
+
 gem 'rails', '~> 5.1'
 gem 'responders'
 
@@ -13,14 +15,16 @@ gem 'aws-sdk', '~> 2.3.0'
 gem 'sprockets'
 gem 'rinku'
 gem 'foreman'
-gem "administrate"
+gem 'administrate'
 gem 'cancancan', '~> 2.0'
 gem 'simple_form'
 gem 'kaminari'
+gem 'algoliasearch-rails'
 
 gem 'webpacker', '~> 3.2'
 gem 'active_link_to'
 gem 'vanilla-ujs', :github => 'hauleth/vanilla-ujs'
+gem 'i18n-js'
 
 # Optimized for Heroku
 group :production do
@@ -30,8 +34,6 @@ group :production do
 end
 
 group :development do
-  gem 'rb-fsevent'
-  gem 'guard-livereload'
   gem 'letter_opener'
   gem 'web-console'
 end

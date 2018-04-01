@@ -9,13 +9,19 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.2.2",
+    "algoliasearch": "^3.26.0",
     "choices.js": "^3.0.3",
     "kanbasu": "^2.1.0",
+    "lodash.debounce": "^4.0.8",
     "rails-erb-loader": "^5.3.0",
     "svg-sprite-loader": "^3.6.2",
     "svgo": "^1.0.5",
     "svgo-loader": "^2.1.0",
-    "ucreate-icons": "github:eucalyptuss/ucreate-icons"
+    "ucreate-icons": "github:eucalyptuss/ucreate-icons",
+    "vue": "^2.5.16",
+    "vue-clickaway": "^2.1.0",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.11.2"

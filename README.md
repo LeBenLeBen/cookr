@@ -6,7 +6,7 @@ Cookr is a simple Rails application to manage cooking recipes organized by tags.
 
 ### Virtualization with [Drifter](https://github.com/liip/drifter)
 
-Vagrant and Virtualbox or Vagrant-LXS are required. Check Drifter documentation if necessary.
+Vagrant and Virtualbox or Vagrant-LXS are required. Check [Drifter documentation](https://liip-drifter.readthedocs.io/en/stable/) if necessary.
 
 ```bash
 git clone --recursive git@github.com:LeBenLeBen/cookr.git
@@ -71,9 +71,19 @@ Go to [localhost:5000](http://localhost:5000).
 
 Registrations are disabled. You can use the console (`rails c`) to create a new user.
 
+```ruby
+User.create(email: '', password: '', password_confirmation: '')
 ```
-User.create(:email => '', :password => '', :password_confirmation => '')
-```
+
+## Enable search
+
+The search work through [Algolia](https://www.algolia.com/). To enable it you need to:
+- Have an Algolia account
+- If the `.env` file doesn’t already exists, copy `.env.example` to `.env`
+- Fill in the variables `ALGOLIASEARCH_APPLICATION_ID`, `ALGOLIASEARCH_API_KEY` and `ALGOLIASEARCH_API_KEY_SEARCH` according to the values you’ll find in your Algolia dashboard
+- Index data with `rake algoliasearch:reindex`
+
+Note: indexing will automatically create new Algolia indices in the form `Model_environment`, for example `Recipe_development`.
 
 ## License
 

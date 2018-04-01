@@ -45,7 +45,6 @@ en:
         create: Envoyer
 
   recipes:
-    search: Find a recipe…
     new: New recipe
     edit: Edit recipe
     empty: No recipe found
@@ -101,3 +100,7 @@ en:
   i18n_helper:
     possessive: "%{owner}'s %{thing}"
     possessive_s: "%{owner}' %{thing}"
+
+  search:
+    placeholder: Search…
+    no_results: No results

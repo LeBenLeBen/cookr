@@ -13,5 +13,6 @@ import 'ucreate-icons/outline/error';
 import 'ucreate-icons/outline/hamburger';
 import 'ucreate-icons/outline/arrow-right';
 import 'ucreate-icons/outline/arrow-left';
+import 'ucreate-icons/outline/search';
 
-import '../assets/icons/recipe-placeholder';
+import 'icons/recipe-placeholder';

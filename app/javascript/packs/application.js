@@ -1,7 +1,12 @@
-import '../../assets/stylesheets/main.scss';
+import Vue from 'vue';
 
-import 'icons';
+// Stylesheets
+import 'stylesheets/main';
 
-import 'ingredients';
-import 'recipes';
-import 'tags';
+// Global UI elements
+import 'ui';
+
+// Components
+import 'components/ingredients';
+import 'components/recipes';
+import 'components/tags';

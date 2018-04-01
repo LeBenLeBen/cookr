@@ -44,6 +44,9 @@
 
   <div class="site-header__right">
     <ul class="nav nav--right">
+      <% if current_user.present? %>
+        <li id="search-container"></li>
+      <% end %>
       <li class="relative-parent">
         <button class="nav__link dropdown-toggle btn btn--bare<%= ' active' if current_page?(controller: 'devise/registrations', action: 'edit') %>">
           <%= render 'shared/icon', id: 'user', classnames: 'icon--100' %>
