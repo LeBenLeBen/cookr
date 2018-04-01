@@ -4,19 +4,19 @@
   <div class="pusher pusher--bottom">
     <div class="pusher__body">
       <h1 class="mrgb0"><%= @recipe.title %></h1>
-      <ul class="list-inline lead text-muted mrgt-">
-        <li class="mrgb-- mrgr pdgh0">
+      <ul class="list-inline lead text-muted mrgt--">
+        <li class="mrgt-- mrgr pdgh0">
           <% authorLink = link_to @recipe.user.username, user_path(@recipe.user.username) %>
           <%= t('recipes.by_html', author: authorLink) %>
         </li>
         <% if @recipe.time.present? %>
-          <li class="mrgb-- mrgr pdgh0">
+          <li class="mrgt-- mrgr pdgh0">
             <%= render 'shared/icon', id: 'time', classnames: 'icon--100' %>
             <%= t('recipes.time', :count => @recipe.time) %>
           </li>
         <% end %>
         <% if @recipe.quantity.present? %>
-          <li class="mrgb-- mrgr pdgh0">
+          <li class="mrgt-- mrgr pdgh0">
             <%= render 'shared/icon', id: 'people', classnames: 'icon--100' %>
             <%= t('recipes.people', :count => @recipe.quantity) %>
           </li>
@@ -43,7 +43,9 @@
 
 <div class="grid grid--multiline grid--large">
   <div class="grid__item md-w-2/3">
-    <%= render 'recipes/image', size: :medium, image: @recipe.image %>
+    <% if @recipe.image.present? %>
+      <%= render 'recipes/image', size: :medium, image: @recipe.image %>
+    <% end %>
 
     <% if @recipe.steps.present? %>
       <% steps = @recipe.steps.split( /\r?\n/ ) %>
