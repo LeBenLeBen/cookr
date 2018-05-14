@@ -31,7 +31,7 @@ Rails.application.configure do
   config.assets.digest = true
 
   # Mailer host URL
-  config.action_mailer.default_url_options = { :host => 'cookr.ch' }
+  config.action_mailer.default_url_options = { :host => 'www.cookr.ch' }
 
   # Mailer config (Heroku Sendgrid)
   ActionMailer::Base.smtp_settings = {
