@@ -1,36 +1,36 @@
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '2.6.5'
 
 gem 'dotenv-rails', groups: [:development]
 
-gem 'rails', '~> 5.1'
+gem 'rails', '~> 6.0.2'
 gem 'responders'
 
 gem 'pg'
 
-gem 'devise'
-gem 'devise_invitable', '~> 1.7.0'
-gem 'paperclip'
-gem 'aws-sdk', '~> 2.3.0'
-gem 'sprockets'
-gem 'rinku'
-gem 'foreman'
 gem 'administrate'
-gem 'cancancan', '~> 2.0'
-gem 'simple_form'
-gem 'kaminari'
 gem 'algoliasearch-rails'
+gem 'aws-sdk-s3', '~> 1'
+gem 'cancancan', '~> 3'
+gem 'devise'
+gem 'devise_invitable', '~> 2'
+gem 'foreman'
+gem 'kaminari'
+gem 'paperclip'
+gem 'rinku'
+gem 'simple_form'
+gem 'sprockets'
 
-gem 'webpacker', '~> 3.2'
 gem 'active_link_to'
-gem 'vanilla-ujs', :github => 'hauleth/vanilla-ujs'
 gem 'i18n-js'
+gem 'vanilla-ujs', github: 'hauleth/vanilla-ujs'
+gem 'webpacker', '~> 4'
 
 # Optimized for Heroku
 group :production do
-  gem 'unicorn'
   gem 'newrelic_rpm'
   gem 'rails_12factor' # Heroku gem to avoid plugins injection
+  gem 'unicorn'
 end
 
 group :development do

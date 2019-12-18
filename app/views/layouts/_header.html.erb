@@ -10,7 +10,7 @@
             <ul class="dropdown-list">
               <li>
                 <%= active_link_to root_path, active: :exact, class: 'dropdown-list__link media media--tiny' do %>
-                  <div class="media__left"><%= render 'shared/icon', id: 'home', classnames: 'icon--75' %></div>
+                  <div class="media__left"><%= render 'shared/icon', id: 'home-alt', classnames: 'icon--75' %></div>
                   <div class="media__body"><%= t('nav.browse') %></div>
                 <% end %>
               </li>
@@ -28,7 +28,7 @@
             active: :exact,
             class: 'nav__link',
             title: t('nav.browse') do %>
-            <%= render 'shared/icon', id: 'home', classnames: 'icon--100' %>
+            <%= render 'shared/icon', id: 'home-alt', classnames: 'icon--100' %>
           <% end %>
         </li>
         <li class="hidden-sm-down">

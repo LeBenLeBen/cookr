@@ -1,4 +1,4 @@
-class RemoveRecipeCooking < ActiveRecord::Migration
+class RemoveRecipeCooking < ActiveRecord::Migration[5.1]
   def up
     remove_column :recipes, :cooking
   end

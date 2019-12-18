@@ -23,7 +23,12 @@ database_name: "cookr"
 root_directory: "/vagrant/"
 
 # Freeze ruby version
-ruby_version: 2.4.1
+ruby_version: 2.6.5
+ruby_build_version: v20191124
 
 # Required by webpacker gem
 nodejs_with_yarn: true
+
+# Box settings
+box_name: 'drifter/buster64-base'
+box_url: 'https://vagrantbox-public.liip.ch/drifter-buster64-base.json'

@@ -25,7 +25,7 @@ Go to [cookr.lo](http://cookr.lo).
 
 ### Local installation
 
-Ruby >= 2.4, PostgreSQL and [Bundler](http://bundler.io/) are required.
+Ruby >= 2.5, PostgreSQL and [Bundler](http://bundler.io/) are required.
 
 ```bash
 git clone git@github.com:LeBenLeBen/cookr.git
@@ -78,6 +78,7 @@ User.create(email: '', password: '', password_confirmation: '')
 ## Enable search
 
 The search work through [Algolia](https://www.algolia.com/). To enable it you need to:
+
 - Have an Algolia account
 - If the `.env` file doesn’t already exists, copy `.env.example` to `.env`
 - Fill in the variables `ALGOLIASEARCH_APPLICATION_ID`, `ALGOLIASEARCH_API_KEY` and `ALGOLIASEARCH_API_KEY_SEARCH` according to the values you’ll find in your Algolia dashboard

@@ -1,4 +1,4 @@
-class AddCounterCache < ActiveRecord::Migration
+class AddCounterCache < ActiveRecord::Migration[5.1]
   def up
     add_column :tags, :recipe_count, :integer, :default => 0
 

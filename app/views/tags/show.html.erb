@@ -1,5 +1,5 @@
 <%- title "#{@tag.title} · #{t('activerecord.models.tag.one')}" %>
-<% content_for :container_class { "container--small" } %>
+<% content_for(:container_class) { "container--small" } %>
 
 <h1><span class="text-muted">#</span><%= @tag.title %></h1>
 

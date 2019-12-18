@@ -8,22 +8,20 @@
   "license": "GPL-3.0-only",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^3.2.2",
+    "@rails/webpacker": "4.2.2",
     "algoliasearch": "^3.26.0",
     "choices.js": "^3.0.3",
     "kanbasu": "^2.1.0",
     "lodash.debounce": "^4.0.8",
     "rails-erb-loader": "^5.3.0",
     "svg-sprite-loader": "^3.6.2",
-    "svgo": "^1.0.5",
-    "svgo-loader": "^2.1.0",
     "ucreate-icons": "github:eucalyptuss/ucreate-icons",
-    "vue": "^2.5.16",
+    "vue": "^2.6.11",
     "vue-clickaway": "^2.1.0",
-    "vue-loader": "^14.2.2",
-    "vue-template-compiler": "^2.5.16"
+    "vue-loader": "^15.8.3",
+    "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.11.2"
+    "webpack-dev-server": "^3.10.0"
   }
 }

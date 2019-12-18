@@ -3,9 +3,10 @@ const webpack = require('webpack');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const { environment } = require('@rails/webpacker');
+const { VueLoaderPlugin } = require('vue-loader');
+const vue = require('./loaders/vue');
 const svgIcons = require('./loaders/svg-icons');
 const erb = require('./loaders/erb');
-const vue = require('./loaders/vue');
 
 environment.config.set('resolve.alias', {
   vue: 'vue/dist/vue.esm.js',
@@ -18,15 +19,14 @@ fileLoader.exclude = [
   path.resolve('node_modules/ucreate-icons'),
 ];
 
-// Extract icons in a dedicated SVG file
-const extractIcons = new SpriteLoaderPlugin();
-environment.plugins.insert(
-  'SpriteLoaderPlugin',
-  extractIcons
-);
-
-environment.loaders.insert('svg-icns', svgIcons);
 environment.loaders.append('erb', erb);
 environment.loaders.append('vue', vue);
+environment.loaders.append('svg-icons', svgIcons);
 
-module.exports = environment
+// Extract icons in a dedicated SVG file
+const extractIcons = new SpriteLoaderPlugin();
+environment.plugins.insert('SpriteLoaderPlugin', extractIcons);
+
+environment.plugins.append('VueLoaderPlugin', new VueLoaderPlugin());
+
+module.exports = environment;

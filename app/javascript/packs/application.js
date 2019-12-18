@@ -1,5 +1,3 @@
-import Vue from 'vue';
-
 // Stylesheets
 import 'stylesheets/main';
 

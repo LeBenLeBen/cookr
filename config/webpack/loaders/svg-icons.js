@@ -13,22 +13,7 @@ module.exports = {
         extract: true,
         spriteFilename: 'assets/icons.svg',
         esModule: false,
-      }
-    },
-    {
-      loader: 'svgo-loader',
-      options: {
-        plugins: [
-          {
-            removeAttrs: {
-              attrs: '(fill|stroke)'
-            },
-          },
-          {
-            convertPathData: false,
-          }
-        ],
-      }
+      },
     },
   ],
 };
