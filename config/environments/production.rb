@@ -5,7 +5,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Whitelist hostname
-  config.hosts << "cookr.ch"
+  config.hosts << "www.cookr.ch"
 
   # Code is not reloaded between requests
   config.cache_classes = true
