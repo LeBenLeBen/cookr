@@ -1,0 +1,5 @@
+{
+  "name": "Cookr",
+  "repository": "https://github.com/LeBenLeBen/cookr",
+  "buildpacks": [{ "url": "heroku/nodejs" }, { "url": "heroku/ruby" }]
+}
