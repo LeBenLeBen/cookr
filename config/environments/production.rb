@@ -5,7 +5,10 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Whitelist hostname
-  config.hosts << "www.cookr.ch"
+  config.hosts << ".cookr.ch"
+  if ENV['HEROKU_APP_NAME']
+    config.hosts << "#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
+  end
 
   # Code is not reloaded between requests
   config.cache_classes = true
