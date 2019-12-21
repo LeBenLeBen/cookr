@@ -5,7 +5,7 @@ gem 'dotenv-rails', groups: [:development]
 
 gem 'rails', '~> 6.0.2'
 gem 'responders'
-
+gem 'puma'
 gem 'pg'
 
 gem 'administrate'
@@ -29,7 +29,6 @@ gem 'webpacker', '~> 4'
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor' # Heroku gem to avoid plugins injection
-  gem 'unicorn'
 end
 
 group :development do

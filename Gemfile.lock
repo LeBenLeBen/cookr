@@ -147,7 +147,6 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-    kgio (2.11.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
@@ -182,6 +181,8 @@ GEM
       terrapin (~> 0.6.0)
     pg (1.1.4)
     public_suffix (4.0.1)
+    puma (4.3.1)
+      nio4r (~> 2.0)
     rack (2.0.8)
     rack-proxy (0.6.5)
       rack
@@ -218,7 +219,6 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.20.3, < 2.0)
-    raindrops (0.19.0)
     rake (13.0.1)
     responders (3.0.0)
       actionpack (>= 5.0)
@@ -250,9 +250,6 @@ GEM
     tilt (2.0.10)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    unicorn (5.5.1)
-      kgio (~> 2.6)
-      raindrops (~> 0.7)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (4.0.1)
@@ -288,13 +285,14 @@ DEPENDENCIES
   newrelic_rpm
   paperclip
   pg
+  puma
   rails (~> 6.0.2)
   rails_12factor
   responders
   rinku
   simple_form
   sprockets
-  unicorn
+  vanilla-ujs!
   web-console
   webpacker (~> 4)
 
