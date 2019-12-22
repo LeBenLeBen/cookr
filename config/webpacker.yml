@@ -56,6 +56,9 @@ development:
   <<: *default
   compile: true
 
+  # Extract and emit a css file
+  extract_css: true
+
   # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules
   check_yarn_integrity: true
 
