@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class RecipeDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -23,7 +23,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     image_content_type: Field::String,
     image_file_size: Field::Number,
     image_updated_at: Field::DateTime,
-    quantity: Field::Number,
+    quantity: Field::Number
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -31,52 +31,46 @@ class RecipeDashboard < Administrate::BaseDashboard
   #
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
-  COLLECTION_ATTRIBUTES = [
-    :id,
-    :title,
-    :user,
-    :created_at,
-    :updated_at,
-  ].freeze
+  COLLECTION_ATTRIBUTES = %i[id title user created_at updated_at].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = [
-    :user,
-    :ingredients,
-    :recipes_tags,
-    :tags,
-    :id,
-    :title,
-    :created_at,
-    :updated_at,
-    :steps,
-    :time,
-    :notes,
-    :image_file_name,
-    :image_content_type,
-    :image_file_size,
-    :image_updated_at,
-    :quantity,
+  SHOW_PAGE_ATTRIBUTES = %i[
+    user
+    ingredients
+    recipes_tags
+    tags
+    id
+    title
+    created_at
+    updated_at
+    steps
+    time
+    notes
+    image_file_name
+    image_content_type
+    image_file_size
+    image_updated_at
+    quantity
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = [
-    :user,
-    :ingredients,
-    :recipes_tags,
-    :tags,
-    :title,
-    :steps,
-    :time,
-    :notes,
-    :image_file_name,
-    :image_content_type,
-    :image_file_size,
-    :image_updated_at,
-    :quantity,
+  FORM_ATTRIBUTES = %i[
+    user
+    ingredients
+    recipes_tags
+    tags
+    title
+    steps
+    time
+    notes
+    image_file_name
+    image_content_type
+    image_file_size
+    image_updated_at
+    quantity
   ].freeze
 
   # Overwrite this method to customize how recipes are displayed

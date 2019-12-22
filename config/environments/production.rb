@@ -5,7 +5,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Whitelist hostname
-  config.hosts << ".cookr.ch"
+  config.hosts << '.cookr.ch'
   if ENV['HEROKU_APP_NAME']
     config.hosts << "#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
   end
@@ -20,7 +20,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
@@ -106,7 +106,7 @@ Rails.application.configure do
     s3_credentials: {
       bucket: ENV['S3_BUCKET_NAME'],
       access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
     },
     s3_host_name: 's3-eu-west-1.amazonaws.com',
     s3_region: 'eu-west-1'

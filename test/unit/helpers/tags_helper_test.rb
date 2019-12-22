@@ -1,4 +1,3 @@
 require 'test_helper'
 
-class TagsHelperTest < ActionView::TestCase
-end
+class TagsHelperTest < ActionView::TestCase; end

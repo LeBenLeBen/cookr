@@ -1,15 +1,19 @@
 # frozen_string_literal: true
 SimpleForm.setup do |config|
-  config.wrappers :default, class: 'form-group', error_class: 'form-group--has-errors' do |b|
+  config.wrappers :default,
+                  class: 'form-group',
+                  error_class: 'form-group--has-errors' do |b|
     b.use :html5
 
     b.use :label, class: 'field-label'
     b.use :input, class: 'field', error_class: 'field--invalid'
-    b.use :hint,  wrap_with: { tag: :div, class: 'field-help' }
+    b.use :hint, wrap_with: { tag: :div, class: 'field-help' }
     b.use :error, wrap_with: { tag: :div, class: 'field-error' }
   end
 
-  config.wrappers :grid, class: 'form-group', error_class: 'form-group--has-errors' do |b|
+  config.wrappers :grid,
+                  class: 'form-group',
+                  error_class: 'form-group--has-errors' do |b|
     b.use :html5
     b.wrapper tag: 'div', class: 'grid' do |ba|
       ba.wrapper tag: 'div', class: 'grid__item md-w-1/4' do |bb|
@@ -17,19 +21,22 @@ SimpleForm.setup do |config|
       end
       ba.wrapper tag: 'div', class: 'grid__item md-w-3/4' do |bb|
         bb.use :input, class: 'field', error_class: 'field--invalid'
-        bb.use :hint,  wrap_with: { tag: :div, class: 'field-help' }
+        bb.use :hint, wrap_with: { tag: :div, class: 'field-help' }
         bb.use :error, wrap_with: { tag: :div, class: 'field-error' }
       end
     end
   end
 
-  config.wrappers :vertical_boolean, tag: 'div', class: 'form-group', error_class: 'form-group--has-errors' do |b|
+  config.wrappers :vertical_boolean,
+                  tag: 'div',
+                  class: 'form-group',
+                  error_class: 'form-group--has-errors' do |b|
     b.use :html5
     b.optional :readonly
 
     b.use :input, class: 'checkbox'
 
-    b.use :hint,  wrap_with: { tag: :div, class: 'field-help' }
+    b.use :hint, wrap_with: { tag: :div, class: 'field-help' }
     b.use :error, wrap_with: { tag: :div, class: 'field-error' }
   end
 
@@ -79,7 +86,9 @@ SimpleForm.setup do |config|
   # config.item_wrapper_class = nil
 
   # How the label text should be generated altogether with the required text.
-  config.label_text = lambda { |label, required, explicit_label| "#{label} #{required}" }
+  config.label_text = lambda do |label, required, explicit_label|
+    "#{label} #{required}"
+  end
 
   # You can define the class to use on all labels. Default is nil.
   # config.label_class = nil
@@ -89,7 +98,7 @@ SimpleForm.setup do |config|
   # config.default_form_class = nil
 
   # You can define which elements should obtain additional classes
-  config.generate_additional_classes_for = [:wrapper]
+  config.generate_additional_classes_for = %i[wrapper]
 
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
@@ -111,9 +120,7 @@ SimpleForm.setup do |config|
 
   # Custom wrappers for input types. This should be a hash containing an input
   # type as key and the wrapper that will be used for all inputs with specified type.
-  config.wrapper_mappings = {
-    boolean: :vertical_boolean
-  }
+  config.wrapper_mappings = { boolean: :vertical_boolean }
 
   # Namespaces where SimpleForm should look for custom input classes that
   # override default inputs.

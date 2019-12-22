@@ -5,7 +5,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Whitelist hostname
-  config.hosts << "cookr.lo"
+  config.hosts << 'cookr.lo'
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -16,7 +16,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports and disable caching
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
   # Mailer host URL
@@ -43,8 +43,5 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
 
   # Paperclip
-  config.paperclip_defaults = {
-    storage: :filesystem
-  }
-
+  config.paperclip_defaults = { storage: :filesystem }
 end

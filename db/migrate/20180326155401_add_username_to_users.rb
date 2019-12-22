@@ -4,7 +4,7 @@ class AddUsernameToUsers < ActiveRecord::Migration[5.1]
 
     User.all.each do |u|
       unless u.username.present?
-        u.username = "user-#{rand(10000...99999)}"
+        u.username = "user-#{rand(10_000...99_999)}"
         u.save
       end
     end

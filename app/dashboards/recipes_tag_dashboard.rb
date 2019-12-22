@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class RecipesTagDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -8,9 +8,7 @@ class RecipesTagDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    recipe: Field::BelongsTo,
-    tag: Field::BelongsTo,
-    id: Field::Number,
+    recipe: Field::BelongsTo, tag: Field::BelongsTo, id: Field::Number
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -18,27 +16,16 @@ class RecipesTagDashboard < Administrate::BaseDashboard
   #
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
-  COLLECTION_ATTRIBUTES = [
-    :id,
-    :recipe,
-    :tag,
-  ].freeze
+  COLLECTION_ATTRIBUTES = %i[id recipe tag].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = [
-    :recipe,
-    :tag,
-    :id,
-  ].freeze
+  SHOW_PAGE_ATTRIBUTES = %i[recipe tag id].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = [
-    :recipe,
-    :tag,
-  ].freeze
+  FORM_ATTRIBUTES = %i[recipe tag].freeze
 
   # Overwrite this method to customize how recipes tags are displayed
   # across all pages of the admin dashboard.

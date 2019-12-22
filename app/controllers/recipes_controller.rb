@@ -1,6 +1,5 @@
 class RecipesController < ApplicationController
-
-  after_action :store_history, :only => [:show]
+  after_action :store_history, only: %i[show]
 
   load_and_authorize_resource
 
@@ -26,9 +25,7 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
-    unless @recipe.ingredients.present?
-      @recipe.ingredients.build
-    end
+    @recipe.ingredients.build unless @recipe.ingredients.present?
   end
 
   def update
@@ -45,9 +42,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
 
-    redirect_to root_path, :flash => { :notice => I18n.t('recipes.deleted') }
+    redirect_to root_path, flash: { notice: I18n.t('recipes.deleted') }
   end
-
 
   private
 
@@ -62,23 +58,20 @@ class RecipesController < ApplicationController
       :tag_count,
       :image,
       :asset_file_name,
-      :ingredients_attributes => [
-        :id,
-        :amount,
-        :title,
-        :_destroy
-      ],
-      :tag_ids => []
+      ingredients_attributes: %i[id amount title _destroy], tag_ids: []
     )
   end
 
   def store_history
     if @recipe.present?
       session[:recipe_history] ||= []
-      session[:recipe_history] -= [@recipe.id] if session[:recipe_history].include? @recipe.id
-      session[:recipe_history].delete_at(0) if session[:recipe_history].size >= 3
+      if session[:recipe_history].include? @recipe.id
+        session[:recipe_history] -= [@recipe.id]
+      end
+      if session[:recipe_history].size >= 3
+        session[:recipe_history].delete_at(0)
+      end
       session[:recipe_history] << @recipe.id
     end
   end
-
 end

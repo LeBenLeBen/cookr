@@ -1,4 +1,3 @@
 require 'test_helper'
 
-class IngredientsHelperTest < ActionView::TestCase
-end
+class IngredientsHelperTest < ActionView::TestCase; end

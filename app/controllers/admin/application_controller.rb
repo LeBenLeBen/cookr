@@ -13,7 +13,7 @@ module Admin
 
     def require_admin
       unless current_user && current_user.admin?
-        flash[:error] = t "errors.unauthorized.page"
+        flash[:error] = t 'errors.unauthorized.page'
         redirect_to root_path
       end
     end

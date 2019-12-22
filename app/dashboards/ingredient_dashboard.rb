@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class IngredientDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -13,7 +13,7 @@ class IngredientDashboard < Administrate::BaseDashboard
     amount: Field::Text,
     title: Field::Text,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -21,31 +21,16 @@ class IngredientDashboard < Administrate::BaseDashboard
   #
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
-  COLLECTION_ATTRIBUTES = [
-    :id,
-    :amount,
-    :title,
-  ].freeze
+  COLLECTION_ATTRIBUTES = %i[id amount title].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = [
-    :recipe,
-    :id,
-    :amount,
-    :title,
-    :created_at,
-    :updated_at,
-  ].freeze
+  SHOW_PAGE_ATTRIBUTES = %i[recipe id amount title created_at updated_at].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = [
-    :recipe,
-    :amount,
-    :title,
-  ].freeze
+  FORM_ATTRIBUTES = %i[recipe amount title].freeze
 
   # Overwrite this method to customize how ingredients are displayed
   # across all pages of the admin dashboard.
