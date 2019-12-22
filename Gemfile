@@ -23,7 +23,6 @@ gem 'sprockets'
 
 gem 'active_link_to'
 gem 'i18n-js'
-gem 'vanilla-ujs', github: 'hauleth/vanilla-ujs'
 gem 'webpacker', '~> 4'
 
 # Optimized for Heroku

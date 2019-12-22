@@ -1,3 +1,6 @@
+import ujs from '@rails/ujs';
+ujs.start();
+
 // Stylesheets
 import 'stylesheets/main';
 
