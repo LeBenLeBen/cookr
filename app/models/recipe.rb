@@ -35,6 +35,10 @@ class Recipe < ApplicationRecord
     order(:title)
   end
 
+  def steps_as_array
+    self.steps.split(/\r?\n/)
+  end
+
   protected
 
   def before_remove_tag(tag)

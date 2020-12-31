@@ -72,7 +72,7 @@ Go to [localhost:5000](http://localhost:5000).
 Registrations are disabled. You can use the console (`rails c`) to create a new user.
 
 ```ruby
-User.create(email: '', password: '', password_confirmation: '')
+User.create(email: '', password: '', password_confirmation: '', role: 'admin')
 ```
 
 ## Enable search

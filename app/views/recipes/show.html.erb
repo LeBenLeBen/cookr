@@ -48,7 +48,7 @@
     <% end %>
 
     <% if @recipe.steps.present? %>
-      <% steps = @recipe.steps.split( /\r?\n/ ) %>
+      <% steps = @recipe.steps_as_array %>
       <table class="table table--divided table--spaced mrgt mrgb0">
         <tbody>
           <% steps.each.with_index do |step, i| %>

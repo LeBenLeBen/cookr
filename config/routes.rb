@@ -32,5 +32,14 @@ Cookr::Application.routes.draw do
       constraints: { username: /[a-zA-Z0-9_.\-]+/ },
       as: :user
 
+  defaults format: :json do
+    namespace :api do
+      namespace :v1 do
+        post 'auth/token', to: 'auth#token', as: 'auth_token'
+        resources :recipes, only: %i[index show]
+      end
+    end
+  end
+
   root to: 'home#index'
 end

@@ -11,3 +11,15 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+module ActionDispatch
+  class IntegrationTest
+    def auth_header(user)
+      header =
+        ActionController::HttpAuthentication::Token.encode_credentials(
+          user.generate_jwt
+        )
+      { 'Authorization': header }
+    end
+  end
+end
