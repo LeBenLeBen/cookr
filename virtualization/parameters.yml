@@ -1,30 +1,30 @@
 ---
 # Name of your project, will also be the vagrant box name
-project_name: "cookr"
+project_name: 'cookr'
 
 # Main hostname through which the vagrant box will be accessible
-hostname: "cookr.lo"
+hostname: 'cookr.lo'
 # Alternative hostnames through which you want to access the vagrant box
 hostnames: []
 
 # Ports you want forwared to your host. See https://www.vagrantup.com/docs/networking/forwarded_ports.html
 # for details.
 forwarded_ports: {
-    "80": "8080",    # HTTP
-    "443": "8443",   # HTTPS
-    "3000": "3000",  # BrowserSync default port
-}
+    '80': '8080', # HTTP
+    '443': '8443', # HTTPS
+    '3000': '3000', # BrowserSync default port
+  }
 
 # Name of the database to create for your project if you include the
 # MySQL or PostgreSQL role
-database_name: "cookr"
+database_name: 'cookr'
 
 # Root directory of your project for the webserver and other purposes
-root_directory: "/vagrant/"
+root_directory: '/vagrant/'
 
 # Freeze ruby version
-ruby_version: 2.6.5
-ruby_build_version: v20191124
+ruby_version: 2.7.2
+ruby_build_version: v20201225
 
 # Required by webpacker gem
 nodejs_with_yarn: true
